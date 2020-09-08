@@ -1,0 +1,99 @@
+<!--miniprogram/pages/person.wxml-->
+<view class='page'>
+    <view style='height:60px'>
+    </view>
+    <form bindsubmit="createPerson">
+        <view class='item person-item flex-between' wx:if='{{!view_options}}'>
+            <view class='text-horizontal'>
+                <view class='text-item'>与我的关系</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">{{relation.value}}</view>
+            </view>
+        </view>
+        <block wx:if='{{view_options}}'>
+            <view class='item flex-between'>
+                <view class='text-horizontal'>
+                    <view class='text-item'>与我的关系</view>
+                </view>
+            </view>
+            <view class='person-item flex-between options'>
+                <view class='option' style="{{relation.key == title.key ? 'border:1rpx solid #e8580c; color: #e8580c':''}}" wx:for="{{options_titles}}" wx:key="index" wx:for-item="title" data-key='{{title.key}}' data-value='{{title.value}}' data-sex='{{title.sex}}' bindtap='selectRelation'>
+                    {{title.value}}
+                </view>
+            </view>
+        </block>
+        <view style='display:none'>
+            <input name="cognation" type="text" value="{{cognation.key}}" style='width:100%;display:none' />
+            <input name="relation" type="text" value="{{relation.key}}" style='width:100%;display:none' />
+        </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:21%'>名字</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="name" placeholder="必须" type="text" value="{{name}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <!-- 只有当前用户设置自己的信息时候才显示-->
+        <view class='item flex-between' wx:if="{{isSelf}}">
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:21%'>性别</view>
+                <view class='text-item' style='flex:1;'>
+                    <radio-group name='sex' class="radio-group">
+                        <label class="radio">
+                            <radio value="male" checked="{{sex == 'male'}}" />男
+                        </label>
+                        <label class="radio">
+                            <radio value="female" checked="{{sex == 'female'}}" />女
+                        </label>
+                    </radio-group>
+                </view>
+            </view>
+        </view>
+        <!-- 非自己时候才显示-->
+        <view class='item flex-between' style='display:none' wx:if="{{!isSelf}}">
+            <input name="sex" value="{{sex}}"></input>
+        </view>
+        <view class='item flex-between' wx:if="{{cognation.key!='QJ'}}">
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:21%'>称谓</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="remark" placeholder="备注，选填" type="text" value="{{remark}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='item person-item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:21%'>生日</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="birthday" placeholder="选填" type="text" value="{{birthday}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='item person-item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:21%'>电话</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="phone" placeholder="选填" type="number" value="{{phone}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='item person-item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:21%'>身份证信息</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="idcard" placeholder="选填" type="text" value="{{idcard}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType='submit'>
+                保存信息
+            </button>
+            <view class='long-buttom' bindtap='switchIdentity' data-id="{{id}}">
+                以{{name}}的身份进行录入
+            </view>
+        </view>
+    </form>
+</view>

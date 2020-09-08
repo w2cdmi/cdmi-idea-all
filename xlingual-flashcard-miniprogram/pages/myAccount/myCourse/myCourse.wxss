@@ -1,0 +1,38 @@
+.my-course-container {
+    height: 100%;
+    background: #fff;
+}
+
+.my-course-content, .content-right-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-course-content {
+    padding: 30rpx;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.content-left image {
+    width: 88rpx;
+    height: 88rpx;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.content-right-bottom {
+    width: 600rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 28rpx;
+    color: #666;
+}
+
+.content-right-top {
+    width: 95%;
+    font-size: 30rpx;
+    line-height: 50rpx;
+    color: #333;
+    font-weight: 600;
+}

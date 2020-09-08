@@ -1,0 +1,19 @@
+<view class='page'>
+<view style='padding-top:40rpx;display:flex;justify-content:center;'>
+	<image src='/images/enterprise-auth.png'></image>
+</view>
+<view class='title'>指尖上的销售管理利器</view>
+
+<view class='description'>
+    <view>·一键实现渠道的扩展</view>
+    <view>·快速打造自己的营销网络</view>
+</view>
+<view class='description'>
+    <view>·财务账目一目了然</view>
+    <view>·员工业绩与工作进展清晰无比</view>
+</view>
+<view class='option-group'>
+    <button open-type='getUserInfo' bindgetuserinfo="getUserInfo" class='btn'>微信登录</button>
+    <button class='btn exit-btn' bindtap='exitLogin'>退出</button>
+</view>
+</view>

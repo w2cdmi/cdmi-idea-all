@@ -1,0 +1,20 @@
+<!--page/agreement/verificationCode.wxml-->
+<view class='page'>
+    <view style="background:#FFF;">
+        <view class="content title">
+            <view style='height:80rpx;line-height:80rpx;font-size:32rpx'>请输入验证码</view>
+        </view>
+        <view class='content'>
+                <view class='horizontal' style='height:80rpx;padding:30rpx 10rpx 0rpx 0rpx'>
+                    <input type="number" maxlength="1" value="{{number1.value}}" class='number' focus="{{number1.focus}}" cursor='{{number1.cursor}}' data-order='1' bindinput="inputVerificationCode" bindtap='getFocus'/>
+                    <input type="number" maxlength="1" value="{{number2.value}}" class='number' focus="{{number2.focus}}" cursor='{{number2.cursor}}'  data-order='2' bindinput="inputVerificationCode" bindtap='getFocus'/>
+                    <input type="number" maxlength="1" value="{{number3.value}}" class='number' focus="{{number3.focus}}" cursor='{{number3.cursor}}'  data-order='3' bindinput="inputVerificationCode" bindtap='getFocus'/>
+                    <input type="number" maxlength="1" value="{{number4.value}}" class='number' focus="{{number4.focus}}" cursor='{{number4.cursor}}'  data-order='4' bindinput="inputVerificationCode" bindtap='getFocus'/>
+                </view>
+        </view>
+        <view class='content'>
+            <view style='padding:10rpx 0rpx'>已向您的手机：186*****328发送了一条验证码短信</view>
+            <view class='text-annotation'>若未收到验证码，请联系邀约方核实您的手机号码.</view>
+        </view>
+    </view>
+</view>

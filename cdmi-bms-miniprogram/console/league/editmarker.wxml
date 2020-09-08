@@ -1,0 +1,27 @@
+<!--console/school/editmarker.wxml-->
+<view class='page'>
+    <form bindsubmit="saveMarker">
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item'style='width:21%'>标记名称</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="name" placeholder="必填" type="text" value="{{name}}" maxlength="50" style='width:100%' />
+                    <input name="id" type="text" value="{{id}}" style='width:100%;display:none' />
+                </view>
+            </view>
+        </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:21%'>识别码</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="sign" placeholder="必填,8个字符以内" type="text" value="{{sign}}" maxlength="8" style='width:100%;' />
+                </view>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType="submit">
+                保存分类标记
+            </button>
+        </view>
+    </form>
+</view>

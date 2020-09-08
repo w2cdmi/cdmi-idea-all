@@ -1,0 +1,50 @@
+<import src="/template/menu.wxml" />
+<view class='page'>
+  <view class='item person-item flex-between' bindtap='jumpToMiniprogram'>
+    <view class='align-center'>
+      <image src='/images/inbox/inbox.png' class='image-icon'></image>
+      <view>收入分析</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToMiniprogram'>
+    <view class='align-center'>
+      <image src='/images/inbox/inbox.png' class='image-icon'></image>
+      <view>流量入口</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToBuzApp'>
+    <view class='align-center'>
+      <image src='/images/inbox/inbox.png' class='image-icon'></image>
+      <view>业务应用</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToDistributor'>
+    <view class='align-center'>
+      <image src='/images/icon/me_spread.png' class='image-icon'></image>
+      <view>渠道商管理</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToBuzConfig'>
+    <view class='align-center'>
+      <image src='/images/icon/me_spread.png' class='image-icon'></image>
+      <view>功能配置</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <tabbar selectIndex="3" bind:onShowMenu="onShowMenu"></tabbar>
+  <menu isShowMenu='{{isShowMenu}}' bind:onUploadImage="onUploadImage" bind:onUploadVideo="onUploadVideo" bind:showCreateFolder="showCreateFolder"></menu>
+</view>

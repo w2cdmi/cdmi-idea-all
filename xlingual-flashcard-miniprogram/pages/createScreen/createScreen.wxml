@@ -1,0 +1,68 @@
+<view>
+    <import src="/pages/template/sceneChoose.wxml" />
+
+    <template is="scene-choose" data="{{listDetail,language,listDetailName,isEditChoose,sceneName,learnLang,categoryName,changesceneName,isOperateCard,isShowDelete,isShowSort,isShowBack,scrollHeight}}" />
+    <swiper autoplay="{{autoplay}}" interval="{{interval}}" current='{{currentSwiperIndex}}' bindchange="bindchangeSwiper">
+        <swiper-item wx:for="{{listDetail}}" wx:key="*this">
+            <view bindlongpress="longPressDelete" data-item="{{item}}" data-index="{{index}}">
+                <view class='image-group'>
+                    <image src='{{item.img}}' class='image-style' mode="aspectFit"></image>
+                    <view>
+                        <image src='../images/icon/button_unnamed_camera_normal@2x.png' data-name='camera' class='getImage-icon' bindtap='getImage'></image>
+                        <image src='../images/icon/button_unnamed_picture_normal@2x.png' data-name='album' class='getImage-icon' bindtap='getImage'></image>
+                    </view>
+                </view>
+                <view class='play-item'>
+                    <view class='flex-item control-btn'>
+                        <view class='flex-item' bindtap='palyAudio'>
+                            <image src='../images/play/play.png' class='image-icon'></image>
+                            <view>播放</view>
+                        </view>
+                        <view class='flex-item' catchtouchend='stopRecord' catchtouchstart='getRecord'>
+                            <image src='../images/icon/mic.png' class='image-icon'></image>
+                            <view>录音</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+
+    </swiper>
+    <view class='content' wx:if="{{isShowTextarea}}" bindtap='getInputFocus'>
+        <textarea bindinput="changText" wx:if="{{showText}}" focus='{{focus}}' value='{{currentText}}' placeholder='请输入文字' cursor-spacing='140'></textarea>
+    </view>
+
+    <!-- <view class='flex-bottom flex-item' wx:if="{{!isShared}}">
+        <view class='scroll-view-width'>
+            <scroll-view class='scroll-view-style' scroll-x>
+                <view wx:for="{{language}}" wx:key="*this" data-index="{{index}}" bindtap='selectLanguage' class='scroll-view-item {{ index === selectedIndex ? "selected-item" : ""}}'>{{item}}</view>
+            </scroll-view>
+        </view>
+    </view> -->
+
+    <view class='flex-bottom flex-item'>
+        <view class='scroll-view-width-sm'>
+            <scroll-view class='scroll-view-style' scroll-x>
+                <view wx:for="{{language}}" wx:key="*this" data-index="{{index}}" data-item="{{item}}" bindtap='selectLanguage' class='scroll-view-item {{ index === selectedLanguageIndex ? "selected-item" : ""}}'>{{item.name}}</view>
+            </scroll-view>
+        </view>
+        <view class='test' bindtap='translateLang'>翻译</view>
+    </view>
+</view>
+
+<audio id="myAudio" src='{{currentAudio}}'></audio>
+
+<!-- 计时器 -->
+<view class='maskLayer' catchtouchmove="preventTouchMove" wx:if="{{chooseSize}}"></view>
+<view class='choose' wx:if="{{chooseSize}}">
+    <view>{{minute}}:{{second}}</view>
+</view>
+
+<view class='cut-img-container' wx:if="{{isShowCanvas}}">
+    <!-- <canvas canvas-id='imgCanvas' disable-scroll="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style='width:{{width}}px;height:{{height}}px' class='canvas-content'></canvas> -->
+    <canvas canvas-id='imgCanvas' disable-scroll="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style='width:{{width}}px;height:{{height}}px' class='canvas-content'></canvas>
+    <view class='cropper-buttons'>
+        <view bindtap='cancelCut'>取消</view>
+        <view bindtap='confirmCut'>确定</view>
+    </view>
+</view>

@@ -1,0 +1,53 @@
+<view class='page'>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item" style="width:21%">应用名称</view>
+      <view class="text-annotation" style="flex:1;">{{app_name}}</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+    <view class='item person-item flex-between' bindtap='jumpToConsolePathSetting' data-title='后台管理路径'>
+    <view class='text-horizontal'>
+      <view class="text-item">后台管理路径</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">{{console_path}}</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToAppConfigItem' data-title='是否启用文档病毒扫描功能'>
+    <view class='text-horizontal'>
+      <view class="text-item">是否启用文档病毒扫描功能</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">关闭</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToAppConfigItem' data-title='是否开启短信网关功能' data-id='u0229328192'>
+    <view class='text-horizontal'>
+      <view class="text-item">是否开启短信网关功能</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">关闭</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToAppConfigItem' data-title='是否开启邮件发送功能' data-id='u0229328195'>
+    <view class='text-horizontal'>
+      <view class="text-item">是否开启邮件发送功能</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">开启</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='button-vertical'>
+    <view class='long-buttom' bindtap='createAppConfig'>
+      新建应用配置参数
+    </view>
+  </view>
+</view>

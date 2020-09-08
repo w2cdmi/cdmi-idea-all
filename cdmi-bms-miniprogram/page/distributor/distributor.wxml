@@ -1,0 +1,20 @@
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{distributors}}" wx:key="index" wx:for-item="distributor" class='item flex-between' bindtap='jumpToDistributorDetail' data-title='{{distributor.name}}' data-id='{{distributor.id}}'>
+            <view class='align-center'>
+                <view>{{distributor.name}}</view>
+                <view class="text-item text-annotation" wx:if="{{distributor.type =='Person'}}">个人</view>
+                <view class="text-item text-annotation" wx:if="{{distributor.type =='Enterprise'}}">企业</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">{{distributor.level}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createDistributor'>
+            新增渠道商
+        </view>
+    </view>
+</view>

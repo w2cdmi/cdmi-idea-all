@@ -1,0 +1,93 @@
+<import src="/disk/template/menu.wxml" />
+<view class='page'>
+  <view class='item person-item flex-between'>
+    <view class='text-horizontal' style="flex:1">
+      <view class='text-item' style='width:21%'>应用名称</view>
+      <view class='text-item' style='flex:1;'>{{app_name}}</view>
+    </view>
+    <view class='flex-align-center' style='width:68rpx'>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">appId</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">{{app_id}}</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">访问授权码</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">1XSfR2EAFAF121dscsFw</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">访问密钥</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">保密</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between'>
+    <view class='text-horizontal'>
+      <view class="text-annotation">服务器域名</view>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">request合法域名</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">
+        https://www.storbox.cn https://obs.storbox.cn
+      </view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">socket合法域名</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">
+        wss://www.storbox.cn wss://obs.storbox.cn
+      </view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between'>
+    <view class='text-horizontal'>
+      <view class="text-annotation">业务域名</view>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">https://view.storbox.cn</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between'>
+    <view class='text-horizontal'>
+      <view class="text-annotation">管理后台</view>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">https://view.storbox.cn/mgr</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <tabbar selectIndex="4" bind:onShowMenu="onShowMenu"></tabbar>
+  <menu isShowMenu='{{isShowMenu}}' bind:onUploadImage="onUploadImage" bind:onUploadVideo="onUploadVideo" bind:showCreateFolder="showCreateFolder"></menu>
+</view>

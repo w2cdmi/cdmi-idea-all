@@ -1,0 +1,96 @@
+<!--index.wxml-->
+<view class='page'>
+  <view class='panel vertical-list'>
+    <view class='item horizontal-list'>
+      <view class='item'>
+        <view>小程序名称</view>
+      </view>
+      <view class='item'>
+        <view>
+          <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+      </view>
+    </view>
+    <view class='item horizontal-list'>
+      <view class='item horizontal-list'>
+        <view class="item">小程序图标</view>
+      </view>
+      <view class='item horizontal-list'>
+        <image src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+        <image src='/images/arrow.png' class='image-size'></image>
+      </view>
+    </view>
+    <view class='item horizontal-list'>
+      <view class='item horizontal-list'>
+        <view class="item">小程序描述</view>
+      </view>
+      <view class='item horizontal-list'>
+        <view class="text-annotation"></view>
+        <image src='/images/arrow.png' class='image-size'></image>
+      </view>
+    </view>
+    <view class='item horizontal-list'>
+      <view class='item'>
+        <view class="text-item">关联第三方服务</view>
+      </view>
+      <view class='item'>
+        <view class="text-annotation"></view>
+        <image src='/images/arrow.png' class='image-size'></image>
+      </view>
+    </view>
+  </view>
+  <view class='panel vertical-list'>
+    <view class='item horizontal-list'>
+      <view class="item">开发信息</view>
+      <view class='item'>
+        <view class="text-annotation">未填写</view>
+        <image src='/images/arrow.png' class='image-size'></image>
+      </view>
+    </view>
+  </view>
+  <view class='panel vertical-list'>
+    <view class='item horizontal-list'>
+      <view class='item'>
+        <view>小程序管理员</view>
+      </view>
+      <view class='item'>
+        <view class="text-annotation"></view>
+        <image src='/images/arrow.png' class='image-size'></image>
+      </view>
+    </view>
+  </view>
+  <view class='panel vertical-list'>
+    <view class='item horizontal-list'>
+      <view class='item'>
+        <view class="text-item">邮件服务配置</view>
+      </view>
+      <view class='item'>
+        <view class="text-annotation"></view>
+        <image src='/images/arrow.png' class='image-size'></image>
+      </view>
+    </view>
+    <view class='item horizontal-list'>
+      <view class='item'>
+        <view class="text-item">短信服务配置</view>
+      </view>
+      <view class='item'>
+        <view class="text-annotation"></view>
+        <image src='/images/arrow.png' class='image-size'></image>
+      </view>
+    </view>
+    <view class='item horizontal-list'>
+      <view class='item'>
+        <view class="text-item">汇智文档云服务配置</view>
+      </view>
+      <view class='item'>
+        <view class="text-annotation"></view>
+        <image src='/images/arrow.png' class='image-size'></image>
+      </view>
+    </view>
+  </view>
+  <view class='button-vertical'>
+    <button class='button-long' bindtap='createEnv'>
+      删除该小程序
+    </button>
+  </view>
+</view>

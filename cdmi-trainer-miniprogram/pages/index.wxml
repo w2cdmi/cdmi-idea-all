@@ -1,0 +1,199 @@
+<!--index.wxml-->
+<view class='page'>
+  <!--播放画面-->
+  <view class='vertical-list scene-player' bindtouchstart="handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend" wx:if='{{viewPlayer}}' id="scene-player">
+    <image src='/images/wxBackup-bg.png' mode="aspectFit" style="width:100%;background-color:black;"></image>
+  </view>
+  <!--画面解说-->
+  <view wx:if="{{hasPlayerTile}}" class='vertical-list scene-title' id="player-title">
+    <view class='item'>
+      当年，一批直接电影先行者来到中国进行观念启蒙，使得中国当代纪录片开始摆脱陈腐的画面加解说模式，开始让人民说话.
+    </view>
+  </view>
+  <!--当前场景会话中的相关人员和会话显示设置栏 -->
+  <view wx:if="{{hasMultiPlayer}}" class='vertical-list scene-member' id="scene-member">
+    <view class='item horizontal-list'>
+      <!--会话参与人员列表-->
+      <view class='item session-member'>
+        <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+        <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+        <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+        <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+      </view>
+      <!--会话显示快捷设置-->
+      <view class='item session-action'>
+        <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+      </view>
+    </view>
+  </view>
+  <!--会话主窗口 -->
+  <scroll-view scroll-y style="height: {{sessionY}}px;background-color:#f5f5f5;" bindscroll="scroll" bindscrolltoupper='scrollTop' bindscrolltolower='scrollBottom' lower-threshold='10' upper-threshold='10'>
+    <view class='vertical-list session-content' bindtouchstart="handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend">
+      <view class='item horizontal-list'>
+        <view class='item session-message'>
+          <view>
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view>
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx "></image>
+          </view>
+          <view style='width:70%;word-break:break-all;'>
+            <view style="line-height:36rpx;padding:11rpx;background:#fff;border-radius:10rpx;">
+              当年，一批直接.电影先行者来到中国进行观念启蒙，使得中国当代纪录片开始摆脱陈腐的画面加解说模式，开始让人民说话.
+            </view>
+          </view>
+        </view>
+        <view class='item'>
+          <view class="text-annotation">121</view>
+          <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+        </view>
+      </view>
+      <view class='item horizontal-list'>
+        <view class='item session-message'>
+          <view>
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation">
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation" style='word-break:break-all;'>
+            当年，一批直接电影先行者来到中国进行观念启蒙，使得中国当代纪录片开始摆脱陈腐的画面加解说模式，开始让人民说话.
+          </view>
+        </view>
+      </view>
+      <view class='item horizontal-list'>
+        <view class='item session-message'>
+          <view>
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation">
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation" style='word-break:break-all;'>
+            当年，一批直接电影先行者来到中国进行观念启蒙，使得中国当代纪录片开始摆脱陈腐的画面加解说模式，开始让人民说话.
+          </view>
+        </view>
+      </view>
+            <view class='item horizontal-list'>
+        <view class='item session-message'>
+          <view>
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation">
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation" style='word-break:break-all;'>
+            当年，一批直接电影先行者来到中国进行观念启蒙，使得中国当代纪录片开始摆脱陈腐的画面加解说模式，开始让人民说话.
+          </view>
+        </view>
+      </view>
+            <view class='item horizontal-list'>
+        <view class='item session-message'>
+          <view>
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation">
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation" style='word-break:break-all;'>
+            当年，一批直接电影先行者来到中国进行观念启蒙，使得中国当代纪录片开始摆脱陈腐的画面加解说模式，开始让人民说话.
+          </view>
+        </view>
+      </view>
+            <view class='item horizontal-list'>
+        <view class='item session-message'>
+          <view>
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation">
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation" style='word-break:break-all;'>
+            当年，一批直接电影先行者来到中国进行观念启蒙，使得中国当代纪录片开始摆脱陈腐的画面加解说模式，开始让人民说话.
+          </view>
+        </view>
+      </view>
+      <view class='item horizontal-list'>
+        <view class='item session-message'>
+          <view>
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation">
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation" style='word-break:break-all;'>
+            当年，一批直接电影先行者来到中国进行观念启蒙，使得中国当代纪录片开始摆脱陈腐的画面加解说模式，开始让人民说话.
+          </view>
+        </view>
+      </view>
+      <view class='item horizontal-list'>
+        <view class='item session-message reverse'>
+          <view>
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation">
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation" style='word-break:break-all;'>
+            当年，一批直接电影先行者来到中国进行观念启蒙，使得中国当代纪录片开始摆脱陈腐的画面加解说模式，开始让人民说话.
+          </view>
+        </view>
+      </view>
+      <view class='item horizontal-list'>
+        <view class='item session-message reverse'>
+          <view>
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation">
+            <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+          </view>
+          <view class="text-annotation" style='word-break:break-all;'>
+            当年，一批直接电影先行者来到中国进行观念启蒙，使得中国当代纪录片开始摆脱陈腐的画面加解说模式，开始让人民说话.
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <!--操作结果临时显示栏 -->
+  <view class='horizontal-list tool-confirm' id='tool-confirm' wx:if="{{hasToolConfirm}}">
+    <view class='item horizontal-list'>
+      <view class='item'>
+        <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+      </view>
+      <view class='item'>
+        语音进度栏 :{{text}}
+      </view>
+    </view>
+    <view class='item horizontal-list'>
+      <view class='item'>
+        提交
+      </view>
+    </view>
+  </view>
+  <!--底部常用操作条 -->
+  <view class='horizontal-list tool-bar' id='tool-bar'>
+    <view class='item tool-language'>
+      <view class="text-item">英语</view>
+    </view>
+    <view class='item tool-record'>
+      <view class="text-item">长按说话</view>
+    </view>
+    <view class='item tool-scenechange'>
+      <view class="text-item">
+        <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+      </view>
+    </view>
+    <view class='item tool-setting'>
+      <view class="text-annotation">设置</view>
+    </view>
+    <view class='item tool-invite'>
+      <view class="text-annotation">邀请</view>
+    </view>
+  </view>
+  <!--鹰眼 -->
+  <view class='horizontal-list hawkeye' catchtap='viewPlayer' wx:if='{{!viewPlayer}}'>
+    <view>
+      <image src='/images/wxBackup-bg.png' style="width:48rpx;height:48rpx;margin-right:10rpx"></image>
+    </view>
+  </view>
+</view>

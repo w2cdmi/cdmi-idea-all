@@ -1,0 +1,79 @@
+/* miniprogram/pages/index.wxss */
+
+page {
+    height: 100%;
+}
+
+.cognation {
+    flex-grow: 1;
+    overflow-x: hidden;
+}
+
+.slider {
+    background-color: "000";
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.slider slider {
+    width: 80rpx;
+    height: 40px;
+}
+
+.slider slider {
+    flex-grow: 1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: #f7f7f7;
+}
+
+.row .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: #eee;
+    border: 1px solid red;
+}
+
+.switch {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.switch .button {
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 32rpx;
+    background-color: red;
+    border-bottom-right-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+    padding: 5rpx 20rpx;
+    color: white;
+    text-align: center;
+}
+
+.switch .text {
+    padding: 5rpx 20rpx;
+    font-size: 24rpx;
+    text-align: center;
+}

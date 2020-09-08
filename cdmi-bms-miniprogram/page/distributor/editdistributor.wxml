@@ -1,0 +1,125 @@
+<view class='page'>
+    <form bindsubmit="createDistributor">
+        <view class='item person-item flex-between' bindtap='selectSuperior'>
+            <view class='text-horizontal'>
+                <view class='text-item'>上级渠道商</view>
+            </view>
+            <view class='flex-align-center'>
+                <image src='{{superior.headImage}}' style='width:48rpx;height:48rpx;' wx:if="{{superior.id != null && superior.id != ''}}"></image>
+                <view class="text-annotation" wx:if="{{superior.id == null || superior.id == ''}}">无</view>
+                <view class="text-annotation" wx:if="{{superior.id != null && superior.id != ''}}">{{superior.name}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+                <input name="superior" type="text" value="{{superior.id}}" style='display:none' />
+            </view>
+        </view>
+        <view class='item flex-between' bindtap='selectDistributorType'>
+            <view class='text-horizontal'>
+                <view class='text-item'>渠道商类型</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation" wx:if="{{distributor_type == 'Person'}}">个人</view>
+                <view class="text-annotation" wx:if="{{distributor_type == 'Enterprise'}}">企业</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+                <input name="type" type="text" value="{{distributor_type}}" style='display:none' />
+            </view>
+        </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:21%'>渠道商名称</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="name" placeholder="必填" type="text" value="" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+            <!-- <view class='flex-align-center'>
+                <image src='/images/icon/cancel.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+            </view> -->
+        </view>
+        <view class='item flex-between' wx:if="{{distributor_type == 'Enterprise'}}">
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:21%'>营业执照号</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="licence" placeholder="必填" type="text" value="{{licence}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='item flex-between' wx:if="{{distributor_type == 'Person'}}">
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:21%'>身份证号码</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="idcard" placeholder="必填" type="text" value="{{idcard}}" maxlength="18" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='item person-item flex-between' bindtap='clearStorage'>
+            <view class='text-horizontal'>
+                <view class="text-item" wx:if="{{distributor_type == 'Person'}}">所在区域</view>
+                <view class="text-item" wx:if="{{distributor_type == 'Enterprise'}}">工商所在地</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">四川 - 成都</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item flex-between' bindtap='clearStorage'>
+            <view class='text-horizontal'>
+                <view class="text-item">渠道商类型</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">广告渠道商</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item person-item flex-between' bindtap='clearStorage'>
+            <view class='text-horizontal'>
+                <view class="text-item">渠道商级别</view>
+                <input name='level' type="text" value="{{level}}" style='width:100%;display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation" wx:if="{{level==''}}">未设置</view>
+                <view class="text-annotation" wx:if="{{level!=''}}">{{level}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item flex-between' wx:if="{{distributor_type == 'Enterprise'}}">
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:21%'>联系人姓名</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name='linkname' placeholder="必填" type="text" value="{{linkname}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <!-- <view class='item flex-between' bindtap='clearStorage'>
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:21%'>职务</view>
+                <view class='text-item' style='flex:1;'>
+                    <input placeholder="选填" type="text" value="老板" maxlength="50" auto-focus style='width:100%' />
+                </view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation"></view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view> -->
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:21%'>联系电话</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name='linkmobile' placeholder="必填" type="number" value="{{linkmobile}}" maxlength="11" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='item person-item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:21%'>邮件地址</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name='linkmail' placeholder="选填" type="text" value="{{linkmail}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType='submit'>
+                提交保存
+            </button>
+        </view>
+    </form>
+</view>

@@ -1,0 +1,14 @@
+<!--page/agreement/agreementResult.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <image src='/images/refuse-auth.png'></image>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='navigateToMiniProgram' wx:if="{{status == 'OK'}}">
+            跳转到分销商业务管理系统小程序
+        </view>
+        <view class='long-buttom' bindtap='' wx:if="{{status == 'Rejected'}}">
+            退出小程序
+        </view>
+    </view>
+</view>

@@ -1,0 +1,17 @@
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{microservices}}" wx:key="index" wx:for-item="microservice" class='item flex-between' bindtap='jumpToMicroservice' data-title='{{microservice.name}}' data-id='{{microservice.id}}'>
+            <view class='align-center'>
+                <view>{{microservice.name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createMicroservice'>
+            新增平台微服务
+        </view>
+    </view>
+</view>

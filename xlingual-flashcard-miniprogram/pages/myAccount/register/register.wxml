@@ -1,0 +1,41 @@
+<!--pages/myAccount/register/register.wxml-->
+<view class='margin-top flex-center'>
+    <view class='view-width'>
+        <view class="input-box flex-space-around">
+            <view class='img-container'>
+                <image src='/pages/images/myAccount/login-user-icon.png'></image>
+            </view>
+            <input placeholder='请输入您的手机号码' bindinput='getInputData' data-name="phone" value="{{phone}}"></input>
+            <view class='code' bindtap='getCode'>{{countdown === 0 ? '获取验证码' : countdown + '后重试'}}</view>
+        </view>
+        <view class="input-box flex-space-around">
+            <view>
+                <image src='/pages/images/myAccount/login-user-icon.png'></image>
+            </view>
+            <input placeholder='请输入您的验证码' bindinput='getInputData' data-name="code" value="{{code}}"></input>
+        </view>
+        <view class="input-box flex-space-around">
+            <view>
+                <image src='/pages/images/myAccount/login-password-icon.png'></image>
+            </view>
+            <input type='password' placeholder='请输入您的密码' bindinput='getInputData' data-name="password" value="{{password}}"></input>
+        </view>
+        <view class="input-box flex-space-around border-bottom">
+            <view>
+                <image src='/pages/images/myAccount/login-password-icon.png'></image>
+            </view>
+            <input placeholder='请输入机构邀请码' bindinput='getInputData' data-name="rcode" value="{{rcode}}"></input>
+        </view>
+    </view>
+</view>
+
+<view class="flex-center margin-top">
+    <view class='registerBtn' bindtap='register'>注册</view>
+</view>
+
+<view class="agreement">
+    <checkbox-group bindchange="checkboxChange">
+        <checkbox checked="{{checked}}"></checkbox>
+    </checkbox-group>
+    <view>我已看过并同意《用户使用协议》</view>
+</view>

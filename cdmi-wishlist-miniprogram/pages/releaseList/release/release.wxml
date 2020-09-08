@@ -1,0 +1,58 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view>
+    <view class='title'>商品信息</view>
+    <view class='flex-item input-item'>
+        <view class='input-title'>商品名称</view>
+        <view>
+            <input auto-focus name="title" placeholder='商品名称'></input>
+        </view>
+    </view>
+    <view class='flex-item input-item'>
+        <view class='input-title'>市场价格</view>
+        <view>
+            <input name="originalPrice" placeholder='市场价格'></input>
+        </view>
+    </view>
+    <view class='flex-item input-item'>
+        <view class='input-title'>众筹价格</view>
+        <view>
+            <input name="actualPrice" placeholder='众筹价格'></input>
+        </view>
+    </view>
+    <view class='flex-item input-item'>
+        <view class='input-title'>抽奖时间</view>
+        <view>
+            <picker mode="date" value="{{selectDate}}" start="{{startDate}}" bindchange='bindChangeDate'>
+                <input name="salesValidity" value="{{selectDate}}" placeholder='选择日期'></input>
+            </picker>
+        </view>
+    </view>
+    <view class='flex-item input-item'>
+        <view class='input-title'></view>
+        <view>
+            <picker mode="time" value="{{selectTime}}" bindchange='bindChangeTime'>
+                <input name="salesTime" value="{{selectTime}}" placeholder='选择时间'></input>
+            </picker>
+        </view>
+    </view>
+    <view class='flex-item input-item'>
+        <view class='input-title'>参与人数</view>
+        <view>
+            <input name="ratedNumber" placeholder='参与人数'></input>
+        </view>
+    </view>
+</view>
+
+<view class='title margin-top'>商品封面</view>
+<view class='image-panel'>
+    <block wx:for="{{images}}" wx:key="this">
+        <view><image src='{{item}}' class='image-size'></image></view>
+    </block>
+    <view bindtap='selectImages'><image src='/images/image-add.png' class='image-size'></image></view>
+</view>
+
+<view class='flex-item flex-center' style='margin-top:20px;'>
+    <button class='lotteryBtn' form-type='submit'>发起众筹</button>
+</view>
+
+</form>

@@ -1,0 +1,8 @@
+@import "../../myScene/myScene.wxss";
+
+.release-common {
+    line-height: 50rpx;
+    padding: 10rpx;
+    overflow: hidden;
+    clear: both;
+}

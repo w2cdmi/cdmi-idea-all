@@ -1,0 +1,15 @@
+<!--console/league/channeloptions.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <checkbox-group bindchange="checkboxChange">
+            <view wx:for="{{channels}}" wx:key="index" wx:for-item="channel" class='item flex-between' bindtap='selectChannel' data-title='{{channel.name}}' data-id='{{channel.id}}'>
+                <view class='align-center'>
+                    <view>{{channel.name}}</view>
+                </view>
+                <view class='flex-align-center'>
+                    <checkbox value="{{channel.id}}" checked="{{channel.checked}}" />
+                </view>
+            </view>
+        </checkbox-group>
+    </view>
+</view>

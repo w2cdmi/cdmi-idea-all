@@ -1,0 +1,93 @@
+<!--console/school/index.wxml-->
+<view class='page'>
+    <view class='item person-item flex-between'>
+        <view class='text-horizontal' style="flex:1">
+            <view class='text-item' style='width:21%'>应用名称</view>
+            <view class='text-item' style='flex:1;'>{{app_name}}</view>
+        </view>
+        <view class='flex-align-center' style='width:68rpx'>
+        </view>
+    </view>
+    <view class='item person-item flex-between'>
+        <view class='text-horizontal' style="flex:1">
+            <view class='text-item' style='width:21%'>课程制作</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+
+    <view class='item flex-between' bindtap='jumpToAppDetail' data-id='jm0229328192'>
+        <view class='align-center'>
+            <view>专家专栏</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToAppDetail' data-id='jm0229328192'>
+        <view class='align-center'>
+            <view>在线课程</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item person-item flex-between' bindtap='jumpToAppDetail' data-id='jm0229328192'>
+        <view class='align-center'>
+            <view>专家服务</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToExperts'>
+        <view class='align-center'>
+            <view>签约专家</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item person-item flex-between' bindtap='jumpToShops'>
+        <view class='align-center'>
+            <view>培训机构</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+
+    <view class='item flex-between' bindtap='jumpToCourseCataloies'>
+        <view class='align-center'>
+            <view>课程类目</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToChannels'>
+        <view class='align-center'>
+            <view>频道类型</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToMarkers'>
+        <view class='align-center'>
+            <view>分类标识</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <!-- <view class='item flex-between' bindtap='jumpToAppDetail' data-id='jm0229328194'>
+    <view class='align-center'>
+      <view>专家领域</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view> -->
+</view>

@@ -1,0 +1,15 @@
+<scroll-view scroll-y="{{true}}" class='list'>
+    <view wx:for="{{dataList}}" class='list-item' wx:key="*this" data-item="{{item}}" bindlongpress='showDrawer' bindtap='gotoDetail'>
+        <image src='{{item.cover}}' class='image-style'></image>
+        <view class='name-text'>{{item.name}}</view>
+    </view>
+</scroll-view>
+
+<view class='mask' wx:if="{{showDrawer}}" bindtap='hideDrawer'></view>
+<view class='drawer' wx:if="{{showDrawer}}">
+    <view bindtap='gotoDetail'>查看场景</view>
+    <view bindtap='deleteScreen'>删除场景</view>
+    <!-- <view bindtap='hideDrawer'>取消</view> -->
+</view>
+
+<view></view>

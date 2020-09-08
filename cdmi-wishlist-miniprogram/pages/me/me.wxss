@@ -1,0 +1,110 @@
+/* 小图标  */
+
+.image-icon {
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+}
+
+.image-size {
+    width: 8px;
+    height: 14px;
+    margin-left: 10px;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.align-center view {
+    height: 20px;
+    line-height: 20px;
+}
+
+.align-center text {
+    height: 14px;
+    line-height: 14px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    background: #fff;
+    padding: 10px 15px;
+    border-top: 1px solid #f8f8f8;
+}
+
+.person-item {
+    display: flex;
+    padding: 0px 15px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.head-bg {
+    background: #51bfb9;
+    height: 35px;
+}
+
+.head-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.head-bg-bottom {
+    background: #fff;
+    height: 68px;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.nickName{
+    text-align:center;
+    line-height:75px;
+}
+
+.contact-customer-service {
+    position: relative;
+    width: 400rpx;
+    height: 80rpx;
+    margin: 0 auto;
+    background: #51bfb9;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 80rpx;
+    margin-top: 60rpx;
+    color: #fff;
+}
+
+.contact-customer-service contact-button {
+    position: absolute;
+    opacity: 0;
+}
+
+.footer{
+    text-align:center;
+    padding-bottom:20rpx;
+    margin-top:6px;
+}
+.footer view{
+    font-size: 24rpx;
+    color: #666;
+    margin-top:4rpx;
+}

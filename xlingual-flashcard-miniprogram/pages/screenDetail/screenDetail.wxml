@@ -1,0 +1,70 @@
+<view>
+    <swiper autoplay="{{autoplay}}" interval="{{interval}}" style='height:{{swipeHeight}}' bindchange="bindchangeSwiper">
+        <swiper-item wx:for="{{listDetail}}" wx:key="*this">
+            <image src='{{item.img}}' class='image-style' mode="aspectFit"></image>
+            <view class='content'>
+                <view wx:if="{{showText}}">{{currentText}}</view>
+            </view>
+        </swiper-item>
+    </swiper>
+
+    <view class='play-item'>
+        <view class='flex-item control-btn'>
+            <view class='flex-item' bindtap='palyAudio'>
+                <image src='../images/play/play.png' class='image-icon'></image>
+                <view>播放</view>
+            </view>
+            <view class='flex-item' bindtap='toggleShowText'>
+                <image src='../images/play/conceal.png' class='image-icon'></image>
+                <view>{{hideShowWord}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class='flex-bottom flex-item' wx:if="{{isShared=='template' || isShared=='customShare'}}">
+        <view class='scroll-view-width'>
+            <scroll-view class='scroll-view-style {{scrollWidth < 750 ? "justify-center" : ""}}' scroll-x style='width: {{scrollWidth}}rpx; margin-left: {{-scrollWidth/2}}rpx'>
+                <view wx:for="{{language}}" wx:key="*this" data-index="{{index}}" bindtap='selectLanguage' class='scroll-view-item {{ index === selectedLanguageIndex ? "selected-item" : ""}}'>{{item.name}}</view>
+            </scroll-view>
+        </view>
+    </view>
+
+    <view class='flex-bottom flex-item' wx:if="{{isShared=='myScreen'}}">
+        <view class='scroll-view-width-sm'>
+            <scroll-view class='scroll-view-width-sm white-space' scroll-x>
+                <view wx:for="{{language}}" wx:key="*this" data-index="{{index}}" bindtap='selectLanguage' class='scroll-view-item {{ index === selectedLanguageIndex ? "selected-item" : ""}}'>{{item.name}}</view>
+            </scroll-view>
+        </view>
+        <view class='share' bindtap='showDrawer'>分享场景</view>
+        <view class='test' bindtap='test'>测试</view>
+    </view>
+
+    <view class='flex-bottom flex-item add-style' wx:if="{{isShared=='workTemplate'}}">
+        <view class='scroll-view-width'>
+            <scroll-view class='white-space' scroll-x>
+                <view wx:for="{{language}}" wx:key="*this" data-index="{{index}}" bindtap='selectLanguage' class='scroll-view-item {{ index === selectedLanguageIndex ? "selected-item" : ""}}'>{{item.name}}</view>
+            </scroll-view>
+        </view>
+        <view class='leading-my-scene' bindtap='leadingMyScene'>导入我的场景</view>
+    </view>
+
+    <view class='flex-bottom flex-item add-style' wx:if="{{isShared=='workMyScene'}}">
+        <view class='scroll-view-width-sm-work'>
+            <scroll-view class='scroll-view-width-sm-work white-space' scroll-x>
+                <view wx:for="{{language}}" wx:key="*this" data-index="{{index}}" bindtap='selectLanguage' class='scroll-view-item {{ index === selectedLanguageIndex ? "selected-item" : ""}}'>{{item.name}}</view>
+            </scroll-view>
+        </view>
+        <view class='edit-secne' bindtap='editScene'>编辑场景</view>
+    </view>
+</view>
+
+<audio id="myAudio" src='{{currentAudio != "noAudio" ? currentAudio : ""}}'></audio>
+
+<view class='mask' wx:if="{{showDrawer}}" bindtap='hideDrawer'></view>
+<view class='drawer' wx:if="{{showDrawer}}">
+    <view bindtap='releaseScreen' wx:if="{{res[0].status == 0}}">发布场景到主页</view>
+    <button bindtap='send2Frient' open-type='share'>发布场景给微信好友</button>
+    <view bindtap='hideDrawer'>取消</view>
+</view>
+
+<view class="backBtn" bindtap='backHomepage' wx:if="{{showBackBtn}}">返回首页</view>

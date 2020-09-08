@@ -1,0 +1,23 @@
+<view class='all-container'>
+
+    <view class='login-content'>
+        <view class='login-common login-user-content'>
+            <view>
+                <image src='../../images/myAccount/login-user-icon.png'></image>
+            </view>
+            <input bindinput="getInputData" type='number' value='{{phoneNumber}}' data-name="phoneNumber" placeholder='请输入您的手机号码'></input>
+        </view>
+        <view class='login-common'>
+            <view>
+                <image src='../../images/myAccount/login-password-icon.png'></image>
+            </view>
+            <input bindinput='getInputData' type='password' value="{{password}}" data-name="password" placeholder='请输入您的密码'></input>
+        </view>
+    </view>
+    <button class='login-btn' open-type='getUserInfo' bindgetuserinfo='userLogin'>授权登录</button>
+
+    <view class='flex-item'>
+        <view bindtap='gotoResetPassword'>忘记密码</view>
+        <view bindtap='gotoRegister'>立即注册</view>
+    </view>
+</view>

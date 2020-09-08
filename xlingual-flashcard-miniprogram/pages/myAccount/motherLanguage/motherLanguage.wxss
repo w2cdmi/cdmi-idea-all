@@ -1,0 +1,31 @@
+.mother-language-container {
+    height: 100%;
+    background: #fff;
+}
+
+.mother-language-content {
+    padding: 0 30rpx;
+    font-size: 28rpx;
+    color: #333;
+    line-height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #f1f1f1;
+}
+
+.mother-language-content image {
+    width: 44rpx;
+    height: 44rpx;
+    vertical-align: middle;
+}
+
+.choose-mother-language {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    line-height: 45px;
+    border-top: 1px solid #f1f1f1;
+    text-align: center;
+    background: #fff;
+}

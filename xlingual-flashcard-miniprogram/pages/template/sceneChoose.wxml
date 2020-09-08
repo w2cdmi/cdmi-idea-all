@@ -1,0 +1,70 @@
+<!-- 场景分类选择模版 -->
+<template name="scene-choose">
+    <view class='scene-choose-content'>
+        <view class='scene-choose-con-top'>
+            <view class='scene-choose-return'  bindtap='editReturn'>
+                <image hidden="{{isShowBack}}" src='/pages/images/icon/icon_common_back_normal@2x.png'></image>
+            </view>
+            <view class='scene-choose-middle' bindtap='editChooseScene'>
+                <view class='scene-choose-middle-con'>
+                    <view class='scene-name-title'>{{sceneName}}</view>
+                    <view class='scene-choose-middle-opt'>
+                        <image src='/pages/images/icon/triangle-icon.png'></image>
+                    </view>
+                </view>
+
+            </view>
+            <view class='scene-choose-menue' bindtap='cardOperate'>
+                <image src='/pages/images/icon/menue-icon.png'></image>
+            </view>
+        </view>
+
+    </view>
+    <view class='scene-choose-detail' wx:if="{{isEditChoose}}">
+        <view class='scene-choose-common'>
+            <view>场景名称</view>
+            <input type='text' placeholder='在此输入场景名称' bindinput='changeSceneName' value='{{changesceneName}}'></input>
+        </view>
+        <view class='scene-choose-common'>
+            <view>分类</view>
+            <view bindtap='chooseSceneType' class='scene-choose-catory'>{{categoryName}}</view>
+        </view>
+        <view class='scene-choose-common secne-choose-lang' bindtap='setChooseLang'>
+            <view>语言</view>
+            <view class='scene-choose-langs'>
+                <view class='scene-choose-langs-title'>{{learnLang}}</view>
+                <view>
+                    <image src='/pages/images/myAccount/more-icon.png'></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='card-operate-container' wx:if="{{isOperateCard}}">
+        <view class='card-operate-tab'>
+            <view class='card-delete {{isShowDelete ? "add-bg" : "" }}' bindtap='deleteCard'>删除卡片</view>
+            <view class='{{isShowSort ? "add-bg" : ""}}' bindtap='sortOperate'>调整次序</view>
+        </view>
+        <scroll-view scroll-y style='height:{{scrollHeight}}'>
+            <view class='card-content-detail' wx:for="{{listDetail}}" wx:key="*this" wx:for-item="items" wx:if="{{listDetail.length-1 !== index}}">
+                <view wx:if="{{isShowDelete}}" class='delete-card' data-item="{{items}}" data-index="{{index}}" bindtap='deleteOneCard'>
+                    <image src='/pages/images/icon/recycle-bin.png'></image>
+                </view>
+                <view class='card-img'>
+                    <image src="{{items.img}}"></image>
+                </view>
+                <view class='card-content-right'>
+                    <view class='card-lang-info card-lang-info-lang'>
+                        <view wx:for="{{language}}" wx:key="*this">{{item.name}}：</view>
+                    </view>
+                    <view class='card-lang-info card-lang-info-word'>
+                        <view wx:for="{{listDetailName[index]}}" wx:key="*this">{{item}}</view>
+                    </view>
+                </view>
+                <view wx:if="{{isShowSort}}" class='card-sort'>
+                    <image bindtap='escSort' data-item="{{items}}" data-index="{{index}}" wx:if="{{index !== 0}}" src='/pages/images/icon/esc-sort-icon.png'></image>
+                    <image bindtap='descSort' data-item="{{items}}" data-index="{{index}}" wx:if="{{index !== listDetail.length-2}}" src='/pages/images/icon/desc-sort-icon.png'></image>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</template>

@@ -1,0 +1,144 @@
+<!--console/relatives.wxml-->
+<view class='page'>
+    <!-- <view class="pannel">
+        <view class="atlas vertical">
+            <view class="horizontal">
+                <view class='item vertical'>
+                    <view>
+                        出五服
+                    </view>
+                    <view>
+                        六世祖
+                    </view>
+                </view>
+            </view>
+            <view class="horizontal">
+                <view class='item vertical'>
+                    <view>
+                        出五服
+                    </view>
+                    <view>
+                        叔伯高祖
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        四服
+                    </view>
+                    <view>
+                        高祖
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        出五服
+                    </view>
+                    <view>
+                        高祖姑
+                    </view>
+                </view>
+            </view>
+            <view class="horizontal">
+                <view class='item vertical'>
+                    <view>
+                        出五服
+                    </view>
+                    <view>
+                        堂曾祖
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        四服
+                    </view>
+                    <view>
+                        叔伯曾祖
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        三服
+                    </view>
+                    <view>
+                        曾祖
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        四服
+                    </view>
+                    <view>
+                        曾祖姑
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        出五服
+                    </view>
+                    <view>
+                        堂曾祖姑
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        出五服
+                    </view>
+                    <view>
+                        从爷
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        四服
+                    </view>
+                    <view>
+                        堂爷
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        三服
+                    </view>
+                    <view>
+                        叔伯爷
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        二服
+                    </view>
+                    <view>
+                        祖爷
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        三服
+                    </view>
+                    <view>
+                        祖姑
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        四服
+                    </view>
+                    <view>
+                        堂祖姑
+                    </view>
+                </view>
+                <view class='item vertical'>
+                    <view>
+                        出五服
+                    </view>
+                    <view>
+                        从祖姑
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view> -->
+    <view class='pannel'>
+        <image src="/images/cognation.jpg"></image>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+.category-container {
+    height: 100%;
+    background: #fff;
+}
+
+.category-content {
+    padding: 0 30rpx;
+    font-size: 28rpx;
+    color: #333;
+    line-height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.category-content image {
+    width: 44rpx;
+    height: 44rpx;
+    vertical-align: middle;
+}

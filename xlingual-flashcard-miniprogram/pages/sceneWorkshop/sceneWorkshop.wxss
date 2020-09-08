@@ -1,0 +1,66 @@
+.scene-workshop-bg {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.scene-workshop-bg-img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 111;
+}
+
+.scene-workshop-bg-img image {
+    width: 100%;
+    height: 100%;
+}
+
+.scene-workshop-container, .scene-workshop-every {
+    display: flex;
+}
+
+.scene-workshop-container {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: fixed;
+    z-index: 222;
+}
+
+.scene-workshop-every {
+    width: 100%;
+    background: #fff;
+    border-radius: 25rpx;
+    margin-bottom: 40rpx;
+    padding: 30rpx 0;
+}
+
+.scene-workshop-common {
+    margin: 0 60rpx 0 80rpx;
+}
+
+.scene-workshop-common image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.scene-workshop-common-title text {
+    display: block;
+}
+
+.scene-workshop-common-title text:first-of-type {
+    font-size: 40rpx;
+    color: #333;
+    line-height: 56rpx;
+}
+
+.scene-workshop-common-title text:last-of-type {
+    font-size: 30rpx;
+    color: #666;
+    line-height: 60rpx;
+}

@@ -1,0 +1,23 @@
+<!--console/school/trainplace.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{branches}}" wx:key="index" wx:for-item="branch" class='item flex-between' bindtap='jumpToBranchDetail' data-title='{{branch.name}}' data-id='{{branch.id}}'>
+            <view class='text-horizontal'>
+                <view class="text-item">{{branch.name}}</view>
+                <view class="text-annotation">未签约</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">四川-成都-天府新区-天府大道2325号</view>
+                <view class="text-item">
+                    <image wx:if="{{expert.imageHead == '' || expert.imageHead == null}}" src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;'></image>
+                </view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createBranch'>
+            新增培训网点
+        </view>
+    </view>
+</view>

@@ -1,0 +1,103 @@
+<!--console/school/index.wxml-->
+<view class='page'>
+    <view class='item person-item flex-between'>
+        <view class='text-horizontal' style="flex:1">
+            <view class='text-item' style='width:21%'>应用名称</view>
+            <view class='text-item' style='flex:1;'>{{app_name}}</view>
+        </view>
+        <view class='flex-align-center' style='width:68rpx'>
+        </view>
+    </view>
+        <view class='item person-item flex-between' bindtap='jumpToTest'>
+        <view class='align-center'>
+            <view>模拟测试</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+
+    <view class='item flex-between' bindtap='jumpToLeagueProject'>
+        <view class='align-center'>
+            <view>项目草稿</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToLeagueItem'>
+        <view class='align-center'>
+            <view>评论管理</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item person-item flex-between' bindtap='jumpToLeague'>
+        <view class='align-center'>
+            <view>加盟申请</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+
+    <view class='item flex-between' bindtap='jumpToReleaseProject'>
+        <view class='align-center'>
+            <view>招商项目</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item person-item flex-between' bindtap='jumpToLeague'>
+        <view class='align-center'>
+            <view>机构管理</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+
+    <view class='item person-item flex-between' bindtap='jumpToAdPannel'>
+        <view class='align-center'>
+            <view>广告位管理</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+
+    <view class='item flex-between' bindtap='jumpToCourseCataloies' data-marker="XMLM" data-channel="PDLX">
+        <view class='align-center'>
+            <view>项目类目</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToChannels' data-marker="PDLX">
+        <view class='align-center'>
+            <view>频道类型</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToChannels' data-marker="TZED">
+        <view class='align-center'>
+            <view>投资额度</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToMarkers'>
+        <view class='align-center'>
+            <view>分类标识</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+</view>

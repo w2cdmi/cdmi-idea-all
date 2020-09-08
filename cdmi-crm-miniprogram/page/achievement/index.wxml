@@ -1,0 +1,83 @@
+<!--page/achievement/index.wxml-->
+<view class='page'>
+    <view class='view-bg border-bottom'>
+        <view class='history-view'>
+            <view class='history-view-left' bindtap='gotoPersonDetail' data-detail="personDetail">
+                <view class='history-view-title'>本月收益</view>
+                <view class='font-size-color'>1200.00</view>
+                <view class='history-view-today-title'>今日+35.04</view>
+            </view>
+            <view class='history-view-middle'></view>
+            <view class='history-view-right' bindtap='gotoProfitDetail' data-detail="profitDetail">
+                <view class='history-view-title'>历史总收益
+                    <image class='small-img history-show' src='/images/me/show.png'></image>
+                </view>
+                <view class='font-size-color'>350000.00</view>
+                <view class='history-view-today-title'>上月+2500.00</view>
+            </view>
+        </view>
+    </view>
+    <!--如果存在多级经销商，这里显示到达下级经销商的-->
+    <view class='view-bg' wx:if="{{isMultilevel==true}}">
+        <view class='my-grade-growth'>分销商等级</view>
+        <view class='level-view'>
+            <view>
+                <view>
+                    <image class='big-img' src='/images/me/share/share-level1.png'></image>
+                </view>
+                <view>金牌级</view>
+            </view>
+            <view class='level-view-middle'>
+                <view>还差350000.00升级为钻石级经销商</view>
+                <view>
+                    <view class='gray-bg'>
+                        <view class='red-bg' style='width:{{(2400/5600)*100}}%'></view>
+                    </view>
+                </view>
+                <view class='level-number-view'>
+                    <view class='level-between'>1200</view>
+                    <view>2400/5600</view>
+                    <view class='level-between'>5600</view>
+                </view>
+            </view>
+            <view>
+                <view>
+                    <image class='big-img' src='/images/me/share/share-level3.png'></image>
+                </view>
+                <view>钻石级</view>
+            </view>
+        </view>
+    </view>
+    <view class='view-bg border-bottom' style='border-top:1px solid #e5e5e5'>
+        <view class='history-view'>
+            <view class='history-view-left' bindtap='gotoPersonDetail' data-detail="personDetail">
+                <view class='history-view-title'>本月新增渠道</view>
+                <view class='font-size-color'>2/5</view>
+            </view>
+            <view class='history-view-middle'></view>
+            <view class='history-view-right' bindtap='gotoProfitDetail' data-detail="profitDetail">
+                <view class='history-view-title'>本月新增用户
+                    <image class='small-img history-show' src='/images/me/show.png'></image>
+                </view>
+                <view class='font-size-color'>2000/31900</view>
+            </view>
+        </view>
+    </view>
+
+    <view class='page-middle-bg'>当日订单</view>
+    <view class='table'>
+        <view class="row">
+          <view class="column">用户名</view>
+          <view class="column">订购产品</view>
+          <view class="column">订单时间</view>
+          <view class="column">提成金额</view>
+        </view>
+        <view class="row" wx:for="{{orders}}" wx:key="*this" wx:for-item="order">
+          <view class="column">{{order.username}}</view>
+          <view class="column">{{order.productname}}</view>
+          <view class="column">{{order.creatime}}</view>
+          <view class="column">{{order.commission}}</view>
+        </view>
+    </view>
+</view>
+

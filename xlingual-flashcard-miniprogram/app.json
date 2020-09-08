@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/find/find",
+    "pages/defaultTemplate/defaultTemplate",
+    "pages/screenDetail/screenDetail",
+    "pages/createScreen/createScreen",
+    "pages/screenDetail/test/test",
+    "pages/index/index",
+    "pages/sceneWorkshop/sceneWorkshop",
+    "pages/sceneWorkshop/officeTemplate/officeTemplate",
+    "pages/sceneWorkshop/freeCreate/freeCreate",
+    "pages/sceneWorkshop/workMyscene/workMyscene",
+    "pages/myScene/myScene",
+    "pages/myAccount/myAccount",
+    "pages/myAccount/personInfo/personInfo",
+    "pages/myAccount/accountRecharge/accountRecharge",
+    "pages/myAccount/motherLanguage/motherLanguage",
+    "pages/myAccount/learnLanguage/learnLanguage",
+    "pages/myAccount/myCourse/myCourse",
+    "pages/myAccount/buyCourse/buyCourse",
+    "pages/myAccount/buyCourse/courseDetail/courseDetail",
+    "pages/myAccount/userLogin/userLogin",
+    "pages/myAccount/resetPassword/resetPassword",
+    "pages/myAccount/register/register",
+    "pages/authAndLogin/authAndLogin",
+        "pages/category/category"
+    ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1FC3B3",
+    "navigationBarTitleText": "爱灵格",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#1FC3B3",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "/pages/images/icon/icon_scene_find_normal@2x.png",
+        "selectedIconPath": "/pages/images/icon/icon_scene_find_pressed@2x.png"
+      },
+      {
+        "pagePath": "pages/sceneWorkshop/sceneWorkshop",
+        "text": "场景工坊",
+        "iconPath": "/pages/images/icon/icon_scene_workshop_normal@2x.png",
+        "selectedIconPath": "/pages/images/icon/icon_scene_workshop_pressed@2x.png"
+      },
+      {
+        "pagePath": "pages/myScene/myScene",
+        "text": "我的场景",
+        "iconPath": "/pages/images/icon/icon_scene_scene_normal@2x.png",
+        "selectedIconPath": "/pages/images/icon/icon_scene_scene_pressed@2x.png"
+      },
+      {
+        "pagePath": "pages/myAccount/myAccount",
+        "text": "账户",
+        "iconPath": "/pages/images/icon/icon_scene_account_normal@2x.png",
+        "selectedIconPath": "/pages/images/icon/icon_scene_account_pressed@2x.png"
+      }
+    ]
+  }
+}

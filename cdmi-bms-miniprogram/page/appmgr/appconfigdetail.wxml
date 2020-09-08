@@ -1,0 +1,46 @@
+<view class='page'>
+  <view class='item person-item flex-between'>
+    <view class='text-horizontal' style="flex:1">
+      <view class='text-item' style='width:21%'>应用名称</view>
+      <view class='text-item' style='flex:1;'>{{app_name}}</view>
+    </view>
+    <view class='flex-align-center' style='width:68rpx'>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">参数名称</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-item" style="word-break:keep-all">是否启用文档病毒扫描功能</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">参数代码</view>
+    </view>
+    <view class='flex-align-center'>
+    <view class="text-item">box.doc.virusscan.enable</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">值类型</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">单值</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">参数值</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">关闭</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+</view>

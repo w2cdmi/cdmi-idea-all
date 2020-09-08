@@ -1,0 +1,82 @@
+<view class='page'>
+    <view class='item person-item flex-between'>
+        <view class='text-horizontal' style="flex:1">
+            <view class='text-item' style='width:21%'>业务名称</view>
+            <view class='text-item' style='flex:1;'>{{app_name}}</view>
+        </view>
+        <view class='flex-align-center' style='width:68rpx'>
+        </view>
+    </view>
+    <view class='item person-item flex-between' bindtap='jumpToAppDetail' data-title='练习场景的公开目录' data-id='jm0229328194'>
+        <view class='align-center'>
+            <view>优质场景</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToScenesCatalog'>
+        <view class='align-center'>
+            <view>场景分类</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item person-item flex-between' bindtap='jumpToChannels'>
+        <view class='align-center'>
+            <view>频道类型</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item person-item flex-between' bindtap='jumpToAppDetail' data-title='应用支持的游戏模式' data-id='jm0229328194'>
+        <view class='align-center'>
+            <view>已支持的游戏模式</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToAppDetail' data-title='语音识别' data-id='jm0229328194'>
+        <view class='align-center'>
+            <view>语音识别支持语种</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToAppDetail' data-title='多语翻译' data-id='jm0229328194'>
+        <view class='align-center'>
+            <view>多语翻译支持语种</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToAppDetail' data-title='语音合成' data-id='jm0229328194'>
+        <view class='align-center'>
+            <view>语音合成支持语种</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToAppDetail' data-title='语音测评' data-id='jm0229328194'>
+        <view class='align-center'>
+            <view>语音测评支持语种</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='jumpToAppDetail' data-title='语音机器人' data-id='jm0229328194'>
+        <view class='align-center'>
+            <view>语音机器人支持语种</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+</view>

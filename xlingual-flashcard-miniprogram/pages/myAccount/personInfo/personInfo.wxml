@@ -1,0 +1,50 @@
+<view class='person-info-container all-container'>
+    <view class='person-info-head flex-between'>
+        <view class='person-info-head-left'>头像</view>
+        <view class='person-info-head-right'>
+            <view class='person-info-head-right-left'><image src='{{personInfo.head}}'></image></view>
+            <view class='person-info-head-right-right'><image src='/pages/images/myAccount/more-icon.png'></image></view>
+        </view>
+    </view>
+    <view class='person-info-common flex-between' bindtap='setNickName'>
+        <view class='person-content-left'>昵称</view>
+        <view class='person-content-right'>
+            <view>{{personInfo.nickName}}</view>
+            <view><image src='/pages/images/myAccount/more-icon.png'></image></view>
+        </view>    
+    </view>
+    <view class='person-info-common flex-between'>
+        <view class='person-content-left'>国籍</view>
+        <view class='person-content-right'>
+            <view>中国</view>
+            <view><image src='/pages/images/myAccount/more-icon.png'></image></view>
+        </view>    
+    </view>
+    <view class='white-bg'></view>
+    <view class='person-info-common flex-between' bindtap='setPhoneNumber'>
+        <view class='person-content-left'>手机号</view>
+        <view class='person-content-right'>
+            <view>{{personInfo.phoneNumber}}</view>
+            <view><image src='/pages/images/myAccount/more-icon.png'></image></view>
+        </view>    
+    </view>
+    <!-- <view class='person-info-common flex-between'>
+        <view class='person-content-left'>密码修改</view>
+        <view class='person-content-right'>
+            <view><image src='/pages/images/myAccount/more-icon.png'></image></view>
+        </view>    
+    </view> -->
+    <view class='logout-btn' bindtap='userLogout'>退出登录</view>
+</view>
+<!-- 更新用户昵称 -->
+<view class='maskLayer' catchtouchmove="preventTouchMove" wx:if="{{chooseSize}}"></view>
+<view class='choose' wx:if="{{chooseSize}}">
+    <view class='alert-info-title'>更新昵称</view>
+    <view class='alert-content'>
+        <input placeholder='新昵称' bindinput="getNewNickName"></input>
+    </view>
+    <view class='alert-footer'>
+        <view class='cancel-set-nick' bindtap='hideModal'>取消</view>
+        <view class='conform-set-nick' bindtap='confirmChangNickName'>确认</view>
+    </view>
+</view>

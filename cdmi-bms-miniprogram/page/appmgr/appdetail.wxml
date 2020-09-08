@@ -1,0 +1,107 @@
+<view class='page'>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">应用名称</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">{{app_name}}</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">应用图标</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">应用描述</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation" wx:if="{{app_desc == null || app_desc == ''}}" >无</view>
+      <view class="text-annotation" wx:if="{{app_desc != null && app_desc != ''}}">查看详情</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">关联第三方服务</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToAppDevelop' data-title='{{app_name}}' data-id='{{app_id}}'>
+    <view class='text-horizontal'>
+      <view class="text-item">开发管理</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToAppConfig' data-title='{{app_name}}' data-id='{{app_id}}'>
+    <view class='text-horizontal'>
+      <view class="text-item">部署参数</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+    <view class='item flex-between' bindtap='jumpToUser'>
+    <view class='text-horizontal'>
+      <view class="text-item">用户管理</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToConsole' wx:if="{{console_path != null && console_path != ''}}">
+    <view class='text-horizontal'>
+      <view class="text-item">管理后台</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToAppManagerList' data-title='{{app_name}}' data-id='{{app_id}}'>
+    <view class='text-horizontal'>
+      <view class="text-item">应用管理员</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToTerminalApps' data-title='{{app_name}}' data-id='{{app_id}}'>
+    <view class='text-horizontal'>
+      <view class="text-item">终端应用</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToTerminalApps' data-title='{{app_name}}' data-id='{{app_id}}'>
+    <view class='text-horizontal'>
+      <view class="text-item">角色与权限</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='button-vertical'>
+    <view class='long-buttom' bindtap='createEnv'>
+      删除该应用
+    </view>
+  </view>
+</view>

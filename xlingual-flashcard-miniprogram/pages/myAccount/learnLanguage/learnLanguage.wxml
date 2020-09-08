@@ -1,0 +1,19 @@
+<view class='learn-language-container'>
+    <scroll-view scroll-y style='height:{{scrollHeight}}'>
+        <label class='learn-language-label'>
+            <view>{{destMotherLang.name}}</view>
+            <view class='learn-language-label-right'>
+                <view>母语必选</view>
+                <checkbox bindtap='' value='{{languageName}}' class="checkbox-item" disabled="true" checked='{{destMotherLang.checked}}'></checkbox>
+            </view>
+
+        </label>
+        <checkbox-group bindchange="checkboxLangChange">
+            <label wx:for='{{learnLanguageList}}' wx:key="*this" class='learn-language-label'>
+                <view>{{item.name}}</view>
+                <checkbox bindtap='' value='{{item.code}}' class="checkbox-item" checked='{{item.checked}}'></checkbox>
+            </label>
+        </checkbox-group>
+    </scroll-view>
+    <view class='choose-learn-language-btn' bindtap='confirmChooseLang'>确定</view>
+</view>

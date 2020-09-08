@@ -1,0 +1,62 @@
+.list {
+    position: absolute;
+    background: #fff;
+    padding: 0 10rpx;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.list-item {
+    position: relative;
+    width: 230rpx;
+    float: left;
+    margin: 0 0 12rpx 12rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.name-text {
+    height: 40rpx;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.image-style {
+    width: 100%;
+    height: 200rpx;
+}
+
+/* 抽屉层 */
+
+.mask {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.drawer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.drawer> view {
+    background: #fff;
+    border-bottom: 2rpx solid #f1f1f1;
+    height: 100rpx;
+    width: 100%;
+    padding: 0 30rpx;
+    line-height: 100rpx;
+}

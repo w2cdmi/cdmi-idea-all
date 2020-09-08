@@ -1,0 +1,11 @@
+/* page/index.wxss */
+.img{
+  width: 100%;
+  clear:both;
+  display: block;
+ 
+}
+.section__title{
+  clear:both;
+  display: block;
+}

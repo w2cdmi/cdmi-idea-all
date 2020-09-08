@@ -1,0 +1,30 @@
+<!--miniprogram/pages/index.wxml-->
+<view class="container">
+    <!-- <canvas canvas-id="cognation" class='cognation' style="width:{{cavasWidth}}px;height:{{cavasHeight}}px;">
+    </canvas>
+     -->
+     <view class="content">
+        <view class="row" wx:for="{{cognations}}" wx:key="index" wx:for-item="row">
+        <view class="item" style='width:{{rectWidth}}' wx:for="{{row}}" wx:key="index" wx:for-item="item" data-x="{{item.x}}" data-y="{{item.y}}" bindtap='navToPerson'>
+            {{item.x}}-{{item.y}}
+        </view>
+    </view>
+    </view>
+    <!-- <view class="slider">
+        <view class="image">
+            显示
+        </view>
+        <slider bindchange="sliderchange" step="1" min='3' max='5' value='{{view_range}}' activeColor='red' backgroundColor='blue'/>
+    </view> -->
+    <!--操作按钮区-->
+    <view>
+        <view class="switch" bindtap='switchPerson'>
+            <view class="button">
+                    身份切换
+            </view>
+            <view class="text">
+                    当前:{{pointer.relation.value}}
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+<view class='scene-workshop-bg-img'><image src='../images/icon/1.png'></image></view>
+<view class='scene-workshop-bg' style=''>
+    <view class='scene-workshop-container'>
+        <view class='scene-workshop-every' bindtap='goToOfficeTemplate'>
+            <view class='scene-workshop-common'><image src='../images/icon/button_scene_template_normal@2x.png'></image></view>
+            <view class='scene-workshop-common-title'>
+                <text>预设模版</text>
+                <text>PREMADE</text>
+            </view>
+        </view>
+        <view class='scene-workshop-every' bindtap='freeCreateScene'>
+            <view class='scene-workshop-common'><image src='../images/icon/button_scene_free_normal@2x.png'></image></view>
+            <view class='scene-workshop-common-title'>
+                <text>自由创作</text>
+                <text>FREE CREATION</text>
+            </view>
+        </view>
+        <view class='scene-workshop-every' bindtap='workMyscene'>
+            <view class='scene-workshop-common'><image src='../images/icon/button_scene_scene_normal@2x.png'></image></view>
+            <view class='scene-workshop-common-title'>
+                <text>我的场景</text>
+                <text>MY SCENE</text>
+            </view>
+        </view>
+    </view>
+</view>

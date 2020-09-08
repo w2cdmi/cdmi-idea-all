@@ -1,0 +1,79 @@
+<import src="/disk/template/menu.wxml" />
+<view class='page'>
+  <view class='item flex-between' bindtap='gotorecycle'>
+    <view class='text-horizontal'>
+      <view class="text-item">账号</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">wuwei@jmapi.cn</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">管理员</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">张三</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">微信号</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">alpeai</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">移动应用</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">网站应用</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">公众账号</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">小程序</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">第三方平台</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <tabbar selectIndex="4" bind:onShowMenu="onShowMenu"></tabbar>
+  <menu isShowMenu='{{isShowMenu}}' bind:onUploadImage="onUploadImage" bind:onUploadVideo="onUploadVideo" bind:showCreateFolder="showCreateFolder"></menu>
+</view>

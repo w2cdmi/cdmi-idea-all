@@ -1,0 +1,23 @@
+<!--page/agreement/agreementlist.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{agreements}}" wx:key="index" wx:for-item="agreement" class='item flex-between' bindtap='jumpToAgreementDetail' data-buzid='{{agreement.buz_id}}' data-id='{{agreement.id}}'>
+            <view class='align-center'>
+                <view>{{agreement.buz_name}}</view>
+            </view>
+            <view class='align-center'>
+                <view>{{agreement.invitee_name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">{{agreement.status}}</view>
+                <view class="text-annotation">({{agreement.ratio}}%)</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createDistributor'>
+            起草新的合约
+        </view>
+    </view>
+</view>

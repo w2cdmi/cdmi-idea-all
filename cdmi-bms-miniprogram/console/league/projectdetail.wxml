@@ -1,0 +1,143 @@
+<!--console/league/projectdetail.wxml-->
+<view class='page'>
+    <view class='item person-item flex-between' bindtap='selectCatalog' data-marker='XMLM'>
+        <view class='text-horizontal'>
+            <view class="text-item">归属类目</view>
+        </view>
+        <view class='flex-align-center'>
+            <input name="catalogid" type="text" value="{{catalog.id}}" style='width:100%;display:none' />
+            <view class="text-annotation" style="flex:1;" wx:if="{{catalog.id !=null && catalog.id !=''}}">{{catalog.name}}</view>
+            <view class="text-annotation" wx:if="{{catalog.id ==null || catalog.id ==''}}">未选择</view>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between'>
+        <view class='text-horizontal'>
+            <view class='text-item' style='width:21%'>项目名称</view>
+            <view class='text-item' style='flex:1;'>
+                <input name="name" placeholder="必填" type="text" value="{{name}}" maxlength="50" style='width:100%' />
+            </view>
+        </view>
+    </view>
+    <view class='item flex-between'>
+        <view class='text-horizontal'>
+            <view class="text-item" style='width:21%'>投资金额</view>
+            <view class='text-item' style='flex:1;'>
+                <input name="amount" placeholder="必填,单位万元" type="number" maxlength="5" value="{{amount}}" style='width:100%;' />
+            </view>
+        </view>
+    </view>
+    <view class='item person-item  flex-between'>
+        <view class='text-horizontal'>
+            <view class="text-item" style='width:21%'>项目优势</view>
+            <view class='text-item' style='flex:1;'>
+                <input name="advantages" type="text" placeholder="选填,最多16个字，使用空格分开" value="{{advantages}}" style='width:100%' />
+            </view>
+        </view>
+    </view>
+    <view class='item flex-between'>
+        <view class='text-horizontal'>
+            <view class="text-item" style='width:28%'>当前直营店数量</view>
+            <view class='text-item' style='flex:1;'>
+                <input name="directstore_count" type="number" placeholder="如果不是店铺加盟可不填写" maxlength="6" value="{{directstore_count}}" style='width:100%;' />
+            </view>
+        </view>
+    </view>
+    <view class='item person-item flex-between'>
+        <view class='text-horizontal'>
+            <view class="text-item" style='width:28%'>当前加盟店数量</view>
+            <view class='text-item' style='flex:1;'>
+                <input name="napastore_count" type="number" placeholder="如果不是店铺加盟可不填写" maxlength="6" value="{{napastore_count}}" style='width:100%;' />
+            </view>
+        </view>
+    </view>
+
+    <view class='pannel-title flex-between'>
+        <view class='text-horizontal'>
+            <view class='text-horizontal'>
+                <view class='text-item'>招商文案</view>
+            </view>
+        </view>
+    </view>
+    <view class='item flex-between'>
+        <view class='text-horizontal'>
+            <view class="text-item">招商视频</view>
+            <input name="video" type="text" value="{{scheme.video}}" style='width:100%;display:none' />
+        </view>
+        <view class='flex-align-center'>
+            <view class="text-annotation" bindtap='changeVideo'>上传视频</view>
+            <view class="text-annotation" bindtap='playVideo' wx:if="{{scheme.video != null && scheme.video != ''}}">播放</view>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between'>
+        <view class='text-horizontal'>
+            <view class="text-item">招商封面</view>
+            <input name="coverImage" type="text" value="{{scheme.coverImage}}" style='width:100%;display:none' />
+        </view>
+        <view class='flex-align-center'>
+            <view class="text-annotation" bindtap='changeCoverImage'>上传图片</view>
+            <view class="text-annotation" bindtap='playCoverImage' wx:if="{{scheme.coverImage != null && scheme.coverImage != ''}}">预览</view>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between'>
+        <view class='text-horizontal'>
+            <view class="text-item">招商说明</view>
+            <input name="contentImage" type="text" value="{{scheme.contentImage}}" style='width:100%;display:none' />
+        </view>
+        <view class='flex-align-center'>
+            <view class="text-annotation" bindtap='changeContentImage'>上传图片</view>
+            <view class="text-annotation" bindtap='playContentImage' wx:if="{{scheme.contentImage != null && scheme.contentImage != ''}}">预览</view>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='changeIcon'>
+        <view class='text-horizontal'>
+            <view class="text-item">招商说明</view>
+            <input name="contentText" type="text" value="{{scheme.contentText}}" style='width:100%;display:none' />
+        </view>
+        <view class='flex-align-center'>
+            <view class="text-annotation">文字介绍</view>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <button class='long-buttom' bindtap='listAdsense'>
+            审核并发布到广告位
+        </button>
+    </view>
+    <!-- 弹出操作菜单 -->
+    <block>
+        <view wx:if="{{view_window!=''}}" style="position:fixed;z-index:2;height:100%;top:0rpx;width:100%;background-color:#e7e7e7;opacity:0.95">
+        </view>
+        <view style='position:fixed;z-index:3;width:100%; height: 200px;top:50px' wx:if="{{view_window=='video'}}">
+            <video src="{{scheme.video}}" muted="{{true}}" controls="{{false}}" autoplay="{{true}}" loap="{{true}}" enable-progress-gesture="{{false}}" style='width:100%;height:100%;' objectFit='{{cover}}' bindended='hiddenVideo'>
+            </video>
+        </view>
+        <view class='dialog' wx:if="{{view_window=='public'}}">
+            <view class="title">
+                <view>将招商项目发布到指定的广告位</view>
+                <view><image src='/images/icon/canche.png' style='width:40rpx;height40rpx'></image></view>
+            </view>
+            <view class="content">
+                <checkbox-group bindchange="checkboxChange">
+                    <view wx:for="{{adsenses}}" wx:key="index" wx:for-item="adsense" class='item flex-between' style='background-color:#efefef' bindtap='selectAdsense' data-title='{{adsense.name}}' data-id='{{adsense.id}}'>
+                        <view class='align-center'>
+                            <view>{{adsense.name}}</view>
+                            <view class="text-annotation">价格:{{adsense.mouthprice}}/{{adsense.yearprice}}</view>
+                        </view>
+                        <view class='flex-align-center'>
+                            <checkbox value="{{adsense.id}}" checked="{{adsense.checked}}" />
+                        </view>
+                    </view>
+                </checkbox-group>
+            </view>
+            <view class="operation">
+                <div class="button" bindtap='publicToAdsense'>
+                    确定发布
+                </div>
+            </view>
+        </view>
+    </block>
+</view>

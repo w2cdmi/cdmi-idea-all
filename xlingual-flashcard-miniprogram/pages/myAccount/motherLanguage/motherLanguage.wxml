@@ -1,0 +1,13 @@
+<view class='mother-language-container'>
+    <scroll-view scroll-y class='mother-language-container-scroll' style='height:{{scrollHeight}}'>
+        <view wx:for="{{motherLanList}}" wx:key="*this" data-item="{{item}}" data-index="{{index}}" class='mother-language-content' bindtap='chooseOneMotherLanguage'>
+            <view>{{item.name}}</view>
+            <view wx:if="{{item.code==chooseCode}}">
+                <image src="../../images/myAccount/right-icon.png"></image>
+            </view>
+        </view>
+    </scroll-view>
+    <view class='choose-mother-language' bindtap='confirmMotherLang'>
+        确定
+    </view>
+</view>

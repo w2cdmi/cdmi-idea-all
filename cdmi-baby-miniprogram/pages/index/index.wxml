@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="page">
+    <view class="header">
+      <view>
+      <image class="logo" src='/images/icon/schoolLogo.png'></image>
+      </view>
+      <view>
+        <view>招生热线</view>
+        <view>028-85868660</view>
+      </view>
+    </view>
+</view>

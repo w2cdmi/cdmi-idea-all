@@ -1,0 +1,29 @@
+<!--console/school/editchannel.wxml-->
+<view class='page'>
+    <form bindsubmit="saveChannel">
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item'style='width:21%'>频道名称</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="name" placeholder="必填" type="text" value="{{name}}" maxlength="50" style='width:100%' />
+                    <input name="id" type="text" value="{{id}}" style='width:100%;display:none' />
+                </view>
+            </view>
+        </view>
+        <view class='item flex-between' bindtap='changeIcon'>
+            <view class='text-horizontal'>
+                <view class="text-item">频道图标</view>
+                <input name="icon" type="text" value="{{icon}}" style='width:100%;display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType="submit">
+                保存频道信息
+            </button>
+        </view>
+    </form>
+</view>

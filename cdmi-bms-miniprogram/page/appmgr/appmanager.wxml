@@ -1,0 +1,23 @@
+<!-- 应用管理员列表页 -->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{admins}}" wx:key="index" wx:for-item="admin" class='item flex-between' bindtap='jumpToManagerDetail' data-title='admin.name' data-id='admin.id'>
+            <view class='text-horizontal'>
+                <view class="text-item">
+                    <image wx:if="{{admin.imageHead == '' || admin.imageHead == null}}" src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;'></image>
+                    <image wx:if="{{admin.imageHead != '' && admin.imageHead != null}}" src='{{admin.imageHead}}' style='width:48rpx;height:48rpx;'></image>
+                </view>
+                <view class="text-item">{{admin.name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">{{admin.phoneNamber}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createAppManager'>
+            新增应用管理员
+        </view>
+    </view>
+</view>

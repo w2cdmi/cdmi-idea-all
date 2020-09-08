@@ -1,0 +1,17 @@
+<!--page/appmgr/appconsoleconfig.wxml-->
+<view class='page'>
+<form bindsubmit="saveConsolePath">
+  <view class='item flex-between'>
+    <view class='text-horizontal'>
+      <view class='text-item' style='flex:1;'>
+        <input name="path" placeholder="必填" type="text" value="{{console_path}}" maxlength="50" style='width:100%'/>
+      </view>
+    </view>
+  </view>
+  <view class='button-vertical'>
+    <button class='long-buttom' formType="submit">
+      保存
+    </button>
+  </view>
+  </form>
+</view>

@@ -1,0 +1,48 @@
+<!--page/member/member.wxml-->
+<!-- search box  -->
+<view class="search-bar" id="search-bar">
+  <view class="search-bar-form">
+    <view class="search-bar-box">
+      <icon class="icon-search-in-box" type="search" size="14"></icon>
+      <input type="text" placeholder-style="color:rgba(3,3,3,0.4);font-size:13px;" class="search-bar-input" placeholder="请输入成员名称或电话号码" value="{{inputVal}}" bindconfirm="searchRequest" bindfocus="showSearchPage" bindinput="inputTyping" />
+    </view>
+  </view>
+  <image src='/images/sort.png' class="sort_btn" hidden='{{isSearch}}' catchtap='fileSort'></image>
+  <text class="sort_btn" wx:if='{{isSearch}}' style='width:30px;' catchtap='cancelSearch'>取消</text>
+</view>
+<scroll-view class='content' enable-back-to-top scroll-y style='height:{{scrollHeight}}px'>
+  <view data-status="1" wx:for="{{members}}" wx:key="*this" wx:for-item="member" class="folderList {{isTouchMoveIndex === index ? 'touch-moveToLeft-active' : 'touch-moveToRight-active'}}">
+    <view class="file-group border-bottom view-bg flex-item" catchtap="jumpToMemberDetail">
+      <view class='flex-item flex-start'>
+        <view>
+          <image class="img-icon margin-right" mode='aspectFit' src='{{member.imageImage}}'></image>
+        </view>
+        <view class='file-info cell_2_body_content employee-text' bindtap='showPersonDetail' data-item="{{item}}">
+          <view class='label'>{{member.truename}}</view>
+          <text catchtap='callme' data-value='{{member.mobile}}'>{{member.mobile}}</text>
+        </view>
+      </view>
+      <!-- 三个圆点  -->
+      <view class='dept-more' data-department='{{item}}' catchtap='setModalStatus' data-status="1">
+        <image class='plug_icon' src='/images/depart-plug.png'></image>
+      </view>
+    </view>
+    <view class="del" data-index="{{index}}" data-item='{{item}}' catchtap='onDeleteDeptOrEmploye'>删除</view>
+  </view>
+</scroll-view>
+
+<!-- 底部菜单  -->
+<view class='bar_bottom' id="action-bar">
+  <button class='bottom_button' open-type='share'>邀请成员</button>
+</view>
+
+<!-- drawer-view  -->
+<view class="drawer_screen" bindtap="setModalStatus" data-status="0" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+  <view class="drawer_attr_content_user">
+    <view class='draw_view_content_comm' data-employe-id='{{department.userId}}' data-dept-id='{{department.pId}}' bindtap='onClickMoveEmploye'>编辑成员信息</view>
+    <view class='draw_view_content_comm' data-employe-id='{{department.userId}}' data-dept-id='{{department.pId}}' bindtap='onClickMoveEmploye'>删除成员</view>
+  </view>
+
+  <view bindtap="setModalStatus" data-status="0" class='cancel_view draw_view_content_comm'>取消</view>
+</view>

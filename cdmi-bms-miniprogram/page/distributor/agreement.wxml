@@ -1,0 +1,63 @@
+<!--page/distributor/agreement.wxml-->
+<view class='page'>
+    <form bindsubmit="createAgreement">
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item" style="width:21%">业务名称</view>
+                <view class='text-item' style='flex:1;'>{{buz_name}}</view>
+            </view>
+        </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item" style="width:21%">渠道商名称</view>
+                <view class='text-item' style='flex:1;'>
+                    <view class="text-item">{{distributor_name}}</view>
+                    <view class="text-item text-annotation" wx:if="{{distributor_type=='Person'}}">(个人)</view>
+                    <view class="text-item text-annotation" wx:if="{{distributor_type=='Enterprise'}}">(企业)</view>
+                </view>
+            </view>
+        </view>
+        <view class='item person-item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item" style="width:28%">提成比例</view>
+                <view class='text-item' style='flex:1;'>{{ratio}}%</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">{{distributor_level}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item flex-between' bindtap='selectStartTime'>
+            <view class='text-horizontal'>
+                <view class="text-item">签署生效时间</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">2018-10-15</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item person-item flex-between' bindtap='selectEndTime'>
+            <view class='text-horizontal'>
+                <view class="text-item">协议续签时间</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">2018-11-15</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item person-item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item">协议明细</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">无</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' open-type="share">
+                将协议通过微信发送给对方
+            </button>
+        </view>
+    </form>
+</view>

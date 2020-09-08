@@ -1,0 +1,9 @@
+<view class='page'>
+<view style='padding-top: 100px;display:flex;justify-content:center;'><image src='/images/person-auth.png'></image></view>
+<view class='title'>爱灵格</view>
+<view class='description'>最美的愿望实现给最果断的你</view>
+<view class='option-group'>
+    <button open-type='getUserInfo' bindgetuserinfo="getUserInfo" class='btn' hover-class='btn-hover'>微信登录</button>
+    <button class='btn exit-btn' bindtap='exitLogin' hover-class='exit-btn-hover'>退出</button>
+</view>
+</view>

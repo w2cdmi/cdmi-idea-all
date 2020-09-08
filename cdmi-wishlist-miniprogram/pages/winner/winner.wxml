@@ -1,0 +1,32 @@
+<view class='winner-bg'>
+    <image src='../../images/winner-bg.png' class='img-bg'></image>
+    <view class='win-title'>中奖啦</view>
+    <view class='win-content'>温馨提示：若用户中奖，则需24小时内支付众筹价才能获得商品；用户放弃支付或支付超时，系统将重新抽取中奖用户。</view>
+</view>
+
+<view class='item'>
+    <image src='{{productImage}}' class='product-img'></image>
+    <view class='product-info'>
+        <view class='product-name'>{{product.title}}</view>
+        <view class='lottery-price'>
+            <view class='price-title'>众筹价</view>
+            <view class='price'>￥{{product.actualPrice}}</view>
+        </view>
+        <view class='original-price'>
+            <view class='price-title'>市场价</view>
+            <view class='price-line'>￥{{product.originalPrice}}</view>
+        </view>
+    </view>
+</view>
+
+<view class='address-item' bindtap='gotoAddressListPage'>
+    <view class='address-info'>
+        <view class='flex-item'>
+            <view>收货人：{{address.addressName}}</view>
+            <view style='text-align:right;margin-right:20px;'>{{address.phoneNumber}}</view>
+        </view>
+        <view style='margin-top: 10px;color:#999;font-size:13px;'>收货地址：{{address.address}}<image src='../../images/arrow.png' class='image-size'></image></view>
+    </view>
+</view>
+
+<view class='pay-btn' hover-class='btn-hover' bindtap='productOrder'>立即支付</view>

@@ -1,0 +1,46 @@
+<!--page/customer/customer.wxml-->
+<view class='page'>
+  <view class="search-bar" id="search-bar">
+    <view class="search-bar-form">
+      <view class="search-bar-box">
+        <icon class="icon-search-in-box" type="search" size="14"></icon>
+        <input type="text" placeholder-style="color:rgba(3,3,3,0.4);font-size:13px;" class="search-bar-input" placeholder="请输入客户名称或电话号码" value="{{inputVal}}" bindconfirm="searchRequest" bindfocus="showSearchPage" bindinput="inputTyping" />
+      </view>
+    </view>
+    <image src='/images/sort.png' class="sort_btn" hidden='{{isSearch}}' catchtap='fileSort'></image>
+    <text class="sort_btn" wx:if='{{isSearch}}' style='width:30px;' catchtap='cancelSearch'>取消</text>
+  </view>
+  <view class='view-bg border-bottom' style='border-top:1px solid #e5e5e5;'>
+    <view class='history-view'>
+      <view class='history-view-left' bindtap='gotoPersonDetail' data-detail="personDetail">
+        <view class='history-view-title'>本月新增客户</view>
+        <view class='font-size-color'>{{monthCustomerCount}}</view>
+        <view class='history-view-today-title'>今日+{{dayGrowth}}</view>
+      </view>
+      <view class='history-view-middle'></view>
+      <view class='history-view-right' bindtap='gotoProfitDetail' data-detail="profitDetail">
+        <view class='history-view-title'>历史总客户</view>
+        <view class='font-size-color'>{{totalCustomerCount}}</view>
+        <view class='history-view-today-title'>上月+{{monthGrowth}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='page-middle-bg'>今日客户</view>
+  <view wx:for="{{customers}}" wx:key="index" wx:for-item="customer" class='item flex-between' bindtap='navigateToCustomerDetail' data-id='{{customer.id}}'>
+    <view class='align-center'>
+      <image src='/images/icon/latent.png' style='padding-right:20rpx;width:20px;height:20px'></image>
+      <view>{{customer.name}}</view>
+      <image src='/images/icon/latent.png' style='padding-left:20rpx;width:14px;height:14px' wx:if="{{customer.status=='potential'}}"></image>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">198.00</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='button-vertical'>
+    <view class='long-buttom' bindtap='createCustomer'>
+      手工添加潜在客户
+    </view>
+  </view>
+</view>

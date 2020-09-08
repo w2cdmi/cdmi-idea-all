@@ -1,0 +1,24 @@
+<!--console/school/expert/expert.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{experts}}" wx:key="index" wx:for-item="expert" class='item flex-between' bindtap='jumpToExpertrDetail' data-title='{{expert.name}}' data-id='{{expert.id}}'>
+            <view class='text-horizontal'>
+                <view class="text-item">{{expert.name}}</view>
+                <view class="text-annotation">{{expert.fields.join(" ")}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">未签约</view>
+                <view class="text-item">
+                    <image wx:if="{{expert.imageHead == '' || expert.imageHead == null}}" src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;'></image>
+                    <image wx:if="{{expert.imageHead != '' && expert.imageHead != null}}" src='{{expert.imageHead}}' style='width:48rpx;height:48rpx;'></image>
+                </view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createExpert'>
+            新增专家信息
+        </view>
+    </view>
+</view>

@@ -1,0 +1,191 @@
+<view class='account-bg'>
+
+    <view wx:if="{{loginStatus}}" class='account-head-info' bindtap='setPersonInfo' data-item='{{accountAllInfo}}'>
+        <view class='account-head-left'>
+            <image src='{{accountAllInfo.avatar}}'></image>
+            <view class='account-head-left-right'>
+                <view>{{accountAllInfo.nickname}}</view>
+                <view>手机：{{accountAllInfo.mobile}}</view>
+            </view>
+        </view>
+        <view class='account-head-right'>
+            <image src='../images/myAccount/more-icon.png'></image>
+        </view>
+    </view>
+
+     <view wx:if="{{!loginStatus}}" class='account-head-info' bindtap='pleaseLogin'>
+        <view class='account-head-left'>
+            <image src='../images/myAccount/head.png'></image>
+            <view class='account-head-left-right'>
+                <view>请登录</view>
+                <view>点我登录</view>
+            </view>
+        </view>
+        <view class='account-head-right'>
+            <image src='../images/myAccount/more-icon.png'></image>
+        </view>
+    </view>
+
+    <view wx:if="{{loginStatus}}" class='white-bg'></view>
+    <view wx:if="{{loginStatus}}" class='account-content-one'>
+        <view class='account-content-common' bindtap='gotoAccountRecharge' data-item="{{balance}}">
+            <view class='account-content-left'>
+                <view>
+                    <image src='../images/myAccount/account-recharge-icon.png'></image>
+                </view>
+                <view>账户充值</view>
+            </view>
+            <view class='account-content-right'>
+                <view class='account-content-right-info'>余额 {{balance}}</view>
+                <view>
+                    <image src='../images/myAccount/more-icon.png'></image>
+                </view>
+            </view>
+
+        </view>
+        <!-- <view class='account-content-common'>
+            <view class='account-content-left'>
+                <view>
+                    <image src='../images/myAccount/balance-icon.png'></image>
+                </view>
+                <view>余额提现</view>
+            </view>
+            <view class='account-content-right'>
+                <view>
+                    <image src='../images/myAccount/more-icon.png'></image>
+                </view>
+            </view>
+
+        </view> -->
+        <view class='account-content-common' bindtap='goToBuyCourse'>
+            <view class='account-content-left'>
+                <view>
+                    <image src='../images/myAccount/buy-course-icon.png'></image>
+                </view>
+                <view>购买课程</view>
+            </view>
+            <view class='account-content-right'>
+                <view>
+                    <image src='../images/myAccount/more-icon.png'></image>
+                </view>
+            </view>
+        </view>
+        <view class='account-content-common' bindtap='goToMyCourse'>
+            <view class='account-content-left'>
+                <view>
+                    <image src='../images/myAccount/my-course-icon.png'></image>
+                </view>
+                <view>我的课程</view>
+            </view>
+            <view class='account-content-right'>
+                <view>
+                    <image src='../images/myAccount/more-icon.png'></image>
+                </view>
+            </view>
+        </view>
+        <view class='account-content-common' data-status="1" bindtap='setInviteUser'>
+            <view class='account-content-left'>
+                <view>
+                    <image src='../images/myAccount/invite-icon.png'></image>
+                </view>
+                <view>邀请新用户</view>
+            </view>
+            <view class='account-content-right'>
+                <view>
+                    <image src='../images/myAccount/more-icon.png'></image>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view wx:if="{{loginStatus}}" class='white-bg'></view>
+    <view wx:if="{{loginStatus}}" class='account-content-two'>
+        <view class='account-content-common' bindtap='chooseMotherLanguage'>
+            <view class='account-content-left'>
+                <view>
+                    <image src='../images/myAccount/motner-language-icon.png'></image>
+                </view>
+                <view>母语</view>
+            </view>
+            <view class='account-content-right'>
+
+                <view class='account-content-right-info'>{{motherLang.name}}</view>
+                <view>
+                    <image src='../images/myAccount/more-icon.png'></image>
+                </view>
+            </view>
+        </view>
+        <view class='account-content-common' bindtap='setLearnLanguage'>
+            <view class='account-content-left'>
+                <view>
+                    <image src='../images/myAccount/learn-language-icon.png'></image>
+                </view>
+                <view>学习语言</view>
+            </view>
+            <view class='account-content-right'>
+                <view class='account-content-right-info'>{{learnLang}}</view>
+                <view>
+                    <image src='../images/myAccount/more-icon.png'></image>
+                </view>
+            </view>
+        </view>
+        <view class='account-content-common' bindtap='switchTranslate'>
+            <view class='account-content-left'>
+                <view>
+                    <image src='../images/myAccount/robot-translate-icon.png'></image>
+                </view>
+                <view>机器人翻译员</view>
+            </view>
+            <view class='account-content-right'>
+                <view class='account-content-right-info' style='padding:0 30rpx'>
+                    {{robotTranslateLang}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='white-bg'></view>
+    <view class='account-content-three'>
+        <view class='account-content-common' bindtap='clearStorage'>
+            <view class='account-content-left'>
+                <view>
+                    <image src='../images/myAccount/wipe-cache-icon.png'></image>
+                </view>
+                <view>清除缓存</view>
+            </view>
+            <view class='account-content-right'>
+                <view>
+                    <image src='../images/myAccount/more-icon.png'></image>
+                </view>
+            </view>
+        </view>
+        <view class='account-content-common'>
+            <view class='account-content-left'>
+                <view>
+                    <image src='../images/myAccount/contact-us-icon.png'></image>
+                </view>
+                <view>联系我们</view>
+            </view>
+            <view class='account-content-right'>
+                <view class='account-content-right-info' style='padding:0 30rpx'>
+                    敬请期待
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 分享按钮  -->
+<view class="share-screen {{isSharing? 'bg-color' : ''}}" bindtap="delLink" data-status="0" wx:if="{{showShareModal}}"></view>
+<view animation="{{ShareAnimationData}}" class="drawer_attr_box" wx:if="{{showShareModal}}">
+    <view class="drawer_attr_content">
+        <view class="share-draw-txt">分享到</view>
+        <view class='icon-contair'>
+            <view class="share-draw-img">
+                <button class='share-btn' open-type="share">
+                    <image class="share-wechat-image" src="/pages/images/icon/share-to-fr.png"></image>
+                    <text class='wechat-friends'>微信好友</text>
+                </button>
+            </view>
+        </view>
+        <view class='cancel-txt' bindtap="delLink" data-status="0">取消</view>
+    </view>
+</view>

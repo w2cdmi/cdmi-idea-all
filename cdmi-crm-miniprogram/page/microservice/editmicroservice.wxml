@@ -1,0 +1,53 @@
+<import src="/disk/template/menu.wxml" />
+<view class='page'>
+  <view class='item flex-between'>
+    <view class='text-horizontal'>
+      <view class='text-item'>微服务名称</view>
+      <view class='text-item' style='flex:1;'>
+        <input placeholder="必填" type="text" value="" maxlength="10" auto-focus style='width:100%' />
+      </view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/icon/cancel.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">微服务图标</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">微服务描述</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">未填写</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">服务接口列表</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">未填写</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">已部署环境</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">未设置</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <tabbar selectIndex="4" bind:onShowMenu="onShowMenu"></tabbar>
+  <menu isShowMenu='{{isShowMenu}}' bind:onUploadImage="onUploadImage" bind:onUploadVideo="onUploadVideo" bind:showCreateFolder="showCreateFolder"></menu>
+</view>

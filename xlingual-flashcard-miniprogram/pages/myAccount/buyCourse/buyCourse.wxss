@@ -1,0 +1,38 @@
+.buy-course-container {
+    height: 100%;
+    background: #fff;
+}
+
+.course-store-content {
+    display: flex;
+    padding: 15rpx 30rpx;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.store-content-left image {
+    width: 88rpx;
+    height: 88rpx;
+    margin-right: 30rpx;
+    border-radius: 50%;
+}
+
+.store-content-middle {
+    width: 68%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 30rpx;
+    color: #333;
+    font-weight: 600;
+}
+
+.store-content-right {
+    font-size: 26rpx;
+    padding: 0rpx 20rpx;
+    color: #fff;
+    background: #1fc3b3;
+    border-radius: 8rpx;
+    line-height: 50rpx;
+    height: 50rpx;
+    margin-top:22rpx;
+}

@@ -1,0 +1,41 @@
+<import src="/disk/template/menu.wxml" />
+<view class='page'>
+  <view class='item person-item flex-between' bindtap='jumpToMiniprogram'>
+    <view class='align-center'>
+      <image src='/images/inbox/inbox.png' class='image-icon'></image>
+      <view>收入类型</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToAppMgr'>
+    <view class='align-center'>
+      <image src='/images/inbox/inbox.png' class='image-icon'></image>
+      <view>成本类型</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToAppMgr'>
+    <view class='align-center'>
+      <image src='/images/inbox/inbox.png' class='image-icon'></image>
+      <view>渠道商类型</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToDistributor'>
+    <view class='align-center'>
+      <image src='/images/inbox/inbox.png' class='image-icon'></image>
+      <view>渠道商等级</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <tabbar selectIndex="3" bind:onShowMenu="onShowMenu"></tabbar>
+  <menu isShowMenu='{{isShowMenu}}' bind:onUploadImage="onUploadImage" bind:onUploadVideo="onUploadVideo" bind:showCreateFolder="showCreateFolder"></menu>
+</view>

@@ -1,0 +1,226 @@
+/* pages/find/findDetail/findDetail.wxss */
+
+page {
+    background: #fff;
+}
+
+swiper {
+    height: 965rpx;
+}
+
+swiper-item {
+    display: table;
+}
+
+.image-style {
+    width: 100%;
+    height: 750rpx;
+    display: table-row;
+}
+
+.content {
+    /* height: 180rpx; */
+    font-size: 44rpx;
+    text-align: center;
+    line-height: 44rpx;
+    /* border-bottom: 2rpx solid #f1f1f1; */
+    background: #fff;
+    display: table-row;
+}
+
+.content >view {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30rpx;
+}
+
+.flex-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.play-item {
+    position: absolute;
+    bottom: 100rpx;
+    left: 0;
+    width: 100%;
+    border-top: 2rpx solid #f1f1f1;
+}
+
+.control-btn {
+    height: 120rpx;
+    border-bottom: 2rpx solid #f1f1f1;
+    background: #fff;
+    font-size: 35rpx;
+    text-align: center;
+}
+
+.control-btn>view {
+    width: 100%;
+    justify-content: center;
+}
+
+.image-icon {
+    width: 50rpx;
+    height: 50rpx;
+    margin: 0 20rpx;
+}
+
+/*底部语言显示  */
+
+.flex-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100rpx;
+    font-size: 35rpx;
+}
+
+.scroll-view-width {
+    width: 100%;
+}
+
+.scroll-view-width-sm-work {
+    width: 600rpx;
+}
+
+.scroll-view-width-sm {
+    width: 400rpx;
+}
+
+.white-space {
+    white-space: nowrap;
+}
+
+.scroll-view-style {
+    width: 750rpx;
+    white-space: nowrap;
+}
+
+.justify-center {
+    position: absolute;
+    left: 375rpx;
+    bottom: 0;
+}
+
+.scroll-view-item {
+    display: inline-block;
+    min-width: 200rpx;
+    border-right: 1rpx solid #f1f1f1;
+    /* color: rgb(59, 204, 245); */
+    color: #999;
+    line-height: 100rpx;
+    text-align: center;
+    background: #fff;
+    padding: 0 30rpx;
+}
+
+.selected-item {
+    color: rgb(59, 204, 245);
+    font-size: 40rpx;
+}
+
+.flex-bottom>.share {
+    background: rgb(17, 193, 243);
+    color: #fff;
+    height: 100%;
+    width: 200rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+
+.flex-bottom>.test {
+    background: rgb(239, 71, 58);
+    color: #fff;
+    height: 100%;
+    width: 150rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+
+/* 抽屉层 */
+
+.mask {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.drawer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.drawer> view {
+    background: #fff;
+    border-bottom: 2rpx solid #f1f1f1;
+    height: 100rpx;
+    width: 100%;
+    padding: 0 30rpx;
+    line-height: 100rpx;
+}
+
+.drawer > button {
+    border: none;
+    padding: 0 30rpx;
+    font-size: 30rpx;
+    background: #fff;
+    border-radius: 0;
+    text-align: start;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.leading-my-scene {
+    background: #1fc3b3;
+    color: #fff;
+    height: 100%;
+    text-align: center;
+    line-height: 100rpx;
+    width: 100%;
+}
+
+.add-style {
+    width: 100%;
+}
+
+.edit-secne {
+    background: #1fc3b3;
+    color: #fff;
+    height: 100%;
+    text-align: center;
+    line-height: 150rpx;
+    width: 100%;
+}
+
+.edit-secne {
+    background: #1fc3b3;
+    color: #fff;
+    height: 100%;
+    text-align: center;
+    line-height: 100rpx;
+    width: 100%;
+}
+
+/* 返回首页按钮 */
+
+.backBtn {
+    height: 80rpx;
+    position: absolute;
+    background: #1fc3b3;
+    color: #fff;
+    width: 80rpx;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10rpx;
+    bottom: 50rpx;
+    right: 50rpx;
+}

@@ -1,0 +1,141 @@
+/**app.wxss**/
+
+/* 整体页面样式 */
+
+page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-size: 28rpx;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+/** 取消似乎没有影响 **/
+
+image {
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* 页面内容面板样式 */
+
+.panel {
+  background-color: #fff;
+  margin-top: 40rpx; /**每个面板之间的距离**/
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 0px solid #f8f8f8;
+}
+
+/* 设置页面第一块页面内容面板与顶部距离 */
+
+.panel:first-child {
+  margin-top: 0rpx;
+  border-top: 0px solid #f8f8f8;
+}
+
+/* 设置页面最后一块页面内容面板与底部距离 */
+
+.panel:last-child {
+  margin-bottom: 0rpx;
+}
+
+.panel >.item {
+  height: 80rpx;
+  border-top: 1px solid #f8f8f8;
+}
+
+/* 设置垂直列表中的第一项的左边距 */
+
+.panel >.item:first-child {
+  border-top: 0px solid #f8f8f8;
+}
+
+/* 设置垂直列表中的最后一项的右边距 */
+
+.panel >.item:last-child {
+  padding-right: 30rpx;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+/* 设置垂直列表的样式 */
+
+.vertical-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /**默认采用左右边框对其的方式**/
+}
+
+/* 设置垂直列表项的样式 */
+
+.vertical-list >.item {
+  width: auto;
+  padding: 10rpx 30rpx; /**垂直列表项内容边距为10rpx **/
+}
+
+/* 设置水平列表的样式 */
+
+.horizontal-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /**默认采用上下边框对其的方式**/
+}
+
+/* 设置水平列表项的样式 */
+
+.horizontal-list >.item {
+  height: 100%;
+}
+.horizontal-list .reverse{
+  flex-direction:row-reverse;
+}
+.image-size {
+  width: 16rpx;
+  height: 28rpx;
+  margin-left: 20rpx;
+}
+
+.text-annotation {
+  color: #666;
+  font-size: 24rpx;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+}
+
+.button-long {
+  width: 78%;
+  height: 80rpx;
+  background-color: #ea5036;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  border-radius: 1.2em;
+  text-align: center;
+}
+
+.button-long:first-child {
+  margin-bottom:40rpx;
+}
+
+.button-long:last-child {
+  margin-top:80rpx;
+}
+
+.button-long master{
+  background-color: #ea5036;
+}
+
+.button-small {
+  height: 60rpx;
+  background-color: #ea5036;
+  color: #fff;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  border-radius: 0.5em;
+  text-align: center;
+}

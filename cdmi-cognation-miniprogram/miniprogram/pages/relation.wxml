@@ -1,0 +1,28 @@
+<!--miniprogram/pages/relation.wxml-->
+<view class='page'>
+    <view style='height:60px'>
+    </view>
+    <view class='item person-item flex-between'>
+        <view class='text-horizontal'>
+            <view class='text-item' wx:if="{{pointer.relation.key!='SELF'}}">与{{pointer.relation.value}}[{{pointer.name}}]的关系</view>
+            <view class='text-item' wx:if="{{pointer.relation.key=='SELF'}}">与我的家庭关系</view>
+        </view>
+        <view class='flex-align-center'>
+            <view class="text-annotation">{{cognation.value}}</view>
+        </view>
+    </view>
+    <view wx:for="{{members}}" wx:key="index" wx:for-item="member" class='item flex-between' bindtap='navToPeron' data-cognation='{{member.cognation.key}}' data-relation='{{member.relation.key}}' data-id='{{member.id}}'>
+        <view class='text-horizontal'>
+            <view class='text-item' style='width:21%'>{{member.relation.value}}</view>
+            <view class='text-item' style='flex:1;'>{{member.name}}</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <button class='long-buttom' bindtap='navToNewPeron'>
+            添加亲人
+        </button>
+    </view>
+</view>

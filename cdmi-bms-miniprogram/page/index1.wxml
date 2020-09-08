@@ -1,0 +1,25 @@
+<view class="section">
+<canvas canvas-id='cover_canvas_0' style='height: 226px; width: 320px;border:0px solid #999;padding:0px;margin:0px;' />
+<view style="height:10px"></view>
+<canvas canvas-id='cover_canvas_1' style='height: 226px; width: 320px;border:0px solid #999;padding:0px;margin:0px;' />
+<view style="height:10px"></view>
+<canvas canvas-id='cover_canvas_2' style='height: 226px; width: 320px;border:0px solid #999;padding:0px;margin:0px;' />
+<view style="height:10px"></view>
+<canvas canvas-id='cover_canvas_3' style='height: 226px; width: 320px;border:0px solid #999;padding:0px;margin:0px;' />
+<view style="height:10px"></view>
+<canvas canvas-id='cover_canvas_4' style='height: 226px; width: 320px;border:0px solid #999;padding:0px;margin:0px;' />
+<view style="height:10px"></view>
+<canvas canvas-id='cover_canvas_5' style='height: 226px; width: 320px;border:0px solid #999;padding:0px;margin:0px;' />
+<view style="height:10px"></view>
+<canvas canvas-id='cover_canvas_6' style='height: 226px; width: 320px;border:0px solid #999;padding:0px;margin:0px;' />
+<view style="height:10px"></view>
+<canvas canvas-id='cover_canvas_7' style='height: 226px; width: 320px;border:0px solid #999;padding:0px;margin:0px;' />
+<view style="height:10px"></view>
+<canvas canvas-id='cover_canvas_8' style='height: 226px; width: 320px;border:0px solid #999;padding:0px;margin:0px;' />
+<view style="height:30px">aa</view>
+<view style="height:30px">
+  <cover-view style='position:fixed;bottom: 0px;height: 30px; width: 100%;padding:0px;margin:0px;display:flex;text-align:center;background-color: rgba(0, 0, 0, 1);'>
+  提交
+  </cover-view>
+</view>
+</view>

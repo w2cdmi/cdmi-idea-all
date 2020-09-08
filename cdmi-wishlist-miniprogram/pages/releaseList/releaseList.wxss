@@ -1,0 +1,113 @@
+/* pages/releaseList/releaseList.wxss */
+page{
+  height: 100%;
+  overflow: hidden;
+}
+
+.scroll-height{
+  height: 1050rpx;
+}
+
+.flex-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item {
+  padding: 10rpx 30rpx;
+  border: 1rpx solid #f1f1f1;
+  background: #fff;
+  font-size: 24rpx;
+  justify-content: flex-start;
+}
+
+.cover-img {
+  height: 200rpx;
+  width: 200rpx;
+}
+
+/*手机信息  */
+
+.phone-name {
+  font-size: 14px;
+  color: #333;
+}
+
+.price-text {
+  font-size: 14px;
+  color: #ea5036;
+}
+
+.padding-top {
+  padding: 10rpx 30rpx;
+}
+
+.delText {
+  text-decoration: line-through;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.margin-left {
+  margin-left: 20rpx;
+}
+
+.lotteryBtn {
+  background: #51bfb9;
+  height: 44px;
+  line-height: 44px;
+  width: 700rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 20rpx;
+  left: 50%;
+  margin-left: -350rpx;
+}
+
+/*抽屉层  */
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.drawer {
+  transition: bottom 0.5s;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  bottom: -500rpx;
+  left: 0;
+  background: #f1f1f1;
+}
+
+.showDrawer {
+  bottom: 0;
+  opacity: 1;
+}
+
+.drawer> view {
+  padding: 10rpx 30rpx;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+  background: #fff;
+}
+
+.hideDrawer {
+  margin-top: 20rpx;
+  border-top: 1rpx solid #f1f1f1;
+}

@@ -1,0 +1,36 @@
+<!--pages/releaseList/releaseList.wxml-->
+<scroll-view class='scroll-height' scroll-y="{{true}}">
+  <view wx:for="{{list}}" wx:key="*this" class="flex-item list-item" bindtap='showDrawer' data-item="{{item}}">
+    <view>
+      <image src='{{item.img}}' class='cover-img'></image>
+    </view>
+    <view>
+      <view class='phone-name padding-top'>{{item.title}}</view>
+      <view class='flex-item padding-top'>
+        <view>众筹价
+          <text class='price-text' space='nbsp'> {{item.actualPrice}}元</text>
+        </view>
+        <view class='margin-left'>市场价
+          <text space='nbsp' class='delText'>{{item.originalPrice}}</text>元</view>
+        <view></view>
+      </view>
+      <view class='flex-item padding-top'>
+        <view>参与人数
+          <text space='nbsp'> {{item.participantNumber}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class='lotteryBtn'>新增众筹</view>
+
+
+<view class='mask' bindtap="hideDrawer" wx:if="{{isShowDrawer}}"></view>
+<view class='drawer {{isShowDrawer ? "showDrawer" : ""}}' wx:hidden="{{isShowDrawer}}">
+  <view bindtap='releaseItem'>发布众筹</view>
+  <view bindtap='editItem'>修改众筹</view>
+  <view bindtap='deleteItem'>删除众筹</view>
+
+  <view class="hideDrawer" bindtap='hideDrawer'>取消</view>
+</view>

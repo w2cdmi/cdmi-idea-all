@@ -1,0 +1,63 @@
+<!--page/distributor/newdistributorlevel.wxml-->
+<view class='page'>
+    <form bindsubmit="createDistributorLevel">
+        <view class='item person-item flex-between' wx:if="{{catalog.id != null}}">
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:24%'>渠道商分类</view>
+                <view class="text-item" style='flex:1;'>{{catalog.title}}</view>
+                <input name="catalogid" value="{{catalog.id}}" style='display:none' />
+            </view>
+            <!-- <view class='flex-align-center'>
+                <view class="text-annotation">{{catalog.title}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view> -->
+        </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:24%'>渠道商级别</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="title" placeholder="必填" type="text" value="{{title}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='item person-item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:24%'>默认提成比例</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="ratio" placeholder="必填，填写2位整数即可，不用填写%" type="number" value="{{ratio}}" maxlength="2" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='pannel-title flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-horizontal'>
+                    <view class='text-item'>达成条件</view>
+                </view>
+            </view>
+        </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:24%'>推广人数</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="userNumber" placeholder="不填写，表示不涉及" type="text" value="{{userNumber}}" maxlength="10" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:24%'>年营业额</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="turnovers" placeholder="不填写，表示不涉及，单位万元%" type="number" value="{{turnovers}}" maxlength="10" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType='submit'>
+                提交保存
+            </button>
+            <view class='long-buttom deleteButton' bindtap='deleteDistributorLevel' wx:if="{{id !=''}}">
+                删除该渠道商等级
+            </view>
+        </view>
+    </form>
+</view>

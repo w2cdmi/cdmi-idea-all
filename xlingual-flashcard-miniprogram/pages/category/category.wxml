@@ -1,0 +1,10 @@
+<view class='category-container'>
+    <scroll-view scroll-y class='category-container-scroll'>
+        <view class='category-content' data-item="{{item}}" wx:for="{{categoryList}}" wx:key='*this' bindtap='chooseCategoryName'>
+            <view>{{item.categoryName}}</view>
+            <view wx:if="{{item.categoryName==chooseName}}">
+                <image src="/pages/images/myAccount/right-icon.png"></image>
+            </view>
+        </view>
+    </scroll-view>
+</view>

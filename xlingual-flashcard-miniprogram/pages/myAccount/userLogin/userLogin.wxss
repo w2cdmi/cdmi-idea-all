@@ -1,0 +1,51 @@
+.all-container {
+    overflow: hidden;
+}
+
+.login-content {
+    margin: 50rpx 30rpx;
+    border: 1px solid #d3d3d3;
+    border-radius: 12rpx;
+}
+
+.login-common {
+    display: flex;
+    line-height: 70rpx;
+}
+
+.login-user-content {
+    border-bottom: 1px solid #d3d3d3;
+    line-height: 70rpx;
+}
+
+.login-common image {
+    width: 32rpx;
+    height: 32rpx;
+    vertical-align: middle;
+    padding: 0 20rpx;
+}
+
+.login-common input {
+    width: 500rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    color: #333;
+}
+
+.login-btn {
+    width: 92%;
+    margin: auto;
+    text-align: center;
+    line-height: 80rpx;
+    color: #fff;
+    background: #1fc3b3;
+    border-radius: 8rpx;
+}
+
+.flex-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx;
+    color: #1fc3b3;
+}

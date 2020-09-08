@@ -1,0 +1,111 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.98",
+	"appid": "wx7246ed6eef105785",
+	"projectname": "%E5%8D%8A%E4%BB%B7%E6%84%BF%E6%9C%9B%E5%8D%95",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 11,
+			"list": [
+				{
+					"id": -1,
+					"name": "商家发布页面",
+					"pathName": "pages/release/release",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "websocket",
+					"pathName": "pages/test/test",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "商家",
+					"pathName": "pages/lottery/lottery",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "商品发布界面",
+					"pathName": "pages/release/release",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "地址列表",
+					"pathName": "pages/address/addressList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "添加收货地址",
+					"pathName": "pages/address/address",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的页面",
+					"pathName": "pages/me/me",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "支付界面",
+					"pathName": "pages/winner/winner",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "所有商品列表",
+					"pathName": "pages/commodityList/commodityList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "历史参与",
+					"pathName": "pages/history/history",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "历史参与",
+					"pathName": "pages/history/history",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发布列表页面",
+					"pathName": "pages/releaseList/releaseList"
+				}
+			]
+		}
+	}
+}

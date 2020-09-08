@@ -1,0 +1,120 @@
+<!--miniprogram/pages/private.wxml-->
+<view class='page'>
+    <block>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item'>已录入关系</view>
+            </view>
+        </view>
+        <view class='person-item flex-between options'>
+            <view class='option' data-key='{{title.key}}' data-value='{{title.value}}' data-sex='{{title.sex}}' bindtap='selectRelation'>
+                自己
+            </view>
+            <view class='option' data-key='{{title.key}}' data-value='{{title.value}}' data-sex='{{title.sex}}' bindtap='selectRelation'>
+                妻子
+            </view>
+        </view>
+        <!-- <view class='person-item flex-between options'>
+                <view class='option' style="{{relation.key == title.key ? 'border:1rpx solid #e8580c; color: #e8580c':''}}" wx:for="{{options_titles}}" wx:key="index" wx:for-item="title" data-key='{{title.key}}' data-value='{{title.value}}' data-sex='{{title.sex}}' bindtap='selectRelation'>
+                    {{title.value}}
+                </view>
+            </view> -->
+    </block>
+    <block>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item'>未录入血亲关系</view>
+            </view>
+        </view>
+        <view class='person-item flex-between options'>
+            <view class='option' data-key='{{title.key}}' data-value='{{title.value}}' data-sex='male' bindtap='selectRelation'>
+                父亲
+            </view>
+            <view class='option' data-key='{{title.key}}' data-value='{{title.value}}' data-sex='female' bindtap='selectRelation'>
+                母亲
+            </view>
+            <view class='option' data-key='{{title.key}}' data-value='{{title.value}}' data-sex='male' bindtap='selectRelation'>
+                哥哥
+            </view>
+            <view class='option' data-key='{{title.key}}' data-value='{{title.value}}' data-sex='female' bindtap='selectRelation'>
+                姐姐
+            </view>
+            <view class='option' data-key='{{title.key}}' data-value='{{title.value}}' data-sex='male' bindtap='selectRelation'>
+                弟弟
+            </view>
+            <view class='option' data-key='{{title.key}}' data-value='{{title.value}}' data-sex='female' bindtap='selectRelation'>
+                妹妹
+            </view>
+                        <view class='option' data-key='{{title.key}}' data-value='{{title.value}}' data-sex='male' bindtap='selectRelation'>
+                +儿子
+            </view>
+            <view class='option' data-key='{{title.key}}' data-value='{{title.value}}' data-sex='female' bindtap='selectRelation'>
+                +女儿
+            </view>
+        </view>
+    </block>
+    <view>
+        <form bindsubmit="createPerson">
+            <view class='item person-item flex-between' wx:if='{{!view_options}}'>
+                <view class='text-horizontal'>
+                    <view class='text-item'>与我的关系</view>
+                </view>
+                <view class='flex-align-center'>
+                    <view class="text-annotation">{{relation.value}}</view>
+                </view>
+            </view>
+            <view style='display:none'>
+                <input name="cognation" type="text" value="{{cognation.key}}" style='width:100%;display:none' />
+                <input name="relation" type="text" value="{{relation.key}}" style='width:100%;display:none' />
+            </view>
+            <view class='item flex-between'>
+                <view class='text-horizontal'>
+                    <view class='text-item' style='width:21%'>名字</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="name" placeholder="必须" type="text" value="{{name}}" maxlength="50" style='width:100%' />
+                    </view>
+                </view>
+            </view>
+            <view class='item flex-between' style='display:none'>
+                <input name="sex" value="{{sex}}"></input>
+            </view>
+            <view class='item flex-between' wx:if="{{cognation.key!='QJ'}}">
+                <view class='text-horizontal'>
+                    <view class='text-item' style='width:21%'>称谓</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="remark" placeholder="备注，选填" type="text" value="{{remark}}" maxlength="50" style='width:100%' />
+                    </view>
+                </view>
+            </view>
+            <view class='item person-item flex-between'>
+                <view class='text-horizontal'>
+                    <view class='text-item' style='width:21%'>生日</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="birthday" placeholder="选填" type="text" value="{{birthday}}" maxlength="50" style='width:100%' />
+                    </view>
+                </view>
+            </view>
+            <view class='item person-item flex-between'>
+                <view class='text-horizontal'>
+                    <view class='text-item' style='width:21%'>电话</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="phone" placeholder="选填" type="number" value="{{phone}}" maxlength="50" style='width:100%' />
+                    </view>
+                </view>
+            </view>
+            <view class='item person-item flex-between'>
+                <view class='text-horizontal'>
+                    <view class='text-item' style='width:21%'>身份证信息</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="idcard" placeholder="选填" type="text" value="{{idcard}}" maxlength="50" style='width:100%' />
+                    </view>
+                </view>
+            </view>
+            <view class='button-vertical'>
+                <button class='long-buttom' formType='submit'>
+                    保存信息
+                </button>
+            </view>
+        </form>
+    </view>
+</view>

@@ -1,0 +1,54 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"cloudfunctionRoot": "functions/",
+	"compileType": "miniprogram",
+	"libVersion": "2.3.2",
+	"appid": "wx77fbd62fff13d38e",
+	"projectname": "%E4%B8%9A%E5%8A%A1%E7%AE%A1%E7%90%86%E5%8A%A9%E6%89%8B",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "选择频道",
+					"pathName": "console/league/channeloptions",
+					"query": "频道"
+				},
+				{
+					"id": -1,
+					"name": "直达",
+					"pathName": "disk/widget/filelist",
+					"query": "view=zhida",
+					"scene": "1005"
+				}
+			]
+		}
+	}
+}

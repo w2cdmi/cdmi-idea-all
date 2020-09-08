@@ -1,0 +1,31 @@
+<import src="/disk/template/menu.wxml" />
+<view class='page'>
+        <view class='item flex-between' bindtap='jumpToOpenWxDetail' data-title='聚数开放平台' data-id='123'>
+        <view class='text-horizontal'>
+            <view class="text-item">聚数开放平台</view>
+        </view>
+        <view class='flex-align-center'>
+            <view class="text-annotation">wuwei@jmapi.cn</view>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+
+     <view class='item person-item flex-between' bindtap='jumpToOpenWxDetail' data-title='爱灵格开放平台' data-id='123'>
+        <view class='text-horizontal'>
+            <view class="text-item">爱灵格开放平台</view>
+        </view>
+        <view class='flex-align-center'>
+        <view class="text-annotation">wilson@jmapi.cn</view>
+            <image src='/images/arrow.png' class='image-size'></image>
+        </view>
+    </view> 
+
+    <view class='button-vertical' >
+        <view class='long-buttom' bindtap='createWxOpen'>
+          新增微信开放平台
+        </view>
+    </view>
+    <tabbar selectIndex="4" bind:onShowMenu="onShowMenu"></tabbar>
+    <menu isShowMenu='{{isShowMenu}}' bind:onUploadImage="onUploadImage" bind:onUploadVideo="onUploadVideo" bind:showCreateFolder="showCreateFolder"></menu>
+</view>
+

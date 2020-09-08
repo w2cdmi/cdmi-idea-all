@@ -1,0 +1,58 @@
+<view class='page'>
+    <form bindsubmit="saveNewApp">
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item'>应用名称</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="name" placeholder="必填" type="text" value="{{name}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+            <!-- <view class='flex-align-center'>
+      <image src='/images/icon/cancel.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+    </view> -->
+        </view>
+        <view class='item flex-between' bindtap='changeIcon'>
+            <view class='text-horizontal'>
+                <view class="text-item">应用图标</view>
+                <input name="icon" type="text" value="{{icon}}" style='width:100%;display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item person-item flex-between' bindtap='inputDesc'>
+            <view class='text-horizontal'>
+                <view class="text-item">应用描述</view>
+                <input name="desc" type="text" value="{{desc}}" style='width:100%;display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation" wx:if="{{desc==''}}">未填写</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item person-item flex-between' bindtap='linkServices'>
+            <view class='text-horizontal'>
+                <view class="text-item">关联第三方服务</view>
+                <input name="linkServices" type="text" value="{{linkServices}}" style='width:100%;display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation" wx:if="{{linkServices.length==0}}">未设置</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item person-item flex-between' bindtap='linkServices'>
+            <view class='text-horizontal'>
+                <view class='text-item'>后台管理路径</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="consolePath" placeholder="非必须，该路径为小程序中的路径" type="text" value="{{consolePath}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType="submit">
+                保存接入应用信息
+            </button>
+        </view>
+    </form>
+</view>

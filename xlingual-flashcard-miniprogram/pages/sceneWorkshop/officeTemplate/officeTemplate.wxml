@@ -1,0 +1,7 @@
+<!--官方模板  -->
+<view class='list'>
+    <view wx:for="{{dataList}}" class='list-item' wx:key="*this"  bindtap='checkTemplateDetail' data-item="{{item}}">
+        <image src='{{item.logo}}' class='image-style'></image>
+        <view class='name-text'>{{item.name}}</view>
+    </view>
+</view>

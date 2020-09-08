@@ -1,0 +1,17 @@
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{apps}}" wx:key="index" wx:for-item="app" class='item flex-between' bindtap='jumpToAppDetail' data-title='{{app.name}}' data-id='{{app.id}}'>
+            <view class='align-center'>
+                <view>{{app.name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createApp'>
+            新增接入应用
+        </view>
+    </view>
+</view>

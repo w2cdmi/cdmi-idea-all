@@ -1,0 +1,19 @@
+<view class='account-recharge-container all-container'>
+    <view class='account-recharge-content'>
+        <view class='account-recharge-common account-recharge-one'>
+            <view>账户余额（元）</view>
+            <view>{{balance}}</view>
+        </view>
+        <view class='account-recharge-common'>
+            <view>充值金额（元）</view>
+            <input type='digit' bindinput='changeReMoney' value='{{rechargeMoney}}' placeholder='请输入充值金额' maxlength='13'></input>
+        </view>
+    </view>
+    <view hidden="{{!isShowIt}}" class='account-recharge-later'>充值后账户余额
+        <text>{{rechargeBalance}}</text>
+    </view>
+    <view hidden="{{isShowIt}}" class='account-recharge-later'>
+        <text>无效的充值金额</text>
+    </view>
+    <view class='wx-recharge {{!isShowIt ? "wx-recharge-add" : ""}}' bindtap='goToPay'><button>微信充值</button></view>
+</view>

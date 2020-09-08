@@ -1,0 +1,23 @@
+<!--page/customer/editcustomertype.wxml-->
+<view class='page'>
+    <form bindsubmit="createCustomertype">
+        <view style='min-height:40vh'>
+            <view class='item flex-between'>
+                <view class='text-horizontal'>
+                    <view class='text-item' style='width:24%'>客户类型</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="title" placeholder="必填" type="text" value="{{title}}" maxlength="50" style='width:100%' />
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType='submit'>
+                提交保存
+            </button>
+            <view class='long-buttom deleteButton' bindtap='deleteCustomertype' wx:if="{{id !=''}}">
+                删除该客户类型
+            </view>
+        </view>
+    </form>
+</view>

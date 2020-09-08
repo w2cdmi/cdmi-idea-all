@@ -1,0 +1,19 @@
+<scroll-view scroll-y class='list'>
+    <view class='release-common'>{{unrelease}}</view>
+    <view wx:for="{{undataList}}" class='list-item' wx:key="*this" data-item="{{item}}" bindlongpress='showDrawer' bindtap='gotoDetail'>
+        <image src='{{item.cards[0].img}}' class='image-style'></image>
+        <view class='name-text'>{{item.name}}</view>
+    </view>
+    <view class='release-common'>{{release}}</view>
+    <view wx:for="{{redataList}}" class='list-item' wx:key="*this" data-item="{{item}}" bindlongpress='showDrawer' bindtap='gotoDetail'>
+        <image src='{{item.cards[0].img}}' class='image-style'></image>
+        <view class='name-text'>{{item.name}}</view>
+    </view>
+</scroll-view>
+
+<view class='mask' wx:if="{{showDrawer}}" catchtouchmove="preventTouchMove" bindtap='hideDrawer'></view>
+<view class='drawer' wx:if="{{showDrawer}}">
+    <view bindtap='deleteScreen'>删除场景</view>
+    <view bindtap='editScene'>编辑场景</view>
+    <view bindtap='hideDrawer'>取消</view>
+</view>

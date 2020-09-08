@@ -1,0 +1,39 @@
+@import "../registered/registered.wxss";
+
+.icon-layout {
+    display: flex;
+    justify-content: center;
+    padding-top: 120rpx;
+}
+
+.icon-view {
+    width: 90rpx;
+}
+
+.enterprise-icon {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.join-enterprise {
+    margin-top: 10rpx;
+    text-align: center;
+}
+
+.join-font {
+    text-align: center;
+    margin-top: 16rpx;
+}
+
+.back-to-index {
+    width: 100%;
+    height: 80rpx;
+    border: 1px solid #999;
+    color: #333;
+    margin-top: 30rpx;
+    font-size: 30rpx;
+    line-height: 80rpx;
+    background: #f5f5f5;
+    border-radius: 1.5em;
+    text-align: center;
+}

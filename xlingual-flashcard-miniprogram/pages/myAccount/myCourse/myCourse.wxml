@@ -1,0 +1,12 @@
+<view class='my-course-container'>
+    <view class='my-course-content' wx:for="{{myCourseList}}" wx:key="*this" bindtap='toUseMycourse'>
+        <view class='content-left'><image src='{{imgUrl}}/static/xlingual/img/{{item.course.cover}}'></image></view>
+        <view class='content-right'>
+            <view class='content-right-top'>
+                <view>{{item.course.name}}</view>
+                <view>{{item.end_time}}到期</view>
+            </view>
+            <view class='content-right-bottom'>{{item.course.brief}}</view>
+        </view>
+    </view>
+</view>

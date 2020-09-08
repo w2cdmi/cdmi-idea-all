@@ -1,0 +1,19 @@
+<!--console/league/project.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{projects}}" wx:key="index" wx:for-item="project" class='item flex-between' bindtap='jumpToProjectDetail' data-title='{{project.name}}' data-id='{{project.id}}'>
+            <view class='align-center'>
+                <view>{{project.name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">{{project.catalog.name}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createProject'>
+            新增招商项目
+        </view>
+    </view>
+</view>

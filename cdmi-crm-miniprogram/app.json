@@ -1,0 +1,107 @@
+{
+  "pages": [
+    "page/achievement/index",
+    "page/order/order",
+    "page/member/member",
+    "page/member/memberdetail",
+    "page/buz/buz",
+    "page/me/me",
+    "page/system/system",
+    "page/index1",
+    "page/index",
+    "page/buz/buzconfig",
+    "page/distributor/distributor",
+    "page/thirdservice/thirdservice",
+    "page/thirdservice/openwx/openwx",
+    "page/env/env",
+    "page/thirdservice/openwxthird/openwxthird",
+    "page/thirdservice/openwx/openwxdetail",
+    "page/thirdservice/openwxthird/openwxthirddetail",
+    "page/appmgr/appmgr",
+    "page/appmgr/appdetail",
+    "page/appmgr/appmanager",
+    "page/manager/manager",
+    "page/appmgr/terminalmgr",
+    "page/appmgr/editapp",
+    "page/manager/managerdetail",
+    "page/manager/editmanager",
+    "page/microservice/microservice",
+    "page/miniprogram/miniprogram",
+    "page/microservice/editmicroservice",
+    "page/env/editenv",
+    "page/appmgr/editterminal",
+    "page/miniprogram/miniprogramdetail",
+    "page/appmgr/editappmanager",
+    "page/appmgr/appmanagerdetail",
+    "page/appmgr/terminaldetail",
+    "page/miniprogram/miniprogramdevelop",
+    "page/appmgr/appmgrdevelop",
+    "page/appmgr/appconfig",
+    "page/appmgr/editappconfig",
+    "page/appmgr/appconfigdetail",
+    "page/distributor/distributordetail",
+    "page/distributor/editdistributor",
+    "page/buz/buzapp/buzapp",
+    "page/buz/buzapp/buzappdetail",
+    "console/trainer/suportlanguage",
+    "console/trainer/index",
+    "console/trainer/editsuportlanguage",
+    "page/sharer/shareStatistics",
+    "page/sharer/personDetail/personDetail",
+    "page/sharer/profitDetail/profitDetail",
+    "page/agreement/agreement",
+    "page/customer/customer",
+    "page/agentproduct/product",
+    "page/setting/setting",
+    "page/agreement/newagreement",
+    "page/agentproduct/productdetail",
+    "page/authAndLogin"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "分销业绩管理系统",
+    "navigationBarBackgroundColor": "#EA5036",
+    "backgroundColor": "white"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#09bb07",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "page/achievement/index",
+        "text": "首页",
+        "iconPath": "/images/icon/index.png",
+        "selectedIconPath": "/images/icon/index-active.png"
+      },
+      {
+        "pagePath": "page/member/member",
+        "text": "成员业绩",
+        "iconPath": "/images/icon/file.png",
+        "selectedIconPath": "/images/icon/file-active.png"
+      },
+      {
+        "pagePath": "page/distributor/distributor",
+        "text": "渠道业绩",
+        "iconPath": "/images/icon/index.png",
+        "selectedIconPath": "/images/icon/index-active.png"
+      },
+      {
+        "pagePath": "page/me/me",
+        "text": "我的",
+        "iconPath": "/images/icon/me.png",
+        "selectedIconPath": "/images/icon/me-active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "connectSocket": 10000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
+  },
+  "cloud": true,
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

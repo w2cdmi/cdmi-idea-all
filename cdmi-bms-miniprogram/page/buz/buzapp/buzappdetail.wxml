@@ -1,0 +1,71 @@
+<view class='page'>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">业务名称</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">{{buzname}}</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+    <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">业务编码</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">{{buzcode}}</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">业务描述</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">关联接入应用</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+    <view class='item person-item flex-between' bindtap='jumpToScheme'>
+    <view class='text-horizontal'>
+      <view class="text-item">推广方案</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToAppConfig' data-title='{{buzname}}' data-id='{{buzid}}'>
+    <view class='text-horizontal'>
+      <view class="text-item">推广分析</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToAppDevelop' data-title='{{appname}}' data-id='{{appid}}'>
+    <view class='text-horizontal'>
+      <view class="text-item">流量分析</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='button-vertical'>
+    <view class='long-buttom' bindtap='createEnv'>
+      删除该业务
+    </view>
+  </view>
+</view>

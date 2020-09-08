@@ -1,0 +1,15 @@
+<view class="section">
+<canvas wx:if="{{isview}}" canvas-id='photo_canvas' style='position:absolute;top:0px;height: {{cutImageHeight}}px; width: {{cutImageWidth}}px;'/>
+  <scroll-view style="height: {{viewHeight}}px; width: {{viewHeight}}px;" scroll-x="false" scroll-y="false">
+  <movable-area class="img" style="height: {{viewHeight}}px; width: {{viewHeight}}px; background: red;" scale-area>
+    <movable-view style="height: {{viewHeight}}px; width: {{viewHeight}}px; background: blue; " direction="all" bindchange="onChange" bindscale="onScale" scale scale-min="1" scale-max="10" scale-value="1">
+      <image id="player-image" class='img' src="{{souce_image}}"  mode="widthFix" bindload="loadImage"></image>
+    </movable-view>
+  </movable-area>
+  </scroll-view>
+</view>
+
+<view style='position:absolute;bottom:0px; padding:0px;margin:0px;width:100%'>
+  <button bindtap="refresh">刷新</button>
+  <button bindtap="cutphoto">截图</button>
+</view>

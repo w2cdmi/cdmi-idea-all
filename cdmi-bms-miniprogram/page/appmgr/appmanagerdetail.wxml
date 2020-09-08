@@ -1,0 +1,63 @@
+<!-- 查看指定的应用管理员的信息   -->
+<view class='page'>
+  <view class='item person-item flex-between'>
+    <view class='text-horizontal' style="flex:1">
+      <view class='text-item' style='width:21%'>应用名称</view>
+      <view class='text-item' style='flex:1;'>{{appname}}</view>
+    </view>
+    <view class='flex-align-center' style='width:68rpx'>
+    </view>
+  </view>
+
+  <view class='item flex-between' bindtap='gotorecycle'>
+    <view class='text-horizontal'>
+      <view class="text-item">姓名</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-item">{{managername}}</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">微信号</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-item">alpeai</view>
+      <image src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">电话号码</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-item">18615703273</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">邮件地址</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">wuwei@jmapi.cn</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage' wx:if="{{!self}}">
+    <view class='text-horizontal'>
+      <view class="text-item">应用角色与授权</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='button-vertical' wx:if="{{!self}}">
+    <view class='long-buttom' bindtap='deleteManager'>
+      删除该应用管理员
+    </view>
+  </view>
+</view>

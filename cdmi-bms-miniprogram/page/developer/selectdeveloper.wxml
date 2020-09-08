@@ -1,0 +1,16 @@
+<!--page/developer/selectdeveloper.wxml-->
+<!-- 当前用户存在多个开发者身份，选择当前要采用的开发者身份 -->
+<view class='page'>
+    <view style="min-height:40vh">
+        <view wx:for="{{developers}}" wx:key="index" wx:for-item="developer" class='item flex-between' bindtap='selectDeveloper' data-id='{{developer.id}}'>
+            <view class='text-horizontal'>
+                <view class="text-item">
+                    <image src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;'></image>
+                </view>
+                <view class="text-item">{{developer.name}}</view>
+                <view class="text-item text-annotation" wx:if="{{developer.targetType == 'Person'}}">个人</view>
+                <view class="text-item text-annotation" wx:if="{{developer.targetType == 'Enterprise'}}">企业</view>
+            </view>
+        </view>
+    </view>
+</view>

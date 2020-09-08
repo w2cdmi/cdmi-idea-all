@@ -1,0 +1,74 @@
+<!--console/school/cataloies.wxml-->
+<view class='page'>
+    <block wx:if="{{sence !='options'}}">
+        <view style='min-height:40vh'>
+            <view class='item flex-between' bindtap='editCatalogName' data-id='{{parent.id}}' wx:if="{{parent.id !=null && parent.id !=''}}">
+                <view class='text-horizontal'>
+                    <view class="text-item" style="width:21%">当前目录</view>
+                    <view class="text-annotation" style="flex:1;">{{parent.name}}</view>
+                </view>
+                <view class='flex-align-center'>
+                    <image src='/images/arrow.png' class='image-size'></image>
+                </view>
+            </view>
+            <view class='item person-item flex-between' bindtap='editCatalogName' data-id='{{parent.id}}' wx:if="{{parent.id !=null && parent.id !=''}}">
+                <view class='text-horizontal'>
+                    <view class="text-item" style="width:21%">目录图标</view>
+                </view>
+                <view class='flex-align-center'>
+                    <view class="text-annotation" wx:if="{{parent.icon==null || parent.icon==''}}">未设置</view>
+                    <image src='{{parent.icon}}' class='image-size' wx:if="{{parent.icon!=null && parent.icon!=''}}"></image>
+                    <image src='/images/arrow.png' class='image-size'></image>
+                </view>
+            </view>
+            <view wx:for="{{cataloies}}" wx:key="index" wx:for-item="catalog" class='item flex-between' bindtap='jumpToCatalogDetail' data-title='{{catalog.name}}' data-id='{{catalog.id}}' data-marker='{{marker}}' data-channel='{{channel_marker}}'>
+                <view class='align-center'>
+                    <view>{{catalog.name}}</view>
+                </view>
+                <view class='flex-align-center'>
+                    <view class="text-annotation">子类目数:{{catalog.childrenNumber}}</view>
+                    <image src='/images/arrow.png' class='image-size'></image>
+                </view>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <view class='long-buttom' bindtap='createCatalog' wx:if="{{parent.id !=null && parent.id !=''}}">
+                新增子类目
+            </view>
+            <view class='long-buttom' bindtap='deleteCatalog' wx:if="{{parent.id !=null && parent.id !='' && cataloies.length == 0}}">
+                删除当前类目
+            </view>
+            <view class='long-buttom' bindtap='createCatalog' wx:if="{{parent.id ==null || parent.id ==''}}">
+                新增类目
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{sence =='options'}}">
+        <view class='item person-item flex-between' data-id='{{parent.id}}' wx:if="{{parent.id !=null && parent.id !=''}}">
+            <view class='text-horizontal'>
+                <view class="text-item" style="width:21%">父级目录</view>
+                <view class="text-annotation" style="flex:1;">{{parent.name}}</view>
+            </view>
+        </view>
+        <view class="pannel-flex">
+            <view class="options" style="{{catalog.id == selectedCatalog.id ? 'border:1rpx solid #e8580c; color: #e8580c':''}}" wx:for="{{cataloies}}" wx:key="index" wx:for-item="catalog" bindtap='selectCatalog' data-title='{{catalog.name}}' data-id='{{catalog.id}}' data-marker='{{marker}}' data-channel='{{channel_marker}}'>
+                <view>{{catalog.name}}</view>
+            </view>
+        </view>
+        <view class="pannel-flex" wx:if="{{children.length != 0}}">
+            <view class="options" style="{{child.id == selectedChild.id ? 'border:1rpx solid #e8580c; color: #e8580c':''}}" wx:for="{{children}}" wx:key="index" wx:for-item="child" bindtap='selectChild' data-title='{{child.name}}' data-id='{{child.id}}' data-marker='{{marker}}' data-channel='{{channel_marker}}'>
+                <view>{{child.name}}</view>
+            </view>
+        </view>
+        <!-- <view wx:for="{{children}}" wx:key="index" wx:for-item="child" class='item flex-between' bindtap='selectCatalog' data-title='{{child.name}}' data-id='{{child.id}}' data-marker='{{marker}}' data-channel='{{channel_marker}}'>
+            <view class='align-center'>
+                <view>{{child.name}}</view>
+            </view>
+        </view> -->
+        <view class='button-vertical'>
+            <view class='long-buttom' bindtap='submitSelectCatalog'>
+                确定选择
+            </view>
+        </view>
+    </block>
+</view>

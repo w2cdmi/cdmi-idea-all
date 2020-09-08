@@ -1,0 +1,20 @@
+<form bindsubmit="formSubmit" report-submit="{{true}}">
+    <view>
+        <view class='flex-item address-info'>
+            <view>收货人</view>
+            <input auto-focus placeholder='收货人' value='{{address.addressName}}' name="addressName" class='text-right'></input>
+        </view>
+        <view class='flex-item address-info'>
+            <view>电话 </view>
+            <input placeholder='电话' name="phoneNumber" value='{{address.phoneNumber}}' class='text-right'></input>
+        </view>
+        <view class='address-info'>
+            <view>收货地址 </view>
+            <textarea class='textarea' name="address" value='{{address.address}}'></textarea>      
+        </view>
+    </view>
+
+    <view class='flex-item flex-center' style='margin-top:20px;'>
+        <button class='lotteryBtn' form-type='submit' hover-class='btn-hover'>确认</button>
+    </view>
+</form>

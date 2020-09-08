@@ -1,0 +1,48 @@
+<!--page/order/order.wxml-->
+<view class='page'>
+  <view class="search-bar" id="search-bar">
+    <view class="search-bar-form">
+      <view class="search-bar-box">
+        <icon class="icon-search-in-box" type="search" size="14"></icon>
+        <input type="text" placeholder-style="color:rgba(3,3,3,0.4);font-size:13px;" class="search-bar-input" placeholder="请输入客户名称或下单时的电话号码" value="{{inputVal}}" bindconfirm="searchRequest" bindfocus="showSearchPage" bindinput="inputTyping" />
+      </view>
+    </view>
+    <image src='/images/sort.png' class="sort_btn" hidden='{{isSearch}}' catchtap='fileSort'></image>
+    <text class="sort_btn" wx:if='{{isSearch}}' style='width:30px;' catchtap='cancelSearch'>取消</text>
+  </view>
+    <view class='view-bg border-bottom' style='border-top:1px solid #e5e5e5;'>
+    <view class='history-view'>
+      <view class='history-view-left' bindtap='gotoPersonDetail' data-detail="personDetail">
+        <view class='history-view-title'>本月订单数</view>
+        <view class='font-size-color'>40</view>
+        <view class='history-view-today-title'>今日+5</view>
+      </view>
+      <view class='history-view-middle'></view>
+      <view class='history-view-right' bindtap='gotoProfitDetail' data-detail="profitDetail">
+        <view class='history-view-title'>历史总订单</view>
+        <view class='font-size-color'>1200</view>
+        <view class='history-view-today-title'>上月+50</view>
+      </view>
+    </view>
+  </view>
+  <view class='page-middle-bg'>当日订单</view>
+  <view class='table'>
+    <view class="row">
+      <view class="column">用户名</view>
+      <view class="column">订购产品</view>
+      <view class="column">订单时间</view>
+      <view class="column">提成金额</view>
+    </view>
+    <view class="row" wx:for="{{orders}}" wx:key="*this" wx:for-item="order">
+      <view class="column">{{order.username}}</view>
+      <view class="column">{{order.productname}}</view>
+      <view class="column">{{order.creatime}}</view>
+      <view class="column">{{order.commission}}</view>
+    </view>
+  </view>
+  <view class='button-vertical'>
+    <view class='long-buttom' bindtap='createDistributor'>
+      手动添加订单
+    </view>
+  </view>
+</view>

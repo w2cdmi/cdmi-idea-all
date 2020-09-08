@@ -1,0 +1,103 @@
+<!--page/buz/buzapp/Scheme.wxml-->
+<view class='page'>
+    <view class='pannel'>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item">支持区域独家经营权</view>
+            </view>
+            <view class='flex-align-center'>
+                <switch checked bindchange="changeEnableAreaExclusive" />
+            </view>
+        </view>
+        <view wx:if="{{enableAreaExclusive}}" class='item flex-between' bindtap='navAreaExclusive'>
+            <view class='text-horizontal'>
+                <view class="text-item">独家区域渠道列表</view>
+            </view>
+            <view class='flex-align-center'>
+            <view class="text-annotation">{{areaExclusiveCount}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='pannel'>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item">支持业务独家经营权</view>
+            </view>
+            <view class='flex-align-center'>
+                <switch bindchange="changeEnableBuzExclusive" />
+            </view>
+        </view>
+        <view wx:if="{{enableBuzExclusive}}" class='item flex-between' bindtap='navBuzExclusive'>
+            <view class='text-horizontal'>
+                <view class="text-item">独家业务渠道列表</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">{{buzExclusiveCount}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='pannel'>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item">允许分销</view>
+            </view>
+            <view class='flex-align-center'>
+                <switch checked bindchange="switchChange" />
+                <!-- <view class="text-annotation">是</view>
+      <image src='/images/arrow.png' class='image-size'></image> -->
+            </view>
+        </view>
+        <view wx:if="{{suport_distribution}}" class='item flex-between' bindtap='navToStrategy'>
+            <view class='text-horizontal'>
+                <view class="text-item">销售策略</view>
+                <input name="strategy" placeholder='必填' type='text' value='{{strategy_value}}' style='display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">{{strategy_view}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='pannel'>
+        <view class='pannel-title flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-horizontal'>
+                    <view class='text-item'>用户方案</view>
+                </view>
+            </view>
+        </view>
+        <view class='item flex-between' bindtap='navToProbation'>
+            <view class='text-horizontal'>
+                <view class="text-item">试用期</view>
+                <input name="probation" placeholder='必填' type='text' value='{{probation_value}}' style='display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">{{probation_view}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item">转发奖励</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="shareReward" placeholder='必填' type='text' value='{{shareReward}}' maxlength='30' style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item">成交奖励</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="dealReward" placeholder='必填，必须为整数，表示{整数}%' type='text' value='{{dealReward}}' maxlength='30' style='width:100%' />
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createScheme'>
+            保存信息
+        </view>
+    </view>
+</view>

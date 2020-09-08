@@ -1,0 +1,105 @@
+.winner-bg {
+    padding: 10px 15px;
+}
+
+.img-bg {
+    width: 100%;
+    height: 158px;
+}
+
+.win-title {
+    text-align: center;
+    margin-top: -150px;
+    color: #fff;
+}
+
+.win-content {
+    text-align: center;
+    margin-top: 48px;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.pay-btn {
+    position: fixed;
+    background: #51bfb9;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    width: 90%;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.item {
+    background: #fff;
+    padding: 10px 15px;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.address-item {
+    background: #fff;
+    margin-top: 10px;
+}
+
+.address-info {
+    padding: 10px 0;
+    margin: 0 15px;
+}
+
+.flex-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-size {
+    width: 8px;
+    height: 14px;
+    float: right;
+    margin-top: 2px;
+}
+
+.price-line {
+    text-decoration: line-through;
+    font-size: 12px;
+}
+
+.product-img {
+    width: 150px;
+    height: 90px;
+}
+
+.product-name {
+    width: 130px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.lottery-price {
+    margin-top:30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.original-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-title {
+    font-size: 12px;
+    color: #999;
+}
+
+.price {
+    color: #ea5036;
+}

@@ -1,0 +1,40 @@
+<!--console/school/editcatalog.wxml-->
+<view class='page'>
+    <form bindsubmit="saveCatalog">
+        <view class='item person-item flex-between' wx:if="{{parent.id !=null && parent.id !=''}}">
+            <view class='text-horizontal'>
+                <view class="text-item" style="width:21%">父目录</view>
+                <view class="text-annotation" style="flex:1;">{{parent.name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <input name="parentid" type="text" value="{{parent.id}}" style='width:100%;display:none' />
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item'>类目名称</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="name" placeholder="必填" type="text" value="{{name}}" maxlength="50" style='width:100%' />
+                    <input name="id" type="text" value="{{id}}" style='width:100%;display:none' />
+                </view>
+            </view>
+        </view>
+        <view class='item flex-between' bindtap='changeIcon'>
+            <view class='text-horizontal'>
+                <view class="text-item">类目图标</view>
+                <input name="icon" type="text" value="{{icon}}" style='width:100%;display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType="submit">
+                保存类目信息
+            </button>
+        </view>
+    </form>
+</view>

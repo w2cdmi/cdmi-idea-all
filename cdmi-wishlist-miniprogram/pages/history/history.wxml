@@ -1,0 +1,34 @@
+<!--pages/history/history.wxml-->
+<view>
+  <view wx:for="{{list}}" wx:key="*this" class="flex-item list-item">
+    <view>
+      <image src='{{item.img}}' class='cover-img'></image>
+    </view>
+    <view>
+      <view class='phone-name padding-top'>{{item.title}}</view>
+      <view class='flex-item padding-top'>
+        <view>众筹价
+          <text class='price-text' space='nbsp'> {{item.actualPrice}}元</text>
+        </view>
+        <view class='margin-left'>市场价
+          <text space='nbsp' class='delText'>{{item.originalPrice}}</text>元</view>
+        <view></view>
+      </view>
+      <view class='flex-item padding-top'>
+        <view>围观人数
+          <text space='nbsp'> {{item.onlookerNumber}}</text>
+        </view>
+        <view>参与人数
+          <text space='nbsp'> {{item.participantNumber}}</text>
+        </view>
+      </view>
+      <view class='flex-item flex-start padding-top'>
+        <view>获奖者</view> 
+        <view class='view-user-image'>
+          <image src='{{item.headImageUrl}}' class='user-image'></image>
+        </view>
+        <view class='user-name'>{{item.userName}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,111 @@
+/* console/league/test/index.wxss */
+
+.container {
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+.font40 {
+    font-size: 40rpx;
+}
+
+.pannel {
+    background-color: #fff;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-top: 1px solid #e7e7e7;
+}
+
+.row:first-child {
+    border-top: 0rpx solid #e7e7e7;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #e7e7e7;
+}
+
+.column:first-child {
+    border-left: 0px solid #e7e7e7;
+}
+
+.search {
+    padding: 20rpx 10rpx;
+    justify-content: center;
+}
+
+.search .searchInput {
+    width: 80%;
+    height: 60rpx;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eee;
+    border-radius: 10rpx;
+    background-color: #efefef;
+}
+
+.search .searchInput image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.search .searchInput .searchText {
+    height: 60rpx;
+    color: black;
+    line-height: 60rpx;
+    padding-left: 10rpx;
+}
+
+.nav {
+    padding: 10rpx 30rpx;
+    height: 40rpx;
+}
+
+.nav .separator{
+    width: 4rpx;
+    height: 100%;
+    background-color:red; 
+}
+
+.nav .jselect {
+    margin-right: 20rpx;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.nav .scroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+.nav .item {
+    padding: 0rpx 20rpx;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.nav .selected {
+    height: 4rpx;
+    background-color: red;
+    width: 100%;
+}
+
+.banner{
+    display: flex;
+    height: 120rpx;
+    width: 100%;
+}

@@ -1,0 +1,18 @@
+<!--page/agreement/agreementcataloies.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{cataloies}}" wx:key="index" wx:for-item="catalog" class='item flex-between' data-name='{{catalog.name}}' data-id='{{catalog.id}}' bindtap='jumpToCustomerCatalogDetail'>
+            <view class='align-center'>
+                <view>{{catalog.name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='jumpToNewCustomerType'>
+            新增合约分类
+        </view>
+    </view>
+</view>

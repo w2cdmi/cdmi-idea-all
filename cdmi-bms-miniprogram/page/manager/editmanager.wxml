@@ -1,0 +1,35 @@
+<view class='page'>
+    <form bindsubmit="inviteManager">
+        <view style="min-height:40vh">
+            <view class='item flex-between'>
+                <view class='text-horizontal' composed='false'>
+                    <view class='text-item' style='width:21%'>真实姓名</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="truename" placeholder='必填' type='text' value='' maxlength='20' style='width:100%' bindfocus='hiddenButton' bindconfirm='confirmName' bindblur='confirmName'/>
+                    </view>
+                </view>
+            </view>
+            <view class='item flex-between'>
+                <view class='text-horizontal' composed='false'>
+                    <view class="text-item" style='width:21%'>电话号码</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="phoneNumber" placeholder='必填' type='number' value='' maxlength='11' style='width:100%' bindfocus='hiddenButton' bindconfirm='confirmPhoneNumber' bindblur='confirmPhoneNumber'/>
+                    </view>
+                </view>
+            </view>
+            <!-- <view class='item person-item flex-between'>
+                <view class='text-horizontal' composed='false'>
+                    <view class="text-item" style='width:21%'>邮件地址</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="email" placeholder='必填' type='text' value='' maxlength='50' style='width:100%' bindinput='inputText' bindfocus='focusText' data-order='3' />
+                    </view>
+                </view>
+            </view> -->
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' wx:if="{{view_invite}}">
+                微信邀请该管理员点击链接确认
+            </button>
+        </view>
+    </form>
+</view>

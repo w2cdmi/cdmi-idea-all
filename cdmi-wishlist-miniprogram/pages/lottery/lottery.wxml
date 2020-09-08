@@ -1,0 +1,77 @@
+<view wx:if="{{isShowProduct}}">
+    <view class='countdown-item flex-item'>
+        <view>倒计时</view>
+        <view class='countdown-text'>{{countdown}}</view>
+    </view>
+    <swiper style='height:240px;' indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="#51bfb9">
+
+        <block wx:for="{{images}}" wx:key="*this">
+            <swiper-item>
+                <image src='{{item}}' class='slide-image'></image>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class='item'>
+        <view class='flex-item padding-top'>
+            <view class='phone-name' style='width:90%;'>{{product.title}}</view>
+            <button class='clear-button-style' open-type='share'>
+                <image class='share-image' src="../../images/share.png" />
+            </button>
+        </view>
+        <view class='flex-item padding-top'>
+            <view>众筹价
+                <text class='price-text' space='nbsp'> {{product.actualPrice}}元</text>
+            </view>
+            <view class='margin-left'>市场价
+                <text space='nbsp'> {{product.originalPrice}}</text>元</view>
+            <view></view>
+        </view>
+        <view class='flex-item padding-top'>
+            <view>围观人数
+                <text space='nbsp'> {{product.onlookerNumber}}</text>
+            </view>
+            <view>参与人数
+                <text space='nbsp'> {{product.participantNumber}}</text>
+            </view>
+            <view>抽奖还差
+                <text class='price-text' space='nbsp'>{{product.ratedNumber - product.participantNumber}}</text>人
+            </view>
+        </view>
+    </view>
+
+    <view class='block-item'>
+        <view class='role-title'>抽奖规则：</view>
+        <view>
+            <view class='role-tips'>获奖概率计算公式：您邀请人员数量/参与人员邀请总人员数量</view>
+            <view class='role-tips-text'>
+                <view>1、付1元就有机会低价购买愿望商品</view>
+                <view>2、参与人数到达数量即进行抽奖</view>
+                <view>3、参与用户可通过邀请好友参与围观，所邀请的围观好友数量会 增加参与用户的开盘中奖概率</view>
+                <view>4、若用户中奖，则需24小时内支付众筹价才能获得商品；否则当用户做自动放弃购买处理</view>
+            </view>
+        </view>
+
+        <view wx:if="{{isShowJoinBtn}}">
+            <view class='lotteryBtn' bindtap='unifiedorder' hover-class='btn-hover'>1元参与</view>
+        </view>
+        <view wx:if="{{!isShowJoinBtn}}">
+            <view class='lotteryBtn'>已参与</view>
+        </view>
+    </view>
+</view>
+<view wx:if="{{!isShowProduct}}" class='wait-bg'>
+    <image src='../../images/wait-bg.png' class='img-bg'></image>
+    <view class='wait-title'>准备中</view>
+    <view class='wait-content'>商家正在准备下一轮抽奖，敬请期待</view>
+</view>
+
+<view class='block-item history-info' wx:if="{{winners.length > 0}}">
+    <view class='info-title'>历史愿望达成名单</view>
+    <view wx:for="{{winners}}" wx:key="*this" class='info-item list-space'>
+        <text style='width:70px;'>{{item.createDate}}</text>
+        <view class='view-user-image'><image src='{{item.headImageUrl}}' class='user-image'></image></view>
+        <view class='user-name'>{{item.userName}}</view>
+        <view class='product-name'>获得商品"{{item.productName}}"</view>
+    </view>
+</view>

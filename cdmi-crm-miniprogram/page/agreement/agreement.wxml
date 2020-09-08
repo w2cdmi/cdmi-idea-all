@@ -1,0 +1,55 @@
+<!--page/agreement/agreement.wxml-->
+<view class='page'>
+  <view class="search-bar" id="search-bar">
+    <view class="search-bar-form">
+      <view class="search-bar-box">
+        <icon class="icon-search-in-box" type="search" size="14"></icon>
+        <input type="text" placeholder-style="color:rgba(3,3,3,0.4);font-size:13px;" class="search-bar-input" placeholder="请输入签约渠道名称或电话号码" value="{{inputVal}}" bindconfirm="searchRequest" bindfocus="showSearchPage" bindinput="inputTyping" />
+      </view>
+    </view>
+    <image src='/images/sort.png' class="sort_btn" hidden='{{isSearch}}' catchtap='fileSort'></image>
+    <text class="sort_btn" wx:if='{{isSearch}}' style='width:30px;' catchtap='cancelSearch'>取消</text>
+  </view>
+  <view class='item flex-between' bindtap='jumpToDistributorDetail' data-title='爱灵格教育科技' data-id='jm0229328193'>
+    <view class='align-center'>
+      <view>与[张三]+就[爱灵格多语闪卡]+的合作协议</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">待对方确认</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item flex-between' bindtap='jumpToDistributorDetail' data-title='塔贝科技中心' data-id='jm0229328193'>
+    <view class='align-center'>
+      <view>与[渠道名]+就[代理商品名]+的合作协议</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">被对方拒绝</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToDistributorDetail' data-title='华一云网科技有限公司' data-id='jm0229328193'>
+    <view class='align-center'>
+      <view>与[渠道名]+就[代理商品名]+的合作协议</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">已生效</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToDistributorDetail' data-title='华一云网科技有限公司' data-id='jm0229328193'>
+    <view class='align-center'>
+      <view>与[渠道名]+就[代理商品名]+的合作协议</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation need-deal">待审核</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='button-vertical'>
+    <view class='long-buttom' bindtap='createAgreement'>
+      起草新合约
+    </view>
+  </view>
+</view>

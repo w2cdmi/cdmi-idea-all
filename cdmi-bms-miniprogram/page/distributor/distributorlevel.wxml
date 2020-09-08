@@ -1,0 +1,20 @@
+<!--page/distributor/distributorlevel.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{levels}}" wx:key="index" wx:for-item="level" class='item flex-between' data-title='{{level.title}}' data-id='{{level.id}}' data-catalog='{{level.catalogId}}' bindtap='jumpToDistributorLevelDetail'>
+            <view class='align-center'>
+                <view>{{level.title}}</view>
+                <view style='padding-left:10rpx'>{{level.catalogTitle}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation" wx:if="{{level.ratio != null}}">默认提成比例:{{level.ratio}}%</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='jumpToNewDistributorLevel'>
+            新增渠道商等级
+        </view>
+    </view>
+</view>

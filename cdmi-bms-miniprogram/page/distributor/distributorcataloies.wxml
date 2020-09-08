@@ -1,0 +1,18 @@
+<!--page/distributor/distributorcataloies.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{channels}}" wx:key="index" wx:for-item="channel" class='item flex-between' bindtap='jumpToChannelDetail' data-title='{{channel.name}}' data-id='{{channel.id}}'>
+            <view class='align-center'>
+                <view>{{channel.name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createChannel'>
+            渠道商分类
+        </view>
+    </view>
+</view>

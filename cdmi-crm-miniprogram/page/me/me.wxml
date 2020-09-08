@@ -1,0 +1,130 @@
+<!--page/me/me.wxml-->
+<view class='page'>
+  <view class='item-flow person-item'>
+    <view>
+      <view class='avatar' style="background-image:url({{avatarUrl}})"></view>
+    </view>
+    <view class='name'>
+      <view class="name-title">
+        <label>{{nick}}</label>
+        <block wx:if="{{expireDate}}">
+          <view class='vip-validity'>{{expireDate}}会员到期</view>
+          <image src='/images/vip-icon.png' class='image-vip'></image>
+        </block>
+      </view>
+      <view class="progress-view">
+        <view class='progress-space'>
+          <view class='progress-used' style='width:{{spaceUsed==0?0:spaceUsed}}%'></view>
+        </view>
+        <label class='progress-size'>业绩完成 ({{spaceSize==0?"0/0":spaceSize}})</label>
+      </view>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='navigateToOrderMgr'>
+    <view class='align-center'>
+      <image src='/images/icon/buy.png' class='image-icon'></image>
+      <view>订单管理</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='navigateToShareStatistics'>
+    <view class='align-center'>
+      <image src='/images/icon/me_spread.png' class='image-icon'></image>
+      <view>分享统计</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='navigateToAgentProductMgr'>
+    <view class='align-center'>
+      <image src='/images/icon/buy.png' class='image-icon'></image>
+      <view>代理产品</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item flex-between' bindtap='navigateToAgreementMgr'>
+    <view class='align-center'>
+      <image src='/images/inbox/inbox.png' class='image-icon'></image>
+      <view>合约管理</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item flex-between' bindtap='navigateToDistributorMgr'>
+    <view class='align-center'>
+      <image src='/images/me-management.png' class='image-icon'></image>
+      <view>渠道管理</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item flex-between' bindtap='navigateToMemberMgr'>
+    <view class='align-center'>
+      <image src='/images/icon/buy.png' class='image-icon'></image>
+      <view>团队成员</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item person-item flex-between' bindtap='navigateToCustomerMgr'>
+    <view class='align-center'>
+      <image src='/images/icon/buy.png' class='image-icon'></image>
+      <view>客户管理</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item person-item flex-between' bindtap='navigateToSettingMgr'>
+    <view class='align-center'>
+      <image src='/images/icon/person-file.png' class='image-icon'></image>
+      <view>系统设置</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='contact-customer-service'>
+    <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:20px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:40px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:60px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:80px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:100px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:120px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:140px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:160px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:180px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:20px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:40px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:60px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:80px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:100px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:120px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:140px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:160px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:180px'></contact-button>
+    <text style='position:relative;'>联系客服</text>
+  </view>
+  <view class="footer">
+    <!-- <view style='color:#ea5036;' bindtap='jumpToProtocol'>《{{appName}}用户服务协议》</view> -->
+    <view>版本(v1.0.001)</view>
+    <view wx:if="{{hasUpdate}}" bindtap='updateVersion'>点击获取新版本</view>
+    <!-- <view>版权所有 © 聚数科技成都有限公司 2017-2018.</view> -->
+  </view>
+</view>

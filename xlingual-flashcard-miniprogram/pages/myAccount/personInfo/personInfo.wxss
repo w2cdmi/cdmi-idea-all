@@ -1,0 +1,123 @@
+.person-info-head {
+    padding: 15rpx 30rpx;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.person-info-head-left {
+    font-size: 30rpx;
+    line-height: 90rpx;
+}
+
+.person-info-head-right {
+    display: flex;
+}
+
+.person-info-head-right-left image {
+    width: 88rpx;
+    height: 88rpx;
+}
+
+.person-info-head-right-right image {
+    width: 44rpx;
+    height: 44rpx;
+    padding-top: 22rpx;
+    padding-left: 25rpx;
+}
+
+.person-info-common {
+    line-height: 100rpx;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 0 30rpx;
+}
+
+.person-content-right {
+    display: flex;
+}
+
+.person-content-right image {
+    width: 44rpx;
+    height: 44rpx;
+    padding-left: 13rpx;
+    vertical-align: text-top;
+}
+
+.person-content-right view:first-child {
+    max-width: 400rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.white-bg {
+    height: 20rpx;
+    background: #f5f5f5;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.maskLayer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.2;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.choose {
+    width: 540rpx;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 2000;
+    background: #f9f9f9;
+    margin: -280rpx 105rpx;
+}
+
+.alert-info-title {
+    font-size: 30rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+
+.alert-content input {
+    width: 480rpx;
+    margin: auto;
+    border: 1px solid #d3d3d3;
+    background: #fff;
+    border-radius: 5px;
+    padding-left: 8rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+}
+
+.alert-footer {
+    display: flex;
+    line-height: 80rpx;
+    margin-top: 30rpx;
+    border-top: 1px solid #d3d3d3;
+}
+
+.alert-footer view {
+    width: 50%;
+    text-align: center;
+}
+
+.cancel-set-nick{
+    border-right: 1px solid #d3d3d3;
+}
+.conform-set-nick{
+    color: #1fc3b3;
+}
+.logout-btn{
+    width: 92%;
+    margin: 80rpx auto 0;
+    text-align: center;
+    line-height: 80rpx;
+    color: #fff;
+    background: #ef473a;
+    border-radius: 8rpx;
+}

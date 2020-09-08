@@ -1,0 +1,66 @@
+page {
+    overflow-y: hidden;
+    background: #fff;
+}
+
+.contentText {
+    margin: 30rpx 0;
+}
+
+.heart-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 40rpx;
+}
+
+.heartImages {
+    height: 70rpx;
+    width: 80rpx;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+.greyHeart {
+    background-position-x: -80rpx;
+}
+
+.select-images{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.select-images>view{
+    float: left;
+}
+
+image {
+    width: 300rpx;
+    height: 240rpx;
+    padding: 10rpx 10px 0 0;
+} 
+
+.trumpet{
+    width: 150rpx;
+    height: 120rpx;
+    margin-top: 20rpx; 
+}
+
+.trumpet {
+    width: 150rpx;
+    height: 120rpx;
+    margin-top: 20rpx;
+}
+
+.flex-item {
+    display: flex;
+    justify-content: center;
+}
+
+.noteImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,73 @@
+<!--page/member/memberdetail.wxml-->
+<view class='page'>
+  <view class='item-flow person-item'>
+    <view>
+      <view class='avatar' style="background-image:url('/images/wxBackup-bg.png')"></view>
+    </view>
+    <view class='name'>
+      <view class="name-title">
+        <label>张三丰</label>
+      </view>
+      <view class="progress-view">
+        <view class='progress-space'>
+          <view class='progress-used' style='width:{{spaceUsed==0?0:spaceUsed}}%'></view>
+        </view>
+        <label class='progress-size'>本月业绩 ({{spaceSize==0?"0/0":spaceSize}})</label>
+      </view>
+    </view>
+  </view>
+  <view wx:if='{{!needCheck}}' class='view-bg border-bottom'>
+    <view class='history-view'>
+      <view class='history-view-left' bindtap='gotoPersonDetail' data-detail="personDetail">
+        <view class='history-view-title'>本月导入用户数</view>
+        <view class='font-size-color'>100</view>
+        <view class='history-view-today-title'>今日+35</view>
+      </view>
+      <view class='history-view-middle'></view>
+      <view class='history-view-right' bindtap='gotoProfitDetail' data-detail="profitDetail">
+        <view class='history-view-title'>历史总导入用户数
+          <image class='small-img history-show' src='/images/me/show.png'></image>
+        </view>
+        <view class='font-size-color'>3500</view>
+        <view class='history-view-today-title'>上月+2500</view>
+      </view>
+    </view>
+  </view>
+  <view class='item flex-between' style="margin-top:30rpx;" bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">名称备注</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">网友五</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">手机号码</view>
+    </view>
+    <view class='flex-align-center'>
+      <!-- <image src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image> -->
+      <view class="text-annotation">18657982302</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between person-item' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">加入时间</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">2018-09-32</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='button-vertical'>
+    <view wx:if='{{needCheck}}' class='long-buttom' style="margin-bottom:30rpx" bindtap='createEnv'>
+      确认该用户为团队成员
+    </view>
+    <view wx:if='{{!needCheck}}' class='long-buttom' bindtap='createEnv'>
+      删除该成员
+    </view>
+  </view>
+</view>

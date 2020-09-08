@@ -1,0 +1,42 @@
+
+<view class='scroll-view' style='height: {{scrollHeight}}'>
+    <!--用户分享  -->
+    <view wx:if='{{selectedHeader === "share" ? true : false}}' wx:for="{{list}}" wx:key="*this" class='share-list-item' bindtap='checkDetail' data-item="{{item}}">
+        <view class='flex-item list-title'>
+            <view>
+                <image src='{{item.author.avatar}}' class='avatar-icon'></image>
+            </view>
+            <view>
+                <view class='name-title-text'>{{item.author.nickname}}</view>
+                <view class='light-text'>{{item.updatedAt}}</view>
+            </view>
+        </view>
+
+        <view class='cover-img flex-item'>
+            <image src='{{item.cards[0].img}}' mode="aspectFill" class='image-icon'></image>
+        </view>
+
+        <view class='flex-item'>
+            <view class='content'>
+                <text>{{item.author.nickname}}: <text class='light-text'>{{item.name}}</text></text>
+            </view>
+        </view>
+    </view>
+    <!--官方模板  -->
+    <view class='relative'>
+        <view wx:if='{{selectedHeader === "template" ? true : false}}' class='list'>
+            <view wx:for="{{dataList}}" class='list-item' wx:key="*this" bindtap='checkTemplateDetail' data-item="{{item}}">
+                <image src='{{item.logo}}' class='image-style'></image>
+                <view class='name-text'>{{item.name}}</view>
+            </view>
+        </view>
+    </view>
+
+</view>
+
+<view class='header'>
+    <view class='headerTab'>
+        <view class='{{selectedHeader === "share" ? "selectedHeader" : ""}}' data-name="share" bindtap='selectedHeader'>用户分享</view>
+        <view class='{{selectedHeader === "template" ? "selectedHeader" : ""}}' data-name="template" bindtap='selectedHeader'>官方模板</view>
+    </view>
+</view>

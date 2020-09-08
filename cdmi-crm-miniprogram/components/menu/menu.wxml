@@ -1,0 +1,31 @@
+<view wx:if="{{isShowMenu=='true'?true:false}}">
+    <view class="modal-mask-white" bindtap="onHideMenu">
+    </view>
+    <view class='menu-panel'>
+        <view class='menu-group'>
+            <view hover-class='button-hover' bindtap='chooseUploadImage'>
+                <image src='/images/menu/image.png'></image>
+                <text>添加应用</text>
+            </view>
+            <view hover-class='button-hover' bindtap='chooseUploadVedio'>
+                <image src='/images/menu/movie.png'></image>
+                <text>添加用户</text>
+            </view>
+            <view hover-class='button-hover' bindtap='showCreateFolder'>
+                <image src='/images/menu/folder.png'></image>
+                <text>新建文件夹</text>
+            </view>
+            <view hover-class='button-hover' bindtap='jumpForwardPage'>
+                <image src='/images/menu/batch.png'></image>
+                <text>分享</text>
+            </view>
+            <view hover-class='button-hover' bindtap='jumpFindPage'>
+                <image src='/images/menu/find.png'></image>
+                <text>看点</text>
+            </view>
+        </view>
+    </view>
+    <view class='close-menu' bindtap='onHideMenu'>
+        <image src='/images/music/delete.png'></image>
+    </view>
+</view>

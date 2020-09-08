@@ -1,0 +1,103 @@
+<!--page/agentproduct/productdetail.wxml-->
+<view class='page'>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">商品名称</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">爱灵格多语闪卡</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+    <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">商品介绍</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">无</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item person-item flex-between'>
+    <view class='text-horizontal'>
+      <view class='text-item'>服务商介绍</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">{{distributor_name}}</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between'>
+    <view class='text-horizontal'>
+      <view class='text-item'>渠道政策</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">未公开</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">上级渠道商</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">爱尔眼科</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">提成比例</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">5%(原价)</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">分销合约</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">2018-03-02</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">联系人</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">张三</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <!-- <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">职务</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">老板</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view> -->
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">联系电话</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">18978074325</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">邮件地址</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">laoban@laoban.com</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+</view>

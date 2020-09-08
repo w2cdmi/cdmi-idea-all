@@ -1,0 +1,120 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.headerTab {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+}
+
+.headerTab>view {
+    width: 250rpx;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #999;
+}
+
+.headerTab>view.selectedHeader {
+    border-bottom: 10rpx solid #1fc3b3;
+    font-size: 32rpx;
+    color: #1fc3b3;
+}
+
+.scroll-view{
+    margin-top: 110rpx;
+}
+
+.share-list-item {
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+.list-title {
+    padding: 20rpx 0;
+}
+
+.flex-item {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-icon {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    margin: 0 15rpx 0 30rpx;
+}
+
+.cover-img {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    border-radius: 5rpx;
+}
+
+.image-icon {
+    width: 100%;
+    height: 750rpx;
+    /* border-radius: 10rpx; */
+}
+
+.content {
+    width: 600rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 20rpx 30rpx;
+    color: #333;
+}
+
+.name-title-text {
+    width: 600rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.light-text {
+    color: #999;
+}
+
+/*模板  */
+
+.relative{
+    position: relative;
+}
+
+.list {
+    position: absolute;
+    background: #fff;
+    padding: 10rpx 10rpx 30rpx;
+    margin: 20rpx 0;
+}
+
+.list-item {
+    position: relative;
+    width: 230rpx;
+    float: left;
+    margin: 12rpx 0 0 12rpx;
+}
+
+.name-text {
+    height: 40rpx;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.image-style {
+    width: 100%;
+    height: 200rpx;
+}

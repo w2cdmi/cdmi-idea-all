@@ -1,0 +1,109 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.2",
+	"appid": "wx517f83d8d89f1d87",
+	"projectname": "%E7%88%B1%E7%81%B5%E6%A0%BC%E9%97%AA%E5%8D%A1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 10,
+			"list": [
+				{
+					"id": -1,
+					"name": "场景工坊",
+					"pathName": "pages/sceneWorkshop/sceneWorkshop",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "账户",
+					"pathName": "pages/myAccount/myAccount",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "课程详情",
+					"pathName": "pages/myAccount/buyCourse/courseDetail/courseDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "测试页面",
+					"pathName": "pages/screenDetail/test/test",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "账户充值",
+					"pathName": "pages/myAccount/accountRecharge/accountRecharge",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人信息",
+					"pathName": "pages/myAccount/personInfo/personInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/myAccount/register/register",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "授权",
+					"pathName": "pages/authAndLogin/authAndLogin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登陆",
+					"pathName": "pages/myAccount/userLogin/userLogin",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "页面详情",
+					"pathName": "pages/screenDetail/screenDetail",
+					"query": "detailType=customShare&id=5b68367528501d1505459b43&rcode=123",
+					"scene": "1007"
+				},
+				{
+					"id": -1,
+					"name": "发现",
+					"pathName": "pages/find/find",
+					"query": "rcode=000000"
+				}
+			]
+		}
+	}
+}

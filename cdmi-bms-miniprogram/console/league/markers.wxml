@@ -1,0 +1,19 @@
+<!--console/school/markers.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{markers}}" wx:key="index" wx:for-item="marker" class='item flex-between' bindtap='jumpToMarkerDetail' data-title='{{marker.name}}' data-id='{{marker.id}}'>
+            <view class='align-center'>
+                <view>{{marker.name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">{{marker.sign}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createMarker'>
+            新增分类标记
+        </view>
+    </view>
+</view>

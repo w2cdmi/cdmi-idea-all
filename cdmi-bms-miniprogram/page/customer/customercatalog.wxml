@@ -1,0 +1,25 @@
+<!--page/customer/customercatalog.wxml-->
+<view class='page'>
+    <view style='min-height:40vh' wx:if="{{pagemodel == ''}}">
+        <view wx:for="{{cataloies}}" wx:key="index" wx:for-item="catalog" class='item flex-between' data-name='{{catalog.title}}' data-id='{{catalog.id}}' bindtap='jumpToCustomerCatalog'>
+            <view class='align-center'>
+                <view>{{catalog.title}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical' wx:if="{{pagemodel == ''}}">
+        <view class='long-buttom' bindtap='jumpToNewCustomerCatalog'>
+            新增客户类型
+        </view>
+    </view>
+    <view style='min-height:40vh' wx:if="{{pagemodel == 'options'}}">
+        <view wx:for="{{cataloies}}" wx:key="index" wx:for-item="catalog" class='item flex-between' data-name='{{catalog.title}}' data-id='{{catalog.id}}' bindtap='selectCustomerCatalog'>
+            <view class='align-center'>
+                <view>{{catalog.title}}</view>
+            </view>
+        </view>
+    </view>
+</view>

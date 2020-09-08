@@ -1,0 +1,7 @@
+<view class='buy-course-container'>
+    <view class='course-store-content' wx:for="{{courseStoreList}}" wx:key="*this">
+        <view class='store-content-left'><image src='{{imgUrl}}/static/xlingual/img/{{item.cover}}'></image></view>
+        <view class='store-content-middle'>{{item.name}}</view>
+        <view class='store-content-right' catchtap='seeCourseDetail' data-item="{{item}}">查看</view>
+    </view>
+</view>

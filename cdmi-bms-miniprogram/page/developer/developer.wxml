@@ -1,0 +1,20 @@
+<!--page/developer/developer.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{developers}}" wx:key="index" wx:for-item="developer" class='item flex-between' bindtap='jumpToDeveloperDetail' data-title='{{developer.name}}' data-id='{{developer.id}}'>
+            <view class='align-center'>
+                <view>{{developer.name}}</view>
+                <view class="text-item text-annotation" wx:if="{{developer.type =='Person'}}">个人</view>
+                <view class="text-item text-annotation" wx:if="{{developer.type =='Enterprise'}}">企业</view>
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createDeveloper'>
+            手动新增开发者
+        </view>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+<!--miniprogram/pages/persionoption.wxml-->
+<view class='page'>
+    <view wx:for="{{members}}" wx:key="index" wx:for-item="member" class='item flex-between' bindtap='selectPerson' data-cognation='{{member.cognation.key}}' data-relation='{{member.relation.key}}' data-id='{{member.id}}' data-name='{{member.name}}'>
+        <view class='text-horizontal'>
+            <view class='text-item' style='width:21%'>{{member.relation.value}}</view>
+            <view class='text-item' style='flex:1;'>{{member.name}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,23 @@
+<!--console/school/trainplace/shopes.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{shopes}}" wx:key="index" wx:for-item="shop" class='item flex-between' bindtap='jumpToShopDetail' data-title='{{shop.name}}' data-id='{{shop.id}}'>
+            <view class='text-horizontal'>
+                <view class="text-item">{{shop.name}}</view>
+                <view class="text-annotation" style='padding-left:20rpx'>未签约</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation" wx:if="{{shop.branches != null && shop.branches.length > 1}}">多网点</view>
+                <view class="text-item">
+                    <image wx:if="{{shop.icon == '' || shop.icon == null}}" src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;'></image>
+                </view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createShop'>
+            新增培训机构
+        </view>
+    </view>
+</view>

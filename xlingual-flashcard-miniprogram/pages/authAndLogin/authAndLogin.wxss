@@ -1,0 +1,52 @@
+/* disk/authAndLogin.wxss */
+page{
+    height: 100%;
+}
+.page{
+    background: #fff;
+    height: 100%;
+}
+.option-group{
+    position:fixed;
+    bottom:40px;
+    width:100%;
+}
+.btn {
+    width: 90%;
+    height: 44px;
+    background-color: #51BFB9;
+    color: #fff;
+    margin-top: 40rpx;
+    font-size: 15px;
+    line-height: 44px;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn::after{
+    border: none;
+}
+.exit-btn{
+    background: #f5f5f5;
+    color: #999;
+}
+.title{
+    padding-top: 20rpx;
+    font-size: 18px;
+    text-align: center;
+}
+.description{
+    margin-top:20rpx; 
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+image{
+    height:88px;
+    width:88px;
+}
+.btn-hover{
+    background: #80D2CD;
+}
+.exit-btn-hover{
+    background: #f9f9f9;
+}

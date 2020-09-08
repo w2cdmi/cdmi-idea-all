@@ -1,0 +1,73 @@
+/* console/relatives.wxss */
+
+.page {
+    height: 100%;
+    width: 100%;
+    background: #f5f5f5;
+    font-size: 28rpx;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.pannel {
+    width: 100%;
+    background: #fff;
+    font-size: 28rpx;
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/** 图谱 **/
+.atlas {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/** 带有vertical的容器,子元素自动进行竖排 **/
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+/** 带有horizontal的容器,子元素自动进行横排 **/
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content:center;
+}
+
+.horizontal .bothsides{
+    justify-content:space-between;
+}
+
+.horizontal .left{
+    justify-content:flex-start;
+}
+
+.horizontal .right{
+    justify-content:flex-end;
+}
+
+/** 具有相当格式内容的元素 **/
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rpx 5rpx;
+    border-top: 1px solid #f8f8f8;
+    background: #df8181;
+    width: 9%;
+    font-size: 18rpx;
+    text-align: center;
+}
+
+/** 备注类文字 **/
+.text-annotation {
+    color: #666;
+    font-size: 24rpx;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

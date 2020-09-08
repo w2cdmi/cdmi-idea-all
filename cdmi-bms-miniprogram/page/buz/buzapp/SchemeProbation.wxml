@@ -1,0 +1,23 @@
+<!--page/buz/buzapp/SchemeProbation.wxml-->
+<view class='page'>
+    <view class='item flex-between' bindtap='selectedProbation' data-probation='0' data-desc="无">
+        <view class='text-horizontal'>
+            <view class='text-item'>无</view>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='selectedProbation' data-probation='7' data-desc="一周试用期">
+        <view class='text-horizontal'>
+            <view class='text-item'>一周试用期</view>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='selectedProbation' data-probation='30' data-desc="一个月试用期">
+        <view class='text-horizontal'>
+            <view class='text-item'>一个月试用期</view>
+        </view>
+    </view>
+    <view class='item flex-between' bindtap='selectedProbation' data-probation='90'  data-desc="90天试用期">
+        <view class='text-horizontal'>
+            <view class='text-item'>90天试用期</view>
+        </view>
+    </view>
+</view>

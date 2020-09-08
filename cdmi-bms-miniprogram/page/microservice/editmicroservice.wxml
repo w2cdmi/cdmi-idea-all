@@ -1,0 +1,85 @@
+<view class='page'>
+    <form bindsubmit='saveMicroservice'>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:60px;'>微服务名称</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="name" placeholder="必填" type="text" value="{{name}}" maxlength="10" style='width:100%' />
+                </view>
+            </view>
+            <!-- <view class='flex-align-center'>
+                 <image src='/images/icon/cancel.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image> 
+            </view> -->
+        </view>
+        <view class='item flex-between' bindtap='clearStorage'>
+            <view class='text-horizontal'>
+                <view class="text-item">微服务图标</view>
+            </view>
+            <view class='flex-align-center'>
+                <input name="icon" type="text" value="" style='display:none' />
+                <image src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item flex-between' bindtap='clearStorage'>
+            <view class='text-horizontal'>
+                <view class="text-item">微服务描述</view>
+            </view>
+            <view class='flex-align-center'>
+                <input name="desc" type="text" value="" style='display:none' />
+                <view wx:if="{{desc == null || desc == ''}}" class="text-annotation">未填写</view>
+                <view wx:if="{{desc != null && desc != ''}}" class="text-annotation">详细</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item person-item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:60px;'>EndPoint</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="endpoint" placeholder="必填，必须以https开头" type="text" value="{{endpoint}}" maxlength="10" auto-focus style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{id!=null && id !=''}}" class='item person-item flex-between' bindtap='clearStorage'>
+            <view class='text-horizontal'>
+                <view class="text-item">服务接口列表</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">未填写</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view wx:if="{{id!=null && id !=''}}" class='item flex-between' bindtap='jumpToMicroserviceConfig' data-title='{{name}}' data-id='{{id}}'>
+            <view class='text-horizontal'>
+                <view class="text-item">部署参数</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">未填写</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view wx:if="{{id!=null && id !=''}}" class='item person-item flex-between' bindtap='clearStorage'>
+            <view class='text-horizontal'>
+                <view class="text-item">部署环境</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">未设置</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view wx:if="{{id!=null && id !=''}}" class='item person-item flex-between' bindtap='clearStorage'>
+            <view class='text-horizontal'>
+                <view class="text-item">接入应用</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">无</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType="submit">
+                保存微服务信息
+            </button>
+        </view>
+    </form>
+</view>

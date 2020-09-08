@@ -1,0 +1,63 @@
+@import "../../createScreen/createScreen.wxss";
+@import "../../template/sceneChoose.wxss";
+.maskLayer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.2;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.choose {
+    width: 150rpx;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 2000;
+    background: #000;
+    margin: -280rpx 300rpx;
+    text-align: center;
+    line-height: 60rpx;
+    opacity: 0.5;
+    color: #fff;
+    border-radius: 10rpx;
+    word-spacing: 10rpx;
+    letter-spacing: 4rpx;
+}
+
+.cut-img-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 6666;
+    background-color:#e5e5e5;
+    top:0;
+    bottom: 0; 
+}
+.canvas-content{
+    background-color:rgba(0, 0, 0, 0.8);
+}
+.cropper-buttons{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 6666;
+    height: 100rpx;
+    line-height: 100rpx;
+    background: #fff;
+}
+.cropper-buttons view{
+    width: 50%;
+    text-align: center;
+}
+.cropper-buttons view:first-child{
+    border-right: 1px solid #e5e5e5;
+}

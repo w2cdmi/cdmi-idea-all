@@ -1,0 +1,33 @@
+<!--miniprogram/pages/game.wxml-->
+<view>
+    <!-- <canvas canvas-id="cognation" class='cognation' style="width:{{cavasWidth}}px;height:{{cavasHeight}}px;">
+    </canvas>
+     -->
+    <view class="content">
+        <!--九宫格区间-->    
+        <view class="grid" wx:for="{{raw_data}}" wx:for-index="r" wx:for-item="row" wx:key="index">
+            <view class="row" wx:for="{{row}}"  wx:for-item="cell" wx:for-index="c" wx:key="index">
+                <view class="item" style='width:{{cellWidth-2}}px;height:{{cellHeight-2}}px' data-x="{{r+1}}" data-y="{{c+1}}" data-value="{{cell}}" data-read="{{cell != 0}}" bindtap='clickCell'>
+                   {{cell==0 ? '': cell}}
+                </view>
+            </view>
+        </view>
+        <!--视频教学区-->
+        <view>dd</view>
+        <!--输入框-->
+        <view class="input-pop" wx:if="{{showInput}}">
+          <view style="width:100%" class="input-panel">
+            <view class="input-item" style='width:20%;height:{{cellHeight-2}}px' wx:for="{{range}}" wx:key="index" bindtap="setValue" data-value="{{index+1}}">
+              {{index + 1}}
+            </view>
+            <view class="input-item" style='width:20%;height:{{cellHeight-2}}px'>滤</view>
+          </view>
+          <view style="width:100%" class="input-panel">
+            <view class="input-item" style='width:25%;height:{{cellHeight-2}}px'>撤销</view>
+            <view class="input-item" style='width:25%;height:{{cellHeight-2}}px'>恢复</view>
+            <view class="input-item" style='width:25%;height:{{cellHeight-2}}px'>清除</view>
+            <view class="input-item" style='width:25%;height:{{cellHeight-2}}px'>标记</view>
+          </view>
+        </view>
+    </view>
+</view>

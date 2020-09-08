@@ -1,0 +1,75 @@
+<!--pages/me/me.wxml-->
+<view class='head-bg'>
+    <image src='{{avatarUrl}}' class='head-image'></image>
+</view>
+<view class='head-bg-bottom'>
+    <view class='nickName'>{{nickName}}</view>
+</view>
+<view class='content'>
+    <view class='item person-item' bindtap='gotoPublishProductPage' wx:if="{{!isAdmin}}">
+        <view class='align-center'>
+            <image src='../../images/product-icon.png' class='image-icon'></image>
+            <view>发布商品</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='../../images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+
+    <view class='item person-item' bindtap='gotoAddressListPage'>
+        <view class='align-center'>
+            <image src='../../images/address-icon.png' class='image-icon'></image>
+            <view>地址管理</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='../../images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+
+    <view class='item person-item' bindtap='gotoHistory'>
+        <view class='align-center'>
+            <image src='../../images/address-icon.png' class='image-icon'></image>
+            <view>历史参与</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='../../images/arrow.png' class='image-size'></image>
+        </view>
+    </view>
+
+    <!-- <view class='item person-item' bindtap='gotoWinnerPage'>
+        <view class='align-center'>
+            <image src='../../images/address-icon.png' class='image-icon'></image>
+            <view>winner</view>
+        </view>
+        <view class='flex-align-center'>
+            <image src='../../images/arrow.png' class='image-size'></image>
+        </view>
+    </view>  -->
+</view>
+
+<view class='contact-customer-service'>
+    <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:20px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:40px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:60px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:80px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:100px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:120px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:140px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:160px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='left:180px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:20px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:40px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:60px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:80px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:100px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:120px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:140px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:160px'></contact-button>
+    <contact-button type='default-light' size="20" session-from="weapp" style='top:20px;left:180px'></contact-button>
+    <text style='position:relative;'>联系客服</text>
+</view>
+<view class="footer">
+    <view>版本(v1.0.2)</view>
+</view>

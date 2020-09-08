@@ -1,0 +1,72 @@
+<!--console/league/test/index.wxml-->
+<!--
+系统分为4个板块：
+招商
+关注
+消息
+我的
+-->
+<view class="container">
+    <!--搜索分类导航条--->
+    <view class="pannel">
+        <view class="row search">
+            <view class="searchInput">
+                <image src="/images/icon/add.png"></image>
+                <view class='searchText'>
+                    搜索正在招商加盟的项目
+                </view>
+            </view>
+        </view>
+        <view class="row nav">
+            <view class="jselect column">
+                <view>精选</view>
+                <view class="selected"></view>
+            </view>
+            <view class="separator">
+            </view>
+            <view class="scroll">
+                <view class="item" wx:for="{{cataloies}}" wx:key="index" wx:for-item="catalog">
+                    <view class="column">
+                        <view>{{catalog.name}}</view>
+                        <view class="selected"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!--Banner广告区--->
+    <view class="pannel">
+        <view class="banner">
+        </view>
+    </view>
+    <!--每日好项目推荐--->
+    <view class="pannel">
+        <view class="row">
+            <view class="column title">每日好项目推荐</view>
+        </view>
+        <!--招商广告LOGO-->
+        <view wx:for="{{adsenses}}" wx:key="index" wx:for-item="adsense">
+            <image></image>
+        </view>
+        <view wx:for="{{adsenses.length == 0}}" wx:key="index" wx:for-item="adsense">
+            <image></image>
+        </view>
+    </view>
+    <!--首页行业类型推荐区--->
+    <view class="pannel" wx:for="{{cataloies}}" wx:key="index" wx:for-item="catalog">
+        <!--分类标栏目题-->
+        <view class="row">
+            <view class="column title">{{catalog.name}}</view>
+            <view class="more" data-id='{{catalog.id}}' bindtap='navToCatalog'>
+                <view class="text">查看更多</view>
+                <view class="arrow">
+                    <image src="/images/arrow.png"></image>
+                </view>
+            </view>
+        </view>
+        <!--招商广告LOGO-->
+        <view wx:for="{{catalog.adsenses}}" wx:key="index" wx:for-item="adsense">
+            <image></image>
+        </view>
+    </view>
+</view>

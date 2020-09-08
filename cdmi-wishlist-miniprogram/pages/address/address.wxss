@@ -1,0 +1,52 @@
+/*地址信息  */
+.flex-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-item > view {
+    width: 33.33%;
+}
+
+.address-info {
+    min-height: 60rpx;
+    padding: 20rpx 30rpx;
+    justify-content: flex-between;
+    background: #fff;
+}
+
+.address-info > input {
+    color: #999;
+    margin-left: 20rpx;
+}
+
+.textarea {
+    height: 200rpx;
+    width: 100%;
+    margin-top: 10px;
+    background: #f9f9f9;
+    padding: 5px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.flex-center {
+    justify-content: center;
+    margin: 20rpx 0;
+}
+
+.lotteryBtn {
+    background: #51bfb9;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    width: 90%;
+    color: #fff;
+    border-radius: 5px;
+    text-align:center;
+    margin:10rpx auto;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,72 @@
+<!--page/setting/setting.wxml-->
+<view class='page'>
+  <view class='item flex-between' bindtap='jumpToMiniprogram'>
+    <view class='align-center'>
+      <view>团队名称</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToMiniprogram'>
+    <view class='align-center'>
+      <view>团队标识</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToMiniprogram'>
+    <view class='align-center'>
+      <view>渠道类型</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToMiniprogram'>
+    <view class='align-center'>
+      <view>渠道等级</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToAppMgr'>
+    <view class='align-center'>
+      <view>业绩等级</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <!-- <view class='item flex-between' bindtap='jumpToMicroService'>
+    <view class='align-center'>
+      <image src='/images/icon/me_spread.png' class='image-icon'></image>
+      <view>团队模式</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item person-item flex-between' bindtap='jumpToThirdService'>
+    <view class='align-center'>
+      <image src='/images/icon/person-file.png' class='image-icon'></image>
+      <view>手动添加订单</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view> -->
+
+  <view class='item person-item flex-between' bindtap='jumpToBMSManager'>
+    <view class='align-center'>
+      <view>管理员移交</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+</view>

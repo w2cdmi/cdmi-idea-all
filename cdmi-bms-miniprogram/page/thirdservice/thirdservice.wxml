@@ -1,0 +1,78 @@
+<view class='page'>
+  <view class='item flex-between' bindtap='toInbox'>
+    <!-- <image class='img-enterprise-manange' src='/disk/images/me-management.png'></image> -->
+    <view class='align-center'>
+      <view>短信网关配置</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item person-item flex-between' bindtap='gotoShareStatistics'>
+    <view class='align-center'>
+      <view>邮件服务器配置</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='jumpToOpenWx'>
+    <view class='align-center'>
+      <view>企业微信标准服务</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item flex-between' bindtap='jumpToOpenWx'>
+    <view class='align-center'>
+      <view>微信开放平台</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+
+  <view class='item person-item flex-between' bindtap='jumpToOpenWxThird'>
+    <view class='align-center'>
+      <view>微信第三方平台</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToOpenWxThird'>
+    <view class='align-center'>
+      <view>存储服务配置</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToOpenWxThird'>
+    <view class='align-center'>
+      <view>翻译与语音服务</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToOpenWxThird'>
+    <view class='align-center'>
+      <view>文件预览服务</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='jumpToDocumentService'>
+    <view class='align-center'>
+      <view>汇智文档云服务</view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index",
+    "pages/logs/logs",
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "#ffffff",
+    "navigationBarTitleText": "口语陪练大师",
+    "navigationBarBackgroundColor": "#EA5036",
+    "backgroundColor": "#ffffff"
+  }
+}

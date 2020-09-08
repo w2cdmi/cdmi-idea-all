@@ -1,0 +1,81 @@
+<view class='page'>
+    <form bindsubmit="createDeveloper">
+        <view class='item flex-between' bindtap='selectDeveloperType'>
+            <view class='text-horizontal'>
+                <view class='text-item'>开发者类型</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation" wx:if="{{developer_type == 'Person'}}">个人</view>
+                <view class="text-annotation" wx:if="{{developer_type == 'Enterprise'}}">企业</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+                <input name="type" type="text" value="{{developer_type}}" style='display:none'/>
+            </view>
+        </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item' style='width:21%' wx:if="{{developer_type == 'Person'}}">开发者名称</view>
+                <view class='text-item' style='width:21%' wx:if="{{developer_type == 'Enterprise'}}">企业名称</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="name" placeholder="必填" type="text" value="{{name}}" maxlength="50"  bindconfirm='setName' bindblur='setName' />
+                </view>
+            </view>
+        </view>
+            <view class='item flex-between' wx:if="{{developer_type == 'Enterprise'}}">
+                <view class='text-horizontal'>
+                    <view class="text-item" style='width:21%'>营业执照号</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="licence" placeholder="必填" type="text" value="{{licence}}" maxlength="50" style='width:100%' bindconfirm='setBusinessLicence' bindblur='setBusinessLicence' />
+                    </view>
+                </view>
+            </view>
+            <view class='item flex-between' wx:if="{{developer_type == 'Person'}}">
+                <view class='text-horizontal'>
+                    <view class="text-item" style='width:21%'>身份证号码</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="idcard" placeholder="必填" type="text" value="{{idcard}}" maxlength="18" style='width:100%' bindconfirm='setIDCard' bindblur='setIDCard' />
+                    </view>
+                </view>
+            </view>
+            <view class='item person-item flex-between' bindtap='selctedArea'>
+                <view class='text-horizontal'>
+                <view class="text-item" wx:if="{{developer_type == 'Person'}}">所在区域</view>
+                    <view class="text-item" wx:if="{{developer_type == 'Enterprise'}}">工商所在地</view>
+                </view>
+                <view class='flex-align-center'>
+                    <view class="text-annotation">四川 - 成都</view>
+                    <image src='/images/arrow.png' class='image-size'></image>
+                    <input name="provinceId" type="text" value="{{provinceId}}" style='display:none'/>
+                    <input name="cityId" type="text" value="{{cityId}}" style='display:none'/>
+                </view>
+            </view>
+            <view class='item flex-between' wx:if="{{developer_type == 'Enterprise'}}">
+                <view class='text-horizontal'>
+                    <view class="text-item" style='width:21%'>联系人姓名</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name='linkname' placeholder="必填" type="text" value="{{linkname}}" maxlength="50" style='width:100%' bindconfirm='setLinkName' bindblur='setLinkName' />
+                    </view>
+                </view>
+            </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:21%'>联系电话</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name='linkmobile' placeholder="必填" type="number" value="{{linkmobile}}" maxlength="50" style='width:100%' bindconfirm='setPhone' bindblur='setPhone' />
+                </view>
+            </view>
+        </view>
+        <view class='item person-item flex-between'>
+            <view class='text-horizontal'>
+                <view class="text-item" style='width:21%'>邮件地址</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name='linkemail' placeholder="选填" type="text" value="{{linkmail}}" maxlength="50" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType='submit'>
+                提交保存
+            </button>
+        </view>
+    </form>
+</view>

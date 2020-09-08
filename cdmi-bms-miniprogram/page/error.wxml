@@ -1,0 +1,2 @@
+<!--page/error.wxml-->
+<text>{{message}}</text>

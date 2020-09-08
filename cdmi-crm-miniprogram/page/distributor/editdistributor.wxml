@@ -1,0 +1,101 @@
+
+<view class='page'>
+  <view class='item flex-between'>
+    <view class='text-horizontal'>
+      <view class='text-item' style='width:21%'>渠道商名称</view>
+      <view class='text-item' style='flex:1;'>
+        <input placeholder="必填" type="text" value="" maxlength="50" auto-focus style='width:100%' />
+      </view>
+    </view>
+    <view class='flex-align-center'>
+      <image src='/images/icon/cancel.png' style='width:48rpx;height:48rpx;margin-left:20rpx'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item" style='width:21%'>营业执照号</view>
+      <view class='text-item' style='flex:1;'>
+        <input placeholder="必填" type="text" value="91440300MA5ERWUX44" maxlength="50" auto-focus style='width:100%' />
+      </view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">工商所在地</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">四川 - 成都</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">渠道商类型</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">广告渠道商</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item">渠道商级别</view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation">一级</view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item" style='width:21%'>联系人姓名</view>
+      <view class='text-item' style='flex:1;'>
+        <input placeholder="必填" type="text" value="张三" maxlength="50" auto-focus style='width:100%' />
+      </view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item" style='width:21%'>职务</view>
+      <view class='text-item' style='flex:1;'>
+        <input placeholder="选填" type="text" value="老板" maxlength="50" auto-focus style='width:100%' />
+      </view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item" style='width:21%'>联系电话</view>
+      <view class='text-item' style='flex:1;'>
+        <input placeholder="选填" type="text" value="18978074325" maxlength="50" auto-focus style='width:100%' />
+      </view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+  <view class='item person-item flex-between' bindtap='clearStorage'>
+    <view class='text-horizontal'>
+      <view class="text-item" style='width:21%'>邮件地址</view>
+      <view class='text-item' style='flex:1;'>
+        <input placeholder="选填" type="text" value="laoban@laoban.com" maxlength="50" auto-focus style='width:100%' />
+      </view>
+    </view>
+    <view class='flex-align-center'>
+      <view class="text-annotation"></view>
+      <image src='/images/arrow.png' class='image-size'></image>
+    </view>
+  </view>
+</view>

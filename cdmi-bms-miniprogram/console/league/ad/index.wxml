@@ -1,0 +1,20 @@
+<!--console/league/ad/index.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{adsenses}}" wx:key="index" wx:for-item="adsense" class='item flex-between' bindtap='jumpToAdsenseDetail' data-title='{{adsense.name}}' data-id='{{adsense.id}}'>
+            <view class='align-center'>
+                <view>{{adsense.name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation" style='flex-basis:160rpx;text-align:right'>价格:{{adsense.mouthprice}}/{{adsense.yearprice}}</view>
+                <view class="text-annotation" style='flex-basis:160rpx;text-align:right'>{{adsense.sign}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='jumpToNewAdsense'>
+            新增广告位
+        </view>
+    </view>
+</view>

@@ -1,0 +1,33 @@
+<!--page/agreement/editagreementcataloies.wxml-->
+<view class='page'>
+    <form bindsubmit="createAgreementCatalog">
+        <view style='min-height:40vh'>
+            <view class='item person-item flex-between'>
+                <view class='text-horizontal'>
+                    <view class='text-item' style='width:24%'>合约模板名称</view>
+                    <view class='text-item' style='flex:1;'>
+                        <input name="name" placeholder="必填" type="text" value="{{name}}" maxlength="50" style='width:100%' />
+                    </view>
+                </view>
+            </view>
+            <view class='item flex-between' bindtap='viewContent'>
+                <view class='text-horizontal'>
+                    <view class="text-item">模板内容</view>
+                    <input name="content" type="text" value="{{content}}" style='display:none' />
+                </view>
+                <view class='flex-align-center'>
+                    <view class="text-annotation">无</view>
+                    <image src='/images/arrow.png' class='image-size'></image>
+                </view>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType='submit'>
+                提交保存
+            </button>
+            <view class='long-buttom deleteButton' bindtap='deleteAgreementCatalog' wx:if="{{id !=''}}">
+                删除该合约类型
+            </view>
+        </view>
+    </form>
+</view>

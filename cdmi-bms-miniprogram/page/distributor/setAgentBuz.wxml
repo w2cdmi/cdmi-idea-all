@@ -1,0 +1,15 @@
+<!--page/distributor/setAgentBuz.wxml-->
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{buz_items}}" wx:key="index" wx:for-item="buz_item" class='item flex-between' bindtap='selectBuzApp' data-title='{{buz_item.name}}' data-distributorId ='{{distributorId}}' data-buzId='{{buz_item.id}}'>
+            <view class='align-center'>
+                <view>{{buz_item.name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                 <view class="text-annotation" wx:if="{{buz_item.status==''}}">未签署协议</view>
+                 <view class="text-annotation" wx:if="{{buz_item.status!=''}}">{{buz_item.status}}</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+</view>

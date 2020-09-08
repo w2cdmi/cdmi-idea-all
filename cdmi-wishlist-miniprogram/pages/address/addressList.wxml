@@ -1,0 +1,31 @@
+<view class='page'>
+    <radio-group bindchange="radioChange">
+        <view class='address-item' wx:for="{{addressList}}" data-id='{{item.id}}' bindtap='selectAddress' wx:key="this">
+            <view class='address-info'>
+                <view class='flex-item'>
+                    <view>{{item.addressName}}</view>
+                    <view style='text-align:right;'>{{item.phoneNumber}}</view>
+                </view>
+                <view style='margin-top: 10px;'>{{item.address}}</view>
+            </view>
+            <view class='address-option'>
+                <view class='flex-left'>
+                    <label>
+                        <radio color='#ea5036' value="{{item.id}}" checked="{{item.isDefault}}" />默认地址</label>
+                </view>
+                <view>
+                    <view class='margin-right' hover-class='view-hover' bindtap='editAddress' data-id='{{item.id}}'>
+                        <image class='edit-icon icon' src='/images/edit-icon.png'></image>
+                        <text>编辑</text>
+                    </view>
+                    <view hover-class='view-hover' bindtap='deleteAddress' data-id='{{item.id}}'>
+                        <image class='delete-icon icon' src='/images/delete-icon.png'></image>
+                        <text>删除</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </radio-group>
+</view>
+
+<view class='add-btn' hover-class='btn-hover' bindtap='gotoAddAddress'>新增地址</view>

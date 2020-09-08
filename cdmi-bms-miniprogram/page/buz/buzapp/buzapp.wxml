@@ -1,0 +1,17 @@
+<view class='page'>
+    <view style='min-height:40vh'>
+        <view wx:for="{{buz_items}}" wx:key="index" wx:for-item="buz_item" class='item flex-between' bindtap='jumpToBuzAppDetail' data-title='{{buz_item.name}}' data-id='{{buz_item.id}}'>
+            <view class='align-center'>
+                <view>{{buz_item.name}}</view>
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+    </view>
+    <view class='button-vertical'>
+        <view class='long-buttom' bindtap='createBuzApp'>
+            新增业务应用
+        </view>
+    </view>
+</view>

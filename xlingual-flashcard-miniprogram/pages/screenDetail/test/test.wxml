@@ -1,0 +1,23 @@
+<view>
+    <view class='heart-group'>
+        <view style='background-image: url("/pages/images/abilityTest/heart.png")' wx:for="{{[1,2,3,4,5]}}" wx:key="*this" class='heartImages {{heartCount < item ? "greyHeart" : ""}}'></view>
+    </view>
+    <view class='flex-item'>
+        <view class='contentText'>{{currentText}}</view>
+    </view>
+    <view class='select-images'>
+        <view wx:for="{{randomArr}}" wx:key="*this" data-item="{{item}}" data-index="{{index}}" bindtap='selectImage'>
+            <image src='{{item}}'></image>
+        </view>
+    </view>
+
+    <view class='flex-item'>
+        <image src='/pages/images/abilityTest/trumpet.jpg' class='trumpet'></image>
+        <image src='/pages/images/abilityTest/trumpet.jpg' class='trumpet'></image>
+        <image src='/pages/images/abilityTest/trumpet.jpg' class='trumpet'></image>
+    </view>
+</view>
+
+<audio src='{{currentAudio}}' id="myAudio"></audio>
+<image src='{{noteImage}}' class='noteImage' bindtap='hideNote' wx:if="{{showNote}}"></image>
+

@@ -1,0 +1,67 @@
+<!--console/school/expert/editexpert.wxml-->
+<view class='page'>
+    <form bindsubmit="saveExpert">
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item'>专家名称</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="name" placeholder="必填" type="text" value="{{name}}" maxlength="50" style='width:100%' />
+                    <input name="id" type="text" value="{{id}}" style='width:100%;display:none' />
+                </view>
+            </view>
+        </view>
+        <view class='item flex-between'>
+            <view class='text-horizontal'>
+                <view class='text-item'>手机号码</view>
+                <view class='text-item' style='flex:1;'>
+                    <input name="mobile" placeholder="必填" type="number" value="{{mobile}}" maxlength="11" style='width:100%' />
+                </view>
+            </view>
+        </view>
+        <view class='item person-item flex-between' bindtap='changeIcon'>
+            <view class='text-horizontal'>
+                <view class="text-item">上传头像</view>
+                <input name="headImage" type="text" value="{{headImage}}"style='width:100%;display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/wxBackup-bg.png' style='width:48rpx;height:48rpx;'></image>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item flex-between' bindtap='changeIcon'>
+            <view class='text-horizontal'>
+                <view class="text-item">擅长领域</view>
+                <view class="text-annotation">{{fields_text}}</view>
+                <input name="fields" type="text" value="{{fields_value}}"style='width:100%;display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item person-item flex-between' bindtap='changeIcon'>
+            <view class='text-horizontal'>
+                <view class="text-item">专家介绍</view>
+                <input name="brief" type="text" value="{{brief}}"style='width:100%;display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation">无</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='item flex-between' bindtap='changeIcon'>
+            <view class='text-horizontal'>
+                <view class="text-item">协议文本</view>
+                <input name="agreement" type="text" value="{{agreement}}" style='width:100%;display:none' />
+            </view>
+            <view class='flex-align-center'>
+                <view class="text-annotation" wx:if="{{agreement != null && agreement!=''}}">未签约</view>
+                <image src='/images/arrow.png' class='image-size'></image>
+            </view>
+        </view>
+        <view class='button-vertical'>
+            <button class='long-buttom' formType="submit">
+                保存专家信息
+            </button>
+        </view>
+    </form>
+</view>

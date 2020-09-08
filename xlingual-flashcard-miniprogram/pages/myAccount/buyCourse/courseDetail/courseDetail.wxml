@@ -1,0 +1,32 @@
+<view class='course-detail-container'>
+    <view class='course-detail-title'>{{courseDetailList.name}}</view>
+    <view class='course-detail-meal'>
+        <view wx:for="{{courseDetailList.price_set}}" wx:key="*this">
+            <view class='course-detail-meal-info'>套餐{{index+1}}:
+                <text> {{item.mealDueTime}} , {{item.amount}} {{item.currency.code}}</text>
+            </view>
+        </view>
+    </view>
+    <view class='course-detail-img'>
+        <image src='/pages/images/myAccount/course-detail-img.jpg'></image>
+    </view>
+    <view class='course-detail-description'>{{courseDetailList.brief}}</view>
+    <view class='course-detail-num'>
+        <image src='/pages/images/myAccount/course-buy-num-icon.png'></image>
+        <view>{{courseDetailList.courseInviteCode}}</view>
+    </view>
+    <view class='course-info-operation'>
+        <button bindtap='gotoBuyCourse'>购买</button>
+        <view wx:if="{{isBuy}}">已拥有</view>
+        <button bindtap='closeCurrent'>关闭</button>
+    </view>
+</view>
+<!-- 购买弹出层 -->
+<view class='maskLayer' catchtouchmove="preventTouchMove" wx:if="{{chooseSize}}" bindtap='hideModal'></view>
+<view class='choose' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+    <view class='alert-title'>购买{{courseDetailList.name}}</view>
+    <view wx:for="{{courseDetailList.price_set}}" wx:key="*this" class='alert-content flex-between' data-item="{{item}}" bindtap='gotoBuyMeal'>
+        <view>套餐{{index+1}}</view>
+        <view>{{item.mealDueTime}} , {{item.amount}} {{item.currency.code}}</view>
+    </view>
+</view>
